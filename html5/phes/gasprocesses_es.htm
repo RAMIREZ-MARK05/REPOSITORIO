@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Procesos Especiales en un Gas Ideal</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+div#total { width: 700px; height: 440px; }
+div#canvas { width: 460px; height: 440px; }
+div#panel { left: 460px; width: 240px; height: 440px; }
+.pos1 { left: 10px; }
+.pos3 { left: 200px; }
+button { width: 220px; }
+input[type="text"] { left: 120px; width: 60px; }
+table.Formel { margin: 20px auto 20px; background-color: #00e0ff; padding: 5px; border: 2px solid #000000; border-collapse: collapse; }
+td { padding: 5px; border: 1px solid #000000; }
+</style>
+<script src="gasprocesses.js"></script>
+<script src="gasprocesses_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Procesos Especiales en un Gas Ideal">
+<meta name="author" content="Walter Fendt, Jos&eacute; Miguel Zamarro">
+<meta name="keywords" content="f&iacute;sica, termodin&aacute;mica, gas ideal, isob&aacute;rico, is&oacute;coro, isotermo">
+</head>
+
+<body>
+
+<h1>Procesos Especiales en un Gas Ideal</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=460 height=440>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><input id="rbP" name="bg1" type="radio" value=""><label for="rbP" id="lbP"></label></div> 
+    <div style="top: 45px;"><input id="rbV" name="bg1" type="radio" value=""><label for="rbV" id="lbV"></label></div>
+    <div style="top: 70px;"><input id="rbT" name="bg1" type="radio" value=""><label for="rbT" id="lbT"></label></div>
+    <div style="top: 100px;"><span id="lb0" class="pos1"></span></div>
+    <div style="top: 125px;"><input id="rb0P" name="bg2" type="radio" value=""><label for="rb0P" id="lb0P"></label><input type="text" id="ip0P"><span id="lb0PU" class="pos3"></span></div>
+    <div style="top: 150px;"><input id="rb0V" name="bg2" type="radio" value=""><label for="rb0V" id="lb0V"></label><input type="text" id="ip0V"><span id="lb0VU" class="pos3"></span></div>
+    <div style="top: 175px;"><input id="rb0T" name="bg2" type="radio" value=""><label for="rb0T" id="lb0T"></label><input type="text" id="ip0T"><span id="lb0TU" class="pos3"></span></div>
+    <div style="top: 205px;"><span id="lb1" class="pos1"></span></div>
+    <div style="top: 230px;"><input id="rb1P" name="bg2" type="radio" value=""><label for="rb1P" id="lb1P"></label><input type="text" id="ip1P"><span id="lb1PU" class="pos3"></span></div>
+    <div style="top: 255px;"><input id="rb1V" name="bg2" type="radio" value=""><label for="rb1V" id="lb1V"></label><input type="text" id="ip1V"><span id="lb1VU" class="pos3"></span></div>
+    <div style="top: 280px;"><input id="rb1T" name="bg2" type="radio" value=""><label for="rb1T" id="lb1T"></label><input type="text" id="ip1T"><span id="lb1TU" class="pos3"></span></div>
+    <div style="top: 320px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 360px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 410px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<p>Con la simulaci&oacute;n puede comprobar las siguientes leyes:</p>
+
+<table class="Formel">
+<tr>
+ <td class="Formel">Proceso isob&aacute;rico:</td>
+ <td class="Formel">presi&oacute;n constante</td>
+ <td class="Formel">V/T constante</td>
+</tr>
+<tr>
+ <td class="Formel">Proceso is&oacute;coro:</td>
+ <td class="Formel">volumen constante</td>
+ <td class="Formel">p/T constante</td>
+</tr>
+<tr>
+ <td class="Formel">Proceso isotermo:</td>
+ <td class="Formel">temperatura constante</td>
+ <td class="Formel">pV constante</td>
+</tr>
+</table>
+
+<p>Estas tres leyes son casos especiales de la <em class="Begriff">ley de los gases ideales</em>:</p>
+
+<table class="Formel">
+<tr>
+ <td class="Formel">pV/T es constante.</td>
+</tr>
+</table>
+
+<script>endPage("gasprocesses",25,12,1999,10,10,2019,"Jos&eacute; Miguel Zamarro, 2001");</script>
+
+</body>
+</html>

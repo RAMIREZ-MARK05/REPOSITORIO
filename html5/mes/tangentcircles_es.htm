@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>C&iacute;rculos tangentes</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+</style>
+<script src="tangentcircles.js"></script>
+<script src="tangentcircles_es.js"></script>
+<script src="page_mes.js"></script>
+<meta name="description" content="App HTML5: C&iacute;rculos tangentes">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, matem&aacute;ticas, geometr&iacute;a, c&iacute;rculo tangente">
+</head>
+
+<body>
+
+<h1>C&iacute;rculos tangentes</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="lb0" class="pos1"></span></div>
+    <div style="top: 70px;"><input type="radio" id="rb1" name="bg" value=""><label for="rb1" id="lb1"></label></div>
+    <div style="top: 110px;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="lb2"></label></div>
+    <div style="top: 150px;"><input type="radio" id="rb3" name="bg" value=""><label for="rb3" id="lb3"></label></div>
+    <div style="top: 190px;"><input type="radio" id="rb4" name="bg" value=""><label for="rb4" id="lb4"></label></div>
+    <div style="top: 230px;"><input type="radio" id="rb5" name="bg" value=""><label for="rb5" id="lb5"></label></div>
+    <div style="top: 270px;"><input type="radio" id="rb6" name="bg" value=""><label for="rb6" id="lb6"></label></div>    
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("tangentcircles",4,10,2017,27,2,2020);</script>
+
+</body>
+
+</html>

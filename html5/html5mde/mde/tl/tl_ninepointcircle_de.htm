@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Der Feuerbach-Kreis eines Dreiecks</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+button { width: 220px; }
+textarea { width: 210px; height: 160px; line-height: 18px; } 
+.pos1 { left: 10px; }
+#ABC { margin-top: 30px; font-weight: bold; }
+</style>
+<script src="tl_ninepointcircle.js"></script>
+<script src="tl_ninepointcircle_de.js"></script>
+<script src="tl_page_de.js"></script>
+<meta name="description" content="HTML5-App: Der Feuerbach-Kreis eines Dreiecks">
+<meta name="keywords" content="Mathematik, Geometrie, Dreieck, Dreiecksgeometrie, feuerbachscher Kreis, Feuerbach-Kreis, Feuerbach">
+<meta name="author" content="Walter Fendt">
+</head>
+
+<body>
+
+<h1>Der Feuerbach-Kreis eines Dreiecks</h1>
+
+<p>Betrachtet wird ein Dreieck mit seinen <a href="tl_orthocenter_de.htm">H&ouml;hen</a>. Zu jeder H&ouml;he zeichnet man den 
+Fu&szlig;punkt und den Mittelpunkt des H&ouml;henabschnitts zwischen dem H&ouml;henschnittpunkt und der zugeh&ouml;rigen Ecke 
+des Dreiecks ein. Au&szlig;erdem markiert man die Mittelpunkte der drei Seiten.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 70px;"><button id="bu2" style="background-color: #ffff00;"></button></div> 
+    <div style="top: 140px;"><textarea id="ta"></textarea></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<div class="Satz" style="width: 600px;">
+Die drei Seitenmittelpunkte, die drei Fu&szlig;punkte der Dreiecksh&ouml;hen und die drei Mittelpunkte der &quot;oberen 
+H&ouml;hen&shy;abschnitte&quot; (jeweils zwischen dem H&ouml;hen&shy;schnittpunkt und einer Ecke des Dreiecks) liegen auf einem 
+Kreis.</div>
+
+<div class="Def" style="width: 600px;">
+Dieser Kreis hei&szlig;t <em class="Begriff">Feuerbach-Kreis</em> oder <em class="Begriff">Neun-Punkte-Kreis</em>.</div>
+
+<div class="Satz" style="width: 600px;">
+Der Mittelpunkt des Feuerbach-Kreises stimmt &uuml;berein mit dem Mittelpunkt der Verbindungs&shy;strecke zwischen 
+H&ouml;hen&shy;schnittpunkt und Umkreis&shy;mittelpunkt.
+</div>
+
+<p>Bemerkung: Der Mittelpunkt des Feuerbach-Kreises liegt auf der <a href="tl_eulerline_de.htm">Euler-Geraden</a>.</p>
+
+<!-- 2. App!!! -->
+
+<!--<div class="Satz" style="margin-top: 20px; width: 600px;">
+Der Feuerbach-Kreis eines Dreiecks ber&uuml;hrt den Inkreis (einschlie&szlig;end) und die drei Ankreise des Dreiecks
+(ausschlie&szlig;end).
+</div>-->
+
+<p id="ABC"><a href="tl_start_de.htm#abc">&Uuml;bersicht</a></p>
+
+<script>endPage("tl_ninepointcircle",28,10,2004,20,10,2017);</script>
+
+</body>
+
+</html>

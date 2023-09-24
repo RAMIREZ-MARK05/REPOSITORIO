@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Winkel an parallelen Geraden</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 740px; height: 400px; }
+div#canvas { width: 500px; height: 400px; }
+div#panel { left: 500px; width: 240px; height: 400px; }
+select.ch1 { width: 220px; } 
+select.ch2 { left: 170px; width: 60px; }
+.pos1 { left: 10px; }
+</style>
+<script src="anglesparallel.js"></script>
+<script src="anglesparallel_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Winkel an parallelen Geraden">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Winkel, Parallelen, Geradenkreuzung, Doppelkreuzung, Stufenwinkel, F-Winkel, Wechselwinkel, Z-Winkel, Nachbarwinkel, E-Winkel">
+
+</head>
+
+<body>
+
+<h1>Winkel an parallelen Geraden</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><input type="radio" id="rb1" name="bg" value=""><label for="rb1" id="lb1"></label></div>
+    <div style="top: 60px;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="lb2"></label></div>
+    <div style="top: 100px;"><input type="radio" id="rb3" name="bg" value=""><label for="rb3" id="lb3"></label></div>
+    <div style="top: 150px;"><select class="ch1" id="ch1"></select></div>
+    <div style="top: 200px;"><span id="lb4" class="pos1"></span><select class="ch2" id="ch2"></select></div> 
+    <div style="top: 250px;"><span id="lb5" class="pos1"></span></div>
+    <div style="top: 280px;"><span id="op1" class="pos1"></span></div>
+    <div style="top: 310px;"><span id="op2" class="pos1"></span></div>
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("anglesparallel",21,3,2006,2,4,2018);</script>
+
+</body>
+
+</html>

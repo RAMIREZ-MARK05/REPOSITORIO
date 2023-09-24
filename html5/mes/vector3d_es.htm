@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Componentes de un vector</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 50px; }
+input[type="text"] { left: 80px; width: 40px; }
+button.navi { width: 50px; background-color: #a0c0ff; }
+td { width: 60px; height: 35px;}
+</style>
+<script src="vector3d.js"></script>
+<script src="vector3d_es.js"></script>
+<script src="page_mes.js"></script>
+<meta name="description" content="App HTML5: Decomposici&oacute;n de un vector tridimensional en componentes">
+<meta name="author" content="Walter Fendt, Nicol&aacute;s Rosillo">
+<meta name="keywords" content="app, matem&aacute;ticas, vector analysis, vector, componentes">
+</head>
+
+<body>
+
+<h1>Componentes de un Vector</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span class="pos1" id="text1"></span></div>
+    <div style="top: 60px;"><span class="pos2" id="ip1a"></span><input type="text" id="ip1b"></div>
+    <div style="top: 100px;"><span class="pos2" id="ip2a"></span><input type="text" id="ip2b"></div>
+    <div style="top: 140px;"><span class="pos2" id="ip3a"></span><input type="text" id="ip3b"></div>
+    <div style="top: 200px; left: 25px;"><table>
+      <tr>
+        <td></td>
+        <td><button id="up" class="navi">&uarr;</button></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button id="left" class="navi">&larr;</button></td>
+        <td><button id="stop" class="navi">&#8226;</button></td>
+        <td><button id="right" class="navi">&rarr;</button></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button id="down" class="navi">&darr;</button></td>
+        <td></td>
+      </tr>
+    </table></div>    
+    
+    <div style="top: 350px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 370px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("vector3d",22,7,1998,19,10,2015,"Nicol&aacute;s Rosillo, 2002");</script>
+
+</body>
+
+</html>

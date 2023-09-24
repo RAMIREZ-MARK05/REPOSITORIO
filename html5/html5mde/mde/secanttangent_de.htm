@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Sekanten- und Tangentensteigung</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 780px; height: 400px; }
+div#canvas { width: 500px; height: 400px; }
+div#panel { left: 500px; width: 280px; height: 400px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 160px; }
+input { width: 260px; }
+</style>
+<script src="secanttangent.js"></script>
+<script src="secanttangent_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Sekanten- und Tangentensteigung">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Mathematikunterricht, Differentialrechnung, Infinitesimalrechnung, Ableitung, Steigung, Sekantensteigung, Tangentensteigung">
+</head>
+
+<body>
+
+<h1>Sekanten- und Tangentensteigung</h1>
+
+<p>In dieser App wird ein Standardbeispiel zur Einf&uuml;hrung der Ableitung dargestellt. Gegeben sind die Quadratfunktion und der feste Punkt 
+P(1|1) auf dem Graphen. Der Punkt Q l&auml;sst sich durch Ziehen mit der Maus auf dem Graphen verschieben. Die Tangente in P ist rot gezeichnet, 
+die (ver&auml;nderliche) Sekante durch P und Q blau. Um einen m&ouml;glichst guten N&auml;herungswert f&uuml;r die Tangentensteigung zu 
+erhalten, muss man den Punkt Q entlang der Kurve zum Punkt P hin verschieben; w&auml;hlt man allerdings Q exakt gleich P, so ist die 
+Sekantensteigung nicht definiert (Division durch 0). Die Tangentensteigung wird daher als Grenzwert der Sekantensteigung definiert.</p>
+
+<p>Der Schieberegler erm&ouml;glicht es, die Tangentensteigung auch f&uuml;r einen anderen Punkt P zu erhalten.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 40px; color: #ff0000;"><span id="lb1a" class="pos1"></span><span id="lb1b" class="pos2"></span></div>
+    <div style="top: 70px;"><input type="range" id="sl" min=0 max=8 step=1 value=""></div>
+    <div style="top: 120px; color: #0000ff;"><span id="lb2a" class="pos1"></span><span id="lb2b" class="pos2"></span></div>
+    <div style="top: 200px; color: #0000ff;"><span id="lb3a" class="pos1"></span><span id="lb3b" class="pos2"></span></div>
+    <div style="top: 240px; color: #ff0000;"><span id="lb4a" class="pos1"></span><span id="lb4b" class="pos2"></span></div>
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("secanttangent",22,2,1998,18,10,2017);</script>
+
+</body>
+
+</html>

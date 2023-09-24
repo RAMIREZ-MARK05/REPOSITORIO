@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Combinaciones de Resistores</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+div#total { width: 860px; height: 450px; }
+div#canvas { width: 600px; height: 450px; }
+div#panel { left: 600px; width: 260px; height: 450px; } 
+button { width: 240px; }
+.pos1 { left: 10px; }
+.pos3 { left: 160px; }
+input[type="text"] { left: 60px; width: 80px; }
+span {white-space: nowrap; }
+</style>
+<script src="page_phes.js"></script>
+<script src="combinationresistors.js"></script>
+<script src="combinationresistors_es.js"></script>
+<meta name="description" content="App HTML5: Combinaciones de Resistores">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="f&iacute;sica, electricidad, electrodin&aacute;mica, resistencia, resistor, Ohm, voltaje, Volt, volt&iacute;metro, amperaje, Ampere, amper&iacute;metro">
+</head>
+
+<body>
+
+<h1>Combinaciones de Resistores</h1>
+
+<p>Esta aplicaci&oacute;n permite la construcci&oacute;n de circuitos el&eacute;ctricos simples con <em class="Begriff">resistencias</em> 
+(&oacute;hmicas).  El bot&oacute;n &quot;Restablecer&quot; produce un circuito con una sola resistencia. En las secciones &quot;Voltaje 
+de la bater&iacute;a&quot; y &quot;Agregar resistor&quot; se introducen los valores de voltaje y resistencia, respectivamente; 
+en ambos casos es necesario presionar la tecla &quot;Intro&quot; para aceptar los valores. Para agregar resistencias 
+<em class="Begriff">en serie</em> con la resistencia seleccionada del circuito solamente se presiona el bot&oacute;n 
+&quot;Conexi&oacute;n Serie&quot; (la selecci&oacute;n de la resistencia se hace mediante un clic sobre el elemento). 
+Asimismo para a&ntilde;adir resistencias <em class="Begriff">en paralelo</em> con la resistencia seleccionada del circuito 
+solamente se presiona el bot&oacute;n &quot;Conexi&oacute;n Paralelo&quot;. Activando la secci&oacute;n de 
+&quot;Medidores&quot; puede conectarse un volt&iacute;metro y un amper&iacute;metro con el(los) componente(s) seleccionado(s) para medir 
+el &quot;Voltaje&quot; y &quot;Amperaje&quot;, respectivamente. Puede realizarse un an&aacute;lisis completo del circuito construido 
+en el cual se determina el voltaje, el amperaje (la intensidad de corriente el&eacute;ctrica) y la resistencia del elemento seleccionado. 
+El an&aacute;lisis tambi&eacute;n puede realizarse en un grupo de resistencias seleccionadas mediante una acci&oacute;n de arrastre 
+del apuntador del rat&oacute;n; las resistencias agrupadas aparecen dentro de una secci&oacute;n rectangular, dentro de la cual se muestra 
+su <em class="Begriff">resistencia equivalente</em> en la esquina superior izquierda.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=600 height=450>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 70px;"><span class="pos1" id="ip1a"></span></div>
+    <div style="top: 100px;"><input type="text" id="ip1b"><span id="ip1c" class="pos3"></span></div>
+    <div style="top: 140px;"><span class="pos1" id="ip2a"></span></div>
+    <div style="top: 170px;"><input type="text" id="ip2b"><span id="ip2c" class="pos3"></span></div>
+    <div style="top: 210px;"><button id="bu2" style="background-color: #ffc800;"></button></div>
+    <div style="top: 260px;"><button id="bu3" style="background-color: #ffc800;"></button></div>
+    <div style="top: 310px;"><span class="pos1" id="lb0"></span></div>
+    <div style="top: 340px;"><input type="checkbox" id="cb1" name="cb1" value=""><label for="cb1" id="lb1"></label></div>
+    <div style="top: 370px;"><input type="checkbox" id="cb2" name="cb2" value=""><label for="cb2" id="lb2"></label></div>
+    <div style="top: 410px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 430px;"><span class="pos1" id="translator"></span></div> 
+  </div>
+</div>
+
+<script>endPage("combinationresistors",11,9,2002,18,2,2020,"Mario Alberto G&oacute;mez Garc&iacute;a, 2008");</script>
+
+</body>
+</html>

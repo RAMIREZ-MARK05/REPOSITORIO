@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Dispersi&oacute;n de Rutherford</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+div#total { width: 800px; height: 440px; }
+div#canvas { width: 500px; height: 440px; }
+div#panel { left: 500px; width: 300px; height: 440px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 160px; }
+.pos3 { left: 260px; }
+input[type="text"] { left: 160px; width: 80px; }
+button { width: 280px; }
+</style>
+<script src="rutherfordscattering.js"></script>
+<script src="rutherfordscattering_es.js"></script>
+<script src="page_phes.js"></script>
+</head>
+
+<body>
+
+<h1>Dispersi&oacute;n de Rutherford</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=440>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 50px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 100px;"><span class="pos1" id="lb1"></span></div>
+    <div style="top: 125px;"><span class="pos1" id="ip1a"></span><input type="text" id="ip1b"><span class="pos3" id="ip1c"></span></div>
+    <div style="top: 170px;"><span class="pos1" id="lb2"></span></div>
+    <div style="top: 200px;"><span class="pos1" id="ip2a"></span><input type="text" id="ip2b"><span class="pos3" id="ip2c"></span></div>
+    <div style="top: 230px;"><span class="pos1" id="ip3a"></span><input type="text" id="ip3b"><span class="pos3" id="ip3c"></span></div>
+    <div style="top: 260px;"><span class="pos1" id="op1a"></span><span class="pos2" id="op1b"></span><span class="pos3" id="op1c"></span></div>
+    <div style="top: 290px;"><span class="pos1" id="op2a"></span><span class="pos2" id="op2b"></span><span class="pos3" id="op2c"></span></div>
+    <div style="top: 330px;"><input type="checkbox" id="cb1" name="par" value=""><label for="par" id="lbPar"></label></div>
+    <div style="top: 355px;"><input type="checkbox" id="cb2" name="ang" value=""><label for="ang" id="lbAng"></label></div>
+    <div style="top: 400px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 420px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script>endPage("rutherfordscattering",20,5,2020,1,11,2020);</script>
+
+</body>
+</html>

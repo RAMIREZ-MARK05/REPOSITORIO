@@ -1,0 +1,222 @@
+/*=======================================*/
+/* Stylesheet für einfache Seite         */
+/* 18.01.2021 - 23.01.2021               */
+/*=======================================*/
+
+/* Reset für Blockelemente */
+
+div, h1, h2, h3, h4, p, table, ul, ol {
+  margin: 0;
+  padding: 0;
+  }
+  
+/* Rand */
+  
+dl, h1, h2, h3, h4, ol, p, ul {
+  margin: 10px 20px 10px 20px;
+  }
+  
+/* Noch nicht besuchter Link */
+
+a:link {                    
+  color: #0000ff;
+  }
+
+/* Schon besuchter Link */  
+  
+a:visited {                            
+  color: #0000ff;    
+  }
+  
+/* Mauszeiger auf Link */
+
+a:hover {                                   
+  color: #ff0000;
+  text-decoration: underline;
+  }
+  
+/* Inhalt der Seite */
+
+body {
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  }
+  
+/* Eintrag Definitionsliste */
+
+dd {
+  margin-bottom: 25px;
+  }
+  
+/* Zentriertes Blockelement (div) */
+
+div.center {
+  margin: 20px auto 20px;
+  text-align: center;
+  }
+  
+/* Link zum Inhaltsverzeichnis */
+
+div#Index {
+  width: 170px; 
+  margin: 20px auto 20px auto;
+  border: 5px double #000000;
+  background-color: silver;
+  }
+  
+/* Link zum Inhaltsverzeichnis, Logo (oben) */
+  
+div#Index1 {
+  padding: 12px;
+  background-color: #ffff00;
+  border: 1px solid #000000;
+  text-align: center;
+  }
+  
+/* Link zum Inhaltsverzeichnis, Text (unten) */
+  
+div#Index2 {
+  padding: 8px;
+  background-color: #ffff00;
+  border: 1px solid #000000;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0000ff;
+  }
+  
+/* Eingerahmte Definition */
+
+div.Def {
+  margin: 20px auto 20px;   
+  padding: 10px;               
+  background-color: #80ffa0; 
+  border: 8px double #000000;
+  font-size: 18px;
+  }
+  
+/* Eingerahmter Satz */
+
+div.Satz {
+  margin: 20px auto 20px;
+  padding: 10px;
+  background-color: #ff80a0;
+  border: 8px double #000000;    
+  font-size: 18px;    
+  }
+  
+/* Überschrift Definitionsliste */
+
+dt {
+  margin-bottom: 8px;          
+  font-size: 18px;       
+  font-weight: bold;    
+  }
+  
+/* Hervorhebung eines Begriffs */
+  
+em.Begriff {
+  font-style: normal;
+  color: #0000ff;
+  }
+  
+/* Überschrift 1. Ordnung */
+  
+h1 {
+  border: 10px solid #0000ff;
+  padding: 5px;
+  background-color: #ffff00;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  }
+  
+/* Überschrift 2. Ordnung */
+  
+h2 {
+  padding: 5px 0px 5px 0px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  }
+  
+/* Überschrift 3. Ordnung */
+  
+h3 {
+  padding: 5px 0px 5px 0px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  }
+  
+/* Trennlinie */
+  
+hr.Trennlinie {                        
+  margin: 50px auto 50px;  
+  width: 40%;          
+  border-bottom: solid thin blue;
+  }
+  
+/* Bild für Link zur Hauptseite */
+  
+img.Link {
+  margin-right: 10px;
+  vertical-align: middle;
+  }
+  
+/* Item einer Liste */
+  
+li {
+  margin-left: 30px;
+  }
+  
+/* Geordnete Liste */
+  
+ol {
+  line-height: 1.4;
+  }
+  
+/* Absatz */
+  
+p {
+  line-height: 1.3;
+  }
+  
+/* Absatz für URL usw. */
+  
+p.Ende {                                
+  font-size: 13px;  
+  }
+  
+/* Liste der Symbole in einer Formel */
+  
+p.Formel {
+  font: normal 14px monospace; 
+  }
+  
+/* Eingerahmte Formel */
+  
+span.Formel {
+  display: block;
+  margin: 10px auto 10px;
+  background-color: #00e0ff;      
+  border: 3px solid #000000;   
+  padding: 8px;       
+  text-align: center;  
+  font-size: 20px;     
+  }
+  
+/* Inline-Element (span) ohne automatischen Zeilenumbruch */
+  
+span.nobr {
+  white-space: nowrap;
+  }
+  
+/* Ungeordnete Liste */
+  
+ul {
+  line-height: 1.4;
+  }
+  

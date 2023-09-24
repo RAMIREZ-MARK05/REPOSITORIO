@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Komponenten eines Vektors</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 50px; }
+input[type="text"] { left: 80px; width: 40px; }
+button.navi { width: 50px; background-color: #a0c0ff; }
+td { width: 60px; height: 35px; }
+</style>
+<script src="vector3d.js"></script>
+<script src="vector3d_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Komponenten eines Vektors">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Vektorrechnung, Vektor, Komponenten, Komponentenzerlegung">
+</head>
+
+<body>
+
+<h1>Komponenten eines Vektors</h1>
+
+<p>Diese kleine Animation soll die <em class="Begriff">Koordinatenschreibweise</em> für <em class="Begriff">Vektoren</em> 
+im dreidimensionalen Raum veranschaulichen. Es wird ein kartesisches Koordinatensystem mit x-Achse (rot), y-Achse (gr&uuml;n) und
+z-Achse (blau) vorausgesetzt. Ein gegebener Vektor (schwarzer Pfeil) kann als Summe von drei <em class="Begriff">Komponenten</em> 
+(farbige Pfeile) ausgedr&uuml;ckt werden, die jeweils die Richtung einer Koordinatenachse haben oder entgegengesetzt dazu sind.
+Jede dieser Komponenten wiederum l&auml;sst sich als Vielfaches eines Einheitsvektors schreiben. Die zugeh&ouml;rigen Koeffizienten
+nennt man die <em class="Begriff">Koordinaten</em> des gegebenen Vektors. Zus&auml;tzlich eingezeichnet sind Hilfslinien (schwarz), 
+die im Allgemeinen den Kanten eines achsenparallelen Quaders entsprechen.</p>
+
+<p>In den Eingabefeldern der Schaltfl&auml;che k&ouml;nnen die Koordinaten eines Vektors vorgegeben werden. Erlaubt sind dabei
+ganze Zahlen von &minus;5 bis +5. Die kleinen Schaltkn&ouml;pfe dienen dazu, die Animation zu starten und zu beeinflussen.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span class="pos1" id="text1"></span></div>
+    <div style="top: 60px;"><span class="pos2" id="ip1a"></span><input type="text" id="ip1b"></div>
+    <div style="top: 100px;"><span class="pos2" id="ip2a"></span><input type="text" id="ip2b"></div>
+    <div style="top: 140px;"><span class="pos2" id="ip3a"></span><input type="text" id="ip3b"></div>
+    <div style="top: 200px; left: 25px;"><table>
+      <tr>
+        <td></td>
+        <td><button id="up" class="navi">&uarr;</button></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button id="left" class="navi">&larr;</button></td>
+        <td><button id="stop" class="navi">&#8226;</button></td>
+        <td><button id="right" class="navi">&rarr;</button></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button id="down" class="navi">&darr;</button></td>
+        <td></td>
+      </tr>
+    </table></div>    
+    
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("vector3d",22,7,1998,31,7,2023);</script>
+
+</body>
+
+</html>

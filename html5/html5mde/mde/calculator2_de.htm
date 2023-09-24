@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Online-Rechner Algebra</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 880px; height: 500px; }
+div#canvas { width: 600px; height: 500px; }
+div#panel { left: 600px; width: 280px; height: 500px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 50px; }
+button.b1 { margin-left: 15px; width: 120px; background-color: #00ffff; } /* Löschen */
+button.b2 { margin-left: 15px; width: 25px; background-color: #ffffff; } /* Ziffern */
+button.b3 { margin-left: 230px; width: 25px; background-color: #fff000; } /* Prozent */
+button.b4 { margin-left: 15px; width: 25px; background-color: #fff000; } /* Rechenarten, Klammern */
+select.s1 { left: 110px; width: 160px; }
+</style>
+<script src="calculator2_parser.js"></script>
+<script src="calculator2_te.js"></script>
+<script src="calculator2.js"></script>
+<script src="calculator2_de.js"></script>
+<script src="calculator2_monomial.js"></script>
+<script src="calculator2_polynomial.js"></script>
+<script src="calculator2_qpolval.js"></script>
+<!--<script src="test1.js"></script>-->
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Online-Rechner Algebra">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Rechnen, Online-Rechner, Algebra-Rechner">
+</head>
+
+<body>
+
+<h1>Online-Rechner f&uuml;r einfache algebraische Terme</h1>
+
+<p>Mit diesem Rechner lassen sich Rechenausdr&uuml;cke mit rationalen Zahlen und Variablen auswerten. Die Eingabe erfolgt &uuml;ber die
+Schaltkn&ouml;pfe und Auswahlfelder der Schaltfl&auml;che.</p>
+
+<h2>M&ouml;gliche Bestandteile der Rechenausdr&uuml;cke</h2>
+
+<ul>
+<li>Variable (Auswahlfeld Variable)</li>
+<li>Ganze Zahlen (Schaltkn&ouml;pfe f&uuml;r Ziffern)</li>
+<li>Br&uuml;che und gemischte Zahlen (Auswahlfeld Bruch)</li>
+<li>Endliche und unendliche Dezimalbr&uuml;che (Auswahlfeld Dezimalbruch)</li>
+<li>Prozents&auml;tze (Schaltknopf %)</li>
+<li>Summen, Differenzen, Produkte, Quotienten (Schaltkn&ouml;pfe +, &minus;, &middot;, :)</li>
+<li>Runde Klammern (Schaltkn&ouml;pfe)</li>
+<li>Bruchterme (Auswahlfeld Bruchterm); auch verschachtelte Bruchterme sind zul&auml;ssig; jeder Bruchterm muss im Auswahlfeld abgeschlossen 
+werden.</li>
+<li>Potenzen, auch verschachtelt (Auswahlfeld Potenz); wichtig ist auch hier das Abschlie&szlig;en des Exponenten im Auswahlfeld.</li>
+</ul>
+
+<h2>Darstellung des Ergebnisses</h2>
+
+<p>Das Ergebnis wird auf zwei Weisen ausgegeben:</p>
+
+<ul>
+<li>Ausmultiplizierte Form (gek&uuml;rzt)</li>
+<li>Faktorisierte Form</li>
+</ul>
+
+<p>Da die Ergebnisse sehr lang sein k&ouml;nnen, l&auml;sst sich die Zeichenfl&auml;che mit gedr&uuml;ckter Maustaste verschieben.</p>
+
+<h2>Einschr&auml;nkungen</h2>
+
+<ul>
+<li>Potenzen sind nur mit ganzzahligen Exponenten m&ouml;glich. Dies gilt auch dann, wenn das Ergebnis wie im Beispiel 25<sup>1/2</sup> 
+rational ist.</li>
+<li>Ist der Exponent einer Potenz gr&ouml;&szlig;er als 100 oder kleiner als &minus;100, so wird kein Ergebnis berechnet, da sonst der
+Rechner f&uuml;r l&auml;ngere Zeit blockiert sein k&ouml;nnte.</li>
+<li>Die Faktorisierung kann unvollst&auml;ndig sein. Das liegt daran, dass der verwendete Algorithmus (Von-Schubert- oder 
+Kronecker-Algorithmus) nicht sehr effizient ist. Beim Grad 4 wird die Suche nach irreduziblen Faktoren abgebrochen, um eine Blockierung des 
+Rechners zu vermeiden. Sollte der Browser trotzdem eine Warnmeldung zeigen, ist es ratsam, die Webseite anzuhalten.</li>
+</ul>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=600 height=500>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;">
+      <button id="clear" class="b1"></button>
+      <button id="reset" class="b1"></button>
+    </div>
+    <div style="top: 80px;">
+      <button id="bu0" class="b2">0</button>
+      <button id="bu1" class="b2">1</button>
+      <button id="bu2" class="b2">2</button>
+      <button id="bu3" class="b2">3</button>
+      <button id="bu4" class="b2">4</button>
+    </div>
+    <div style="top: 120px;">
+      <button id="bu5" class="b2">5</button>
+      <button id="bu6" class="b2">6</button>
+      <button id="bu7" class="b2">7</button>
+      <button id="bu8" class="b2">8</button>
+      <button id="bu9" class="b2">9</button>
+    </div>
+    <div style="top: 100px;">
+      <button id="buPerc" class="b3">%</button>
+    </div>
+    <div style="top: 170px;">
+      <span id="var" class="pos1"></span><select id="selVar" class="s1"></select>
+    </div>
+    <div style="top: 210px;">
+      <button id="plus" class="b4">+</button>
+      <button id="minus" class="b4">&minus;</button>
+      <button id="mult" class="b4">&middot;</button>
+      <button id="div" class="b4">:</button>
+    </div>  
+    <div style="top: 250px;">
+      <button id="open" class="b4">(</button>
+      <button id="close" class="b4">)</button>
+    </div>
+    <div style="top: 300px;">
+      <span id="frac" class="pos1"></span><select id="selFN" class="s1"></select>
+    </div>    
+    <div style="top: 340px;">
+      <span id="dec" class="pos1"></span><select id="selDN" class="s1"></select>
+    </div> 
+    <div style="top: 380px;">
+      <span id="fracterm" class="pos1"></span><select id="selFT" class="s1"></select>
+    </div>        
+    <div style="top: 420px;">
+      <span id="pow" class="pos1"></span><select id="selPow" class="s1"></select>
+    </div>
+    <div style="top: 470px;"><span id="author" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("calculator2",17,8,2020,17,8,2020);</script>
+
+</body>
+
+</html>

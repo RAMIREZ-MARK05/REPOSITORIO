@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Inkreis eines Dreiecks</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; }
+div#text { font-size: 12px; }
+button { width: 220px; }
+.pos1 { left: 10px; }
+canvas#ta { border: solid #808080 1px; }
+</style>
+<script src="incircle.js"></script>
+<script src="incircle_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="Inkreis eines Dreiecks">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="Mathematik, Geometrie, Dreieck, Inkreis, Inkreismittelpunkt, Winkelhalbierende, Winkelsymmetrale">
+</head>
+
+<body>
+
+<h1>Inkreis eines Dreiecks</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 70px;"><button id="bu2" style="background-color: #ffff00;"></button></div> 
+    <div id="text" style="top: 140px; left: 10px;"><canvas id="ta" width=218 height=150>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 370px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<div class="Satz" style="width: 650px;">
+Die drei Winkelhalbierenden eines Dreiecks schneiden sich in einem Punkt. 
+Dieser Punkt hat von den drei Seiten des Dreiecks den gleichen Abstand.</div>
+
+<script>endPage("incircle",4,11,1998,29,3,2020);</script>
+
+</body>
+
+</html>

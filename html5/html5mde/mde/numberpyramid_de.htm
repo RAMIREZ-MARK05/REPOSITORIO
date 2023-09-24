@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Zahlenpyramide</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 700px; height: 400px; }
+div#canvas { width: 450px; height: 400px; }
+div#panel { left: 450px; width: 250px; height: 400px; } 
+button { width: 230px; }
+select { background-color: #ffffff; }
+select#ch1 { left: 150px; width: 90px; }
+select#ch2, select#ch3 { left: 10px; width: 230px; }
+input[type="text"] { left: 150px; width: 85px; }
+.pos1 { left: 10px; }
+</style>
+<script src="numberpyramid.js"></script>
+<script src="numberpyramid_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Zahlenpyramide">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="Mathematik, Addition, Subtraktion, Zahlenpyramide">
+</head>
+
+<body>
+
+<h1>Zahlenpyramide</h1>
+
+<p>Eine <em class="Begriff">Zahlenpyramide</em> ist so zu erg&auml;nzen, dass die Summe von zwei nebeneinander stehenden Zahlen 
+immer gleich der Zahl dar&uuml;ber ist.</p>
+
+<p>Mit dem obersten Schaltknopf der Schaltfl&auml;che k&ouml;nnen die Zahlen der Pyramide gel&ouml;scht werden.
+Darunter bieten drei Auswahlfelder mehrere Einstellm&ouml;glichkeiten, n&auml;mlich f&uuml;r die Gr&ouml;&szlig;e der Pyramide (2 bis 10),
+f&uuml;r die Entscheidung zwischen eigenen und zuf&auml;llig ausgew&auml;hlten Aufgaben sowie f&uuml;r den zugrunde liegenden Zahlenbereich 
+(nat&uuml;rliche Zahlen oder ganze Zahlen). Das Eingabefeld &quot;Zahl&quot; kann verwendet werden, wenn zuvor mit einem Mausklick 
+eine Zelle ausgew&auml;hlt wurde. Abgeschlossen wird eine Eingabe entweder durch die Enter-Taste oder mit einem Klick auf den Schaltknopf
+&quot;&Uuml;bernehmen&quot;. Den untersten Schaltknopf (&quot;L&ouml;sung zeigen&quot;) sollte man nur bet&auml;tigen, wenn man
+ohne Hilfe nicht mehr weiterkommt.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=450 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #80ffff;"></button></div>
+    <div style="top: 70px;"><span id="lb1" class="pos1"></span><select id="ch1"></select></div>
+    <div style="top: 110px;"><select id="ch2"></select></div>
+    <div style="top: 150px;"><select id="ch3"></select></div>
+    <div style="top: 190px;"><span id="lb2" class="pos1"></span><input type="text" id="ip"></div>
+    <div style="top: 230px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 280px;"><button id="bu3" style="background-color: #c0c0ff;"></button></div>
+    <div style="top: 360px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 380px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script>endPage("numberpyramid",1,5,2023,2,5,2023);</script>
+
+</body>
+</html>

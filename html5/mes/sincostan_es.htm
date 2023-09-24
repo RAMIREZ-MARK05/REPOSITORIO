@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Seno, coseno y tangente de un &aacute;ngulo</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 800px; height: 360px; }
+div#canvas { width: 600px; height: 360px; }
+div#panel { left: 600px; width: 200px; height: 360px; } 
+.pos1 { left: 10px; }
+</style>
+<script src="sincostan.js"></script>
+<script src="sincostan_es.js"></script>
+<script src="page_mes.js"></script>
+<meta name="description" content="App HTML5: Seno, coseno y tangente de un &aacute;ngulo">
+<meta name="author" content="Walter Fendt, Nicol&aacute;s Rosillo">
+<meta name="keywords" content="app, matem&aacute;ticas, trigonometr&iacute;a, seno, coseno, tangente">
+</head>
+
+<body>
+
+<h1>Seno, Coseno y Tangente de un &Aacute;ngulo</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=600 height=360>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 40px;"><span class="pos1" id="lb0"></span></div>
+    <div style="top: 80px;"><input type="radio" id="rb1" name="bg" value=""><label for="rb1" id="lb1" style="color: #008000;"></label></div>
+    <div style="top: 120px;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="lb2" style="color: #ff0000;"></label></div>
+    <div style="top: 160px;"><input type="radio" id="rb3" name="bg" value=""><label for="rb3" id="lb3" style="color: #0000ff;"></label></div>
+    <div style="top: 310px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 330px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("sincostan",25,12,1997,19,10,2015,"Nicol&aacute;s Rosillo, 2002");</script>
+
+</body>
+
+</html>

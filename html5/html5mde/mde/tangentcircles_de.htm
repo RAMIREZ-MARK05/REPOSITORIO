@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Ber&uuml;hrkreise</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+</style>
+<script src="tangentcircles.js"></script>
+<script src="tangentcircles_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Ber&uuml;hrkreise">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Ber&uuml;hrkreis, Ber&uuml;hrkreisaufgabe">
+</head>
+
+<body>
+
+<h1>Ber&uuml;hrkreise</h1>
+
+<p>Diese App zeigt verschiedene Ber&uuml;hrkreisaufgaben. Der Aufgabentyp kann in der Schaltfl&auml;che eingestellt werden.
+Dabei sind jeweils Kreise mit besonderen Eigenschaften gesucht:</p>
+
+<ul>
+<li>Kreise, die durch zwei gegebene Punkte gehen</li>
+<li>Kreise, die durch einen gegebenen Punkt gehen und zugleich eine gegebene Gerade ber&uuml;hren</li>
+<li>Kreise, die durch einen gegebenen Punkt gehen und zugleich einen gegebenen Kreis ber&uuml;hren</li>
+<li>Kreise, die zwei gegebene Geraden ber&uuml;hren</li>
+<li>Kreise, die eine gegebene Gerade und einen gegebenen Kreis ber&uuml;hren</li>
+<li>Kreise, die zwei gegebene Kreise ber&uuml;hren</li>
+</ul>
+
+<p>Die vorgegebenen Punkte, Geraden und Kreise sind schwarz dargestellt und lassen sich mit gedr&uuml;ckter Maustaste ver&auml;ndern.
+In roter Farbe werden beispielhaft einige L&ouml;sungskreise gezeigt. Verschiebt man den Mittelpunkt eines solchen Ber&uuml;hrkreises
+mit der Maus, so wird der geometrische Ort der Mittelpunkte sichtbar (blau).</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="lb0" class="pos1"></span></div>
+    <div style="top: 70px;"><input type="radio" id="rb1" name="bg" value=""><label for="rb1" id="lb1"></label></div>
+    <div style="top: 110px;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="lb2"></label></div>
+    <div style="top: 150px;"><input type="radio" id="rb3" name="bg" value=""><label for="rb3" id="lb3"></label></div>
+    <div style="top: 190px;"><input type="radio" id="rb4" name="bg" value=""><label for="rb4" id="lb4"></label></div>
+    <div style="top: 230px;"><input type="radio" id="rb5" name="bg" value=""><label for="rb5" id="lb5"></label></div>
+    <div style="top: 270px;"><input type="radio" id="rb6" name="bg" value=""><label for="rb6" id="lb6"></label></div>    
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("tangentcircles",4,10,2017,18,10,2017);</script>
+
+</body>
+
+</html>

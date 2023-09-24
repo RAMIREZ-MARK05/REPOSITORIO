@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Elliptische Kurven</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+input { width: 220px; }
+div.Gleichung { margin: 20px auto; width: 200px; }
+</style>
+<script src="ellipticcurve.js"></script>
+<script src="ellipticcurve_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Elliptische Kurve">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, elliptische Kurve">
+</head>
+
+<body>
+
+<h1>Elliptische Kurven</h1>
+
+<p><em class="Begriff">Elliptische Kurven</em> (nicht zu verwechseln mit Ellipsen!) sind definiert durch Gleichungen des Typs</p>
+
+<div class="Gleichung">y<sup>2</sup> = x<sup>3</sup> + a x + b,</div>
+
+<p>wobei die Koeffizienten a und b das genaue Aussehen bestimmen. Wie man aus der Gleichung leicht erkennt, sind solche Kurven symmetrisch 
+bez&uuml;glich der x-Achse. Je nach den Werten von a und b erh&auml;lt man entweder eine zusammenh&auml;ngende Kurve oder zwei voneinander 
+getrennte Teile. Welcher dieser beiden F&auml;lle zutrifft, sieht man am Vorzeichen der <em class="Begriff">Diskriminante</em></p>
+
+<div class="Gleichung">&Delta; = &minus; 4 a<sup>3</sup> &minus; 27 b<sup>2</sup>.</div>
+
+<p>Elliptische Kurven werden bei einem bekannten Verschl&uuml;sselungsverfahren (ECC, Elliptic Curve Cryptography) verwendet. 
+Au&szlig;erdem spielen sie in einigen Gebieten der modernen Mathematik eine wichtige Rolle, unter anderem beim Beweis der ber&uuml;hmten
+Fermatschen Vermutung durch Andrew Wiles (1994).</p>
+
+<p>Auf elliptischen Kurven definiert man eine <em class="Begriff">Addition</em>, die zwei gegebenen Punkten P und Q 
+(<span style="color: #0000ff;">blau</span>) der Kurve als &quot;Summe&quot; einen weiteren Kurvenpunkt zuordnet, der mit 
+<span class="nobr">P+Q</span> bezeichnet wird. Man findet das Ergebnis, indem man zu den gegebenen Kurvenpunkten die Sekante 
+zeichnet (bei gleichen Punkten die Tangente). Die gezeichnete Gerade (grau) hat im Allgemeinen noch einen weiteren Schnittpunkt 
+mit der Kurve. Durch Spiegelung dieses Schnittpunkts an der x-Achse erh&auml;lt man den gesuchten Punkt 
+<span class="nobr">P+Q</span> (<span style="color: #ff0000;">rot</span>).</p>
+
+<p>In dieser App werden die Koeffizienten einer elliptischen Kurve mithilfe der beiden Schieberegler eingestellt. Die gegebenen
+Punkte P und Q lassen sich mit der Maus (bei gedr&uuml;ckter Maustaste) beziehungsweise mit dem Finger verschieben.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 50px;"><span id="lb1" class="pos1"></span></div>
+    <div style="top: 80px;"><input type="range" id="ra1" min=0 max=200 step=1></div>
+    <div style="top: 130px;"><span id="lb2" class="pos1"></span></div>
+    <div style="top: 160px;"><input type="range" id="ra2" min=0 max=200 step=1></div>
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("ellipticcurve",19,11,2020,19,11,2020);</script>
+
+</body>
+
+</html>

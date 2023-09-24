@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Schriftliches Rechnen</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 800px; height: 480px; }
+div#canvas { width: 560px; height: 480px; }
+div#panel { left: 560px; width: 240px; height: 480px; } 
+.pos1 { left: 10px; }
+button { width: 220px; }
+select { width: 220px; }
+</style>
+<script src="elementaryoperations.js"></script>
+<script src="elementaryoperations_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Schriftliches Rechnen">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Arithmetik, Grundrechenarten, Rechentrainer, Rechentraining, schriftliches Rechnen">
+</head>
+
+<body>
+
+<h1>Schriftliches Rechnen (Grundrechenarten)</h1>
+
+<p>Mit dieser App kann man das schriftliche Rechnen &uuml;ben. Auf geht's!</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=560 height=480>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="lb0" class="pos1"></span></div>
+    <div style="top: 60px;"><input type="checkbox" id="cb1" name="cb1" value=""><label for="cb1" id="lb1"></label></div>
+    <div style="top: 90px;"><input type="checkbox" id="cb2" name="cb2" value=""><label for="cb2" id="lb2"></label></div>
+    <div style="top: 120px;"><input type="checkbox" id="cb3" name="cb3" value=""><label for="cb3" id="lb3"></label></div>
+    <div style="top: 150px;"><input type="checkbox" id="cb4" name="cb4" value=""><label for="cb4" id="lb4"></label></div>
+    <div style="top: 180px;"><input type="checkbox" id="cb5" name="cb5" value=""><label for="cb5" id="lb5"></label></div>
+    <div style="top: 210px;"><input type="checkbox" id="cb6" name="cb6" value=""><label for="cb6" id="lb6"></label></div>
+    <div style="top: 250px;"><span id="lb7" class="pos1"></span></div>
+    <div style="top: 280px;"><select id="ch">
+      <option>&nbsp; &nbsp; 1</option>
+      <option>&nbsp; &nbsp; 2</option>
+      <option>&nbsp; &nbsp; 3</option>
+    </select></div>
+    <div style="top: 340px;"><button id="bu" style="background-color: #ffff00;"></button></div>
+    <div style="top: 450px;"><span id="author" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("elementaryoperations",24,8,1998,18,10,2017);</script>
+
+</body>
+
+</html>

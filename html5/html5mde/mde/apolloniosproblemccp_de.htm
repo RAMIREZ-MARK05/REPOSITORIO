@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Problem des Apollonios, CCP-Problem</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 660px; height: 420px; }
+div#canvas { width: 420px; height: 420px; }
+div#panel { left: 420px; width: 240px; height: 420px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 200px; }
+</style>
+<script src="apolloniosproblemccp.js"></script>
+<script src="apolloniosproblemccp_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Problem des Apollonios, CCP-Problem">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Apollonios, Apollonius, Problem des Apollonios, Apollonisches Problem, Ber&uuml;hrkreis, CCP-Problem">
+</head>
+
+<body>
+
+<h1>Problem des Apollonios, CCP-Problem</h1>
+
+<p>Gegeben sind zwei Kreise k<sub>1</sub> und k<sub>2</sub> sowie ein Punkt P. Es sollen die Kreise gefunden werden, die zugleich die
+gegebenen Kreise ber&uuml;hren und durch den gegebenen Punkt gehen.</p>
+
+<p>Die Mittelpunkte und die Radien von k<sub>1</sub> und k<sub>2</sub> und der Punkt P lassen sich mit gedr&uuml;ckter Maustaste 
+variieren. In den Optionsfeldern der Schaltfl&auml;che kann eingestellt werden, welche L&ouml;sungen dargestellt werden sollen.
+Die Zahl der L&ouml;sungen wird jeweils angegeben.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=420 height=420>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="text1" class="pos1"></span></div>
+    <div style="top: 50px;"><span id="text2a" class="pos1"></span></div>
+    <div style="top: 65px;"><span id="text2b" class="pos1"></span></div>
+    <div style="top: 80px;"><span id="text2c" class="pos1"></span></div>   
+    <div style="top: 120px;"><input type="checkbox" id="cb1"><label for="cb1" id="lb1"></label>
+      <input type="checkbox" id="cb11"><input type="checkbox" id="cb12"><span id="lb1n" class="pos2"></span></div>
+    <div style="top: 150px;"><input type="checkbox" id="cb2"><label for="cb2" id="lb2"></label>
+      <input type="checkbox" id="cb21"><input type="checkbox" id="cb22"><span id="lb2n" class="pos2"></span></div>
+    <div style="top: 180px;"><input type="checkbox" id="cb3"><label for="cb3" id="lb3"></label>
+      <input type="checkbox" id="cb31"><input type="checkbox" id="cb32"><span id="lb3n" class="pos2"></span></div>
+    <div style="top: 210px;"><input type="checkbox" id="cb4"><label for="cb4" id="lb4"></label>
+      <input type="checkbox" id="cb41"><input type="checkbox" id="cb42"><span id="lb4n" class="pos2"></span></div>    
+    <div style="top: 250px;"><span id="text4" class="pos1"></span><span id="lbn" class="pos2"></span></div>
+    <div style="top: 380px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 400px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("apolloniosproblemccp",27,12,2008,19,10,2017);</script>
+
+</body>
+
+</html>

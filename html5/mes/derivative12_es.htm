@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Derivadas primera y segunda de una funci&oacute;n</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 700px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 300px; height: 400px; } 
+button { width: 280px; }
+.pos1 { left: 10px; }
+.pos2 { left: 60px; width: 220px; }
+.pos3 { left: 160px; width: 120px; }
+table { width: 500px; margin: 20px auto; border: #000000 solid 1px; }
+td { width: 50%; }
+.symbol { font-family: monospace; }
+</style>
+<script src="derivative12.js"></script>
+<script src="derivative12_es.js"></script>
+<script src="page_mes.js"></script>
+<meta name="description" content="App HTML5: Derivadas primera y segunda de una funci&oacute;n">
+<meta name="author" content="Walter Fendt, Nicol&aacute;s Rosillo">
+<meta name="keywords" content="app, matem&aacute;ticas, an&aacute;lisis, derivada">
+</head>
+
+<body>
+
+<h1>Derivadas Primera y Segunda de una Funci&oacute;n</h1>
+
+<p>S&iacute;mbolos:</p>
+
+<table>
+<tr><td class="symbol">x</td><td>variable independiente</td></tr>
+<tr><td class="symbol">+</td><td>m&aacute;s</td></tr>
+<tr><td class="symbol">&minus;</td><td>menos</td></tr>
+<tr><td class="symbol">*</td><td>multiplicado por</td></tr>
+<tr><td class="symbol">/</td><td>dividido por</td></tr>
+<tr><td class="symbol">^</td><td>elevado a</td></tr>
+<tr><td class="symbol">(...)</td><td>par&eacute;ntesis</td></tr>
+<tr><td class="symbol">abs(...)</td><td>valor absoluto</td></tr>
+<tr><td class="symbol">sqrt(...)</td><td>ra&iacute;z cuadrada</td></tr>
+<tr><td class="symbol">exp(...)</td><td>funci&oacute;n exponencial</td></tr>
+<tr><td class="symbol">ln(...)</td><td>logaritmo neperiano</td></tr>
+<tr><td class="symbol">sin(...)</td><td>seno</td></tr>
+<tr><td class="symbol">cos(...)</td><td>coseno</td></tr>
+<tr><td class="symbol">tan(...)</td><td>tangente</td></tr>
+<tr><td class="symbol">arcsin(...)</td><td>arcoseno</td></tr>
+<tr><td class="symbol">arccos(...)</td><td>arcocoseno</td></tr>
+<tr><td class="symbol">arctan(...)</td><td>arcotangente</td></tr>
+<tr><td class="symbol">sinh(...)</td><td>seno hiperb&oacute;lico</td></tr>
+<tr><td class="symbol">cosh(...)</td><td>coseno hiperb&oacute;lico</td></tr>
+<tr><td class="symbol">tanh(...)</td><td>tangente hiperb&oacute;lica</td></tr>
+<tr><td class="symbol">arsinh(...)</td><td>seno hiperb&oacute;lico inverso</td></tr>
+<tr><td class="symbol">arcosh(...)</td><td>coseno hiperb&oacute;lico inverso</td></tr>
+<tr><td class="symbol">artanh(...)</td><td>tangente hiperb&oacute;lica inversa</td></tr>
+<tr><td class="symbol">e</td><td>n&uacute;mero e</td></tr>
+<tr><td class="symbol">pi</td><td>n&uacute;mero &pi;</td></tr>
+</table>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><span class="pos1" id="lb1"></span></div>
+    <div style="top: 40px;"><span class="pos1" id="ip1a"></span><input type="text" class="pos2" id="ip1b"></div>    
+    <div style="top: 80px;"><input id="cb1" type="checkbox" name="cb1" value=""><label id="cb1a" for="cb1" style="color: #ff0000;"></label></div>
+    <div style="top: 110px;"><input id="cb2" type="checkbox" name="cb2" value=""><label id="cb2a" for="cb2" style="color: #0000ff;"></label></div>
+    <div style="top: 150px;"><span class="pos1" id="ip2a"></span><input type="text" class="pos3" id="ip2b"></div>
+    <div style="top: 190px;"><span class="pos1" id="ip3a"></span><input type="text" class="pos3" id="ip3b"></div>
+    <div style="top: 230px;"><span class="pos1" id="ip4a"></span><input type="text" class="pos3" id="ip4b"></div>
+    <div style="top: 270px;"><span class="pos1" id="op5a"></span><span class="pos3" id="op5b"></span></div>
+    <div style="top: 320px;"><button id="bu" style="background-color: #ffff00;"></button></div>
+    <div style="top: 370px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script>endPage("derivative12",10,10,1999,21,11,2015,"Nicol&aacute;s Rosillo, 2002");</script>
+
+</body>
+</html>

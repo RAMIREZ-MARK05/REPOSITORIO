@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Thaleskreis</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+canvas { border: 1px solid black; display: block; margin: 20px auto; }
+</style>
+<script src="thalescircle.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Thaleskreis">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Thales, Thaleskreis">
+</head>
+
+<body>
+
+<h1>Der Thaleskreis</h1>
+
+<p>Zu einem Halbkreis wird ein Dreieck gezeichnet, dessen untere Seite mit dem Halbkreisdurchmesser &uuml;bereinstimmt. Die obere Ecke des 
+Dreiecks l&auml;sst sich mit gedr&uuml;ckter Maustaste auf dem Halbkreis verschieben. Was f&auml;llt an dem gr&uuml;n gekennzeichneten Winkel 
+auf?</p>
+
+<canvas id="cv" width=500 height=300>HTML5-Canvas nicht unterst&uuml;tzt!</canvas>
+
+<p>Durch die Verbindungslinie zwischen dem Halbkreismittelpunkt und der oberen Ecke des Dreiecks wird das gegebene Dreieck in zwei Teildreiecke 
+zerlegt. In jedem dieser beiden Teildreiecke sind zwei Seiten Kreisradien, also gleich lang. Die beiden rot markierten Winkel haben also die 
+gleiche Gr&ouml;&szlig;e, da es sich um Basiswinkel in einem gleichschenkligen Dreieck handelt. Aus demselben Grund sind die beiden blau 
+gezeichneten Winkel gleich gro&szlig;. Addiert man die Gr&ouml;&szlig;en der rot oder blau gekennzeichneten Winkel, so erh&auml;lt man 180&deg; 
+(Innenwinkelsumme im Dreieck). Infolgedessen muss die Gr&ouml;&szlig;e des gr&uuml;n markierten Winkels (ein roter und ein blauer Winkel) halb 
+so gro&szlig; sein, das hei&szlig;t gleich 90&deg;.</p>
+
+<div class="Satz" style="width: 700px;">
+<strong>Satz des Thales:</strong><br>
+Liegt eine Ecke eines Dreiecks auf dem Halbkreis &uuml;ber der gegen&uuml;berliegenden Seite, so hat der entsprechende Winkel eine 
+Gr&ouml;&szlig;e von 90&deg;.</div>
+
+<script>endPage("thalescircle",17,6,1998,18,10,2017);</script>
+
+</body>
+
+</html>

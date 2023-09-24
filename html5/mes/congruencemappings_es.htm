@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Transformaci&oacute;nes geom&eacute;tricas</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 130px; }
+select { width: 220px; }
+button { width: 220px; }
+</style>
+<script src="congruencemappings.js"></script>
+<script src="congruencemappings_es.js"></script>
+<script src="page_mes.js"></script>
+<meta name="description" content="App HTML5: Transformaci&oacute;nes geom&eacute;tricas: Reflexi&oacute;n axial, Reflexi&oacute;n central, Traslaci&oacute;n y Rotaci&oacute;n">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, matem&aacute;ticas, geometr&iacute;a, reflexi&oacute;n, transformaci&oacute;nes, simetr&iacute;a, reflexi&oacute;n axial, simetr&iacute;a axial, reflexi&oacute;n central, simetr&iacute;a central, traslaci&oacute;n, rotaci&oacute;n">
+</head>
+
+<body>
+
+<h1>Transformaci&oacute;nes geom&eacute;tricas:<br>Reflexi&oacute;n axial, Reflexi&oacute;n central, Traslaci&oacute;n y Rotaci&oacute;n</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><select id="ch1"></select></div>
+    <div style="top: 70px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 140px;"><select id="ch2"></select></div>
+    <div style="top: 180px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 230px;"><button id="bu3" style="background-color: #ff40ff;"></button></div>
+    <div style="top: 300px;"><input id="cb" type="checkbox"><label id="lb" for="cb" style="color: #0000ff"></label></div>
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("congruencemappings",19,6,1999,27,2,2020);</script>
+
+</body>
+
+</html>

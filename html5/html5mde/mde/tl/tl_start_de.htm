@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Das Dreiecks-Labor</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+button { width: 220px; }
+textarea { width: 210px; height: 160px; line-height: 18px; } 
+.pos1 { left: 10px; }
+</style>
+<script src="tl_start.js"></script>
+<script src="tl_start_de.js"></script>
+<script src="tl_page_de.js"></script>
+<meta name="description" content="Das Dreiecks-Labor">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="Apps, Mathematik, Geometrie, Dreieck, Dreiecksgeometrie">
+</head>
+
+<body>
+
+<h1>Das Dreiecks-Labor</h1>
+
+<p>Dreiecke? So etwas Langweiliges! Drei Punkte zeichnen und mit Strecken verbinden. Das war's wohl schon. Oder?</p>
+
+<p>Von wegen langweilig! Je mehr man sich mit dem Thema befasst, desto interessanter wird die Sache. Auch wenn einige der Erkenntnisse
+&uuml;ber Dreiecke schon mehr als zwei Jahrtausende auf dem Buckel haben: Gerade in den letzten Jahrzehnten wurden &#8211; oft mit Hilfe
+von Computern &#8211; immer wieder neue, verbl&uuml;ffende Eigenschaften entdeckt. Dieses Dreiecks-Labor soll dabei helfen, ein wenig
+Einblick in die Welt der Dreiecke zu erhalten.</p>
+
+<h2>Bedienungshinweise</h2>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 70px;"><button id="bu2" style="background-color: #ffff00;"></button></div> 
+    <div style="top: 140px;"><textarea id="ta"></textarea></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<h2 id="abc" style="margin-top: 20px;">Einzelthemen (in alphabetischer Reihenfolge)</h2>
+
+<ul>
+<li><a href="tl_excircles_de.htm">Ankreise</a></li>
+<li><a href="tl_apolloniospoint_de.htm">Apollonios-Kreis und Apollonios-Punkt</a></li>
+<li><a href="tl_exteriorangles_de.htm">Au&szlig;enwinkel</a></li>
+<li><a href="tl_bevanpoint_de.htm">Bevan-Punkt</a></li>
+<li><a href="tl_brocardpoints_de.htm">Brocard-Punkte</a></li>
+<li><a href="tl_trilliumtheorem_de.htm">Dreizack</a></li>
+<li><a href="tl_eulerline_de.htm">Euler-Gerade</a></li>
+<li><a href="tl_exeterpoint_de.htm">Exeter-Punkt</a></li>
+<li><a href="tl_fermatpoints_de.htm">Fermat-Punkte</a></li>
+<li><a href="tl_ninepointcircle_de.htm">Feuerbach-Kreis</a></li>
+<li><a href="tl_fuhrmanntriangle_de.htm">Fuhrmann-Dreieck und Fuhrmann-Kreis</a></li>
+<li><a href="tl_gergonnepoint_de.htm">Gergonne-Punkt</a></li>
+<li><a href="tl_gergonneline_de.htm">Gergonne-Gerade</a></li>
+<li>Grebe-Punkt siehe <a href="tl_lemoinepoint_de.htm">Lemoine-Punkt</a></li>
+<li><a href="tl_orthocenter_de.htm">H&ouml;hen</a></li>
+<li><a href="tl_orthictriangle_de.htm">H&ouml;henfu&szlig;punktdreieck</a></li>
+<li><a href="tl_incircle_de.htm">Inkreis</a></li>
+<li><a href="tl_interiorangles_de.htm">Innenwinkel</a></li>
+<li><a href="tl_isodynamicpoints_de.htm">Isodynamische Punkte</a></li>
+<li><a href="tl_kieperthyperbola_de.htm">Kiepert-Hyperbel</a></li>
+<li><a href="tl_lamoencircle_de.htm">Lamoen-Kreis</a></li>
+<li><a href="tl_lemoinepoint_de.htm">Lemoine-Punkt</a></li>
+<li><a href="tl_malfatticircles_de.htm">Malfatti-Kreise</a></li>
+<li><a href="tl_midparallels_de.htm">Mittelparallelen</a></li>
+<li><a href="tl_perpendicularbisectors_de.htm">Mittelsenkrechte</a></li>
+<li><a href="tl_middlespoint_de.htm">Mittenpunkt</a></li>
+<li><a href="tl_morleytriangle_de.htm">Morley-Dreieck</a></li>
+<li><a href="tl_nagelpoint_de.htm">Nagel-Punkt</a></li>
+<li><a href="tl_napoleontriangle_de.htm">Napoleon-Dreieck</a></li>
+<li><a href="tl_napoleonpoints_de.htm">Napoleon-Punkte</a></li>
+<li>Neun-Punkte-Kreis siehe <a href="tl_ninepointcircle_de.htm">Feuerbach-Kreis</a></li>
+<li>Orthozentrum siehe <a href="tl_orthocenter_de.htm">H&ouml;hen</a></li>
+<li><a href="tl_equalparallelians_de.htm">Punkt der gleich langen Parallelen</a></li>
+<li>Satz vom Dreizack siehe <a href="tl_trilliumtheorem_de.htm">Dreizack</a></li>
+<li><a href="tl_feuerbachtheorem_de.htm">Satz von Feuerbach</a></li>
+<li><a href="tl_schifflerpoint_de.htm">Schiffler-Punkt</a></li>
+<li>Schwerpunkt siehe <a href="tl_centroid_de.htm">Seitenhalbierende</a></li>
+<li><a href="tl_centroid_de.htm">Seitenhalbierende</a></li>
+<li><a href="tl_simsonline_de.htm">Simson-Gerade</a></li>
+<li><a href="tl_soddycircles_de.htm">Soddy-Kreise</a></li>
+<li><a href="tl_spiekerpoint_de.htm">Spieker-Punkt</a></li>
+<li><a href="tl_steinerpoint_de.htm">Steiner-Kreise und Steiner-Punkt</a></li>
+<li><a href="tl_steinercircumellipse_de.htm">Steiner-Umellipse</a></li>
+<li><a href="tl_southpole_de.htm">S&uuml;dpolsatz</a></li>
+<li>Symmedianenpunkt siehe <a href="tl_lemoinepoint_de.htm">Lemoine-Punkt</a></li>
+<li><a href="tl_tangentialtriangle_de.htm">Tangentendreieck</a></li>
+<li><a href="tl_taylorcircle_de.htm">Taylor-Kreis</a></li>
+<li>Trillium theorem siehe <a href="tl_trilliumtheorem_de.htm">Dreizack</a></li>
+<li><a href="tl_circumcircle_de.htm">Umkreis</a></li>
+<li><a href="tl_anglebisectors_de.htm">Winkelhalbierende (Innenwinkel)</a></li>
+<li><a href="tl_anglebisectors2_de.htm">Winkelhalbierende (Innen- und Au&szlig;enwinkel)</a></li>
+</ul>
+
+<script>endPage("tl_start",28,10,2004,17,7,2023);</script>
+
+</body>
+
+</html>

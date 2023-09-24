@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Circuitos AC Sencillos</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+div#total { width: 700px; height: 420px; }
+div#canvas { width: 420px; height: 420px; }
+div#panel { left: 420px; width: 280px; height: 420px; } 
+input[type="text"] { left: 130px; width: 80px; }
+button { width: 260px; }
+.pos1 { left: 10px; }
+.pos2 { left: 130px; }
+.pos3 { left: 225px; }
+</style>
+<script src="accircuits.js"></script>
+<script src="accircuits_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Circuitos AC Sencillos">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, electrodin&aacute;mica, circuito AC, tensi&oacute;n, corriente, resistencia, condensador, bobina, capacidad, autoinducci&oacute;n">
+</head>
+
+<body>
+
+<h1>Circuitos AC Sencillos</h1>
+
+<p>Esta aplicaci&oacute;n simula un circuito sencillo que consiste de una <em class="Begriff">fuente de tensi&oacute;n alterna</em> y, 
+dependiendo del bot&oacute;n seleccionado, una <em class="Begriff">resistencia</em>, o un <em class="Begriff">condensador</em>, o una 
+<em class="Begriff">bobina</em>, ideal en cualquier caso. Tambi&eacute;n hay un volt&iacute;metro V (azul) y un amper&iacute;metro A (rojo).</p>
+
+<p>Debajo del dibujo del circuito, a la izquierda, aparece un diagrama que permite leer el valor instant&aacute;neo de la fase de la 
+oscilaci&oacute;n mediante dos marcadores (azul para la tensi&oacute;n, rojo para la intensidad). Las proyecciones de los marcadores sobre el 
+eje horizontal indican los valores instant&aacute;neos de U e I. A la derecha, aparece otro diagrama que ilustra la dependencia con el tiempo 
+de la tensi&oacute;n e intensidad.</p>
+
+<p>Con el bot&oacute;n &quot;Inicio&quot; se vuelve a los valores de partida. Los dos botones restantes sirven para &quot;Comenzar&quot; o parar 
+y continuar (&quot;Pausa / Reanudar&quot;) la simulaci&oacute;n. La simulaci&oacute;n se puede hacer cinco veces m&aacute;s lenta utilizando
+la opci&oacute;n &quot;Ralentizado&quot;.</p>
+
+<p>Es posible variar los valores preseleccionados de frecuencia, tensi&oacute;n m&aacute;xima y resistencia, capacidad o autoinducci&oacute;n. 
+El programa indicar&aacute; el nuevo valor de la intensidad m&aacute;xima.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=420 height=420>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><input type="radio" id="rbR" name="bg" value=""><label for="rbR" id="lbR"></label></div>
+    <div style="top: 45px;"><input type="radio" id="rbC" name="bg" value=""><label for="rbC" id="lbC"></label></div>
+    <div style="top: 70px;"><input type="radio" id="rbL" name="bg" value=""><label for="rbL" id="lbL"></label></div>
+    <div style="top: 110px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 150px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 190px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 230px;"><span class="pos1" id="ipNya"></span><input type="text" id="ipNyb"><span class="pos3" id="ipNyc"></span></div>
+    <div style="top: 270px;"><span class="pos1" id="ipU0a"></span><input type="text" id="ipU0b"><span class="pos3" id="ipU0c"></span></div>
+    <div style="top: 310px;"><span id="ipRCLa" class="pos1"></span><input type="text" id="ipRCLb"><span id="ipRCLc" class="pos3"></span></div>
+    <div style="top: 350px;"><span class="pos1" id="opI0a"></span><span id="opI0b" class="pos2"></span><span id="opI0c" class="pos3"></span></div>
+    <div style="top: 390px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script>endPage("accircuits",13,6,1998,14,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

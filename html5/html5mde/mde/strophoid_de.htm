@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Gerade Strophoide</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 800px; height: 420px; }
+div#canvas { width: 520px; height: 420px; }
+div#panel { left: 520px; width: 280px; height: 420px; } 
+button { width: 260px; }
+.pos1 { left: 10px; }
+</style>
+<script src="strophoid.js"></script>
+<script src="strophoid_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Gerade Strophoide">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Strophoide">
+</head>
+
+<body>
+
+<h1>Gerade Strophoide</h1>
+
+<p>Die hier dargestellte Kurve (rot) bezeichnet man als <em class="Begriff">gerade Strophoide</em>. Die waagrechte Achse des eingezeichneten
+Koordinatensystems ist die Symmetrieachse der Kurve. Die senkrechte Achse geht durch den Punkt, in dem die Strophoide sich selbst
+schneidet. Au&szlig;erdem ist noch die Asymptote zu sehen. Man versteht darunter eine Gerade, der sich die Kurve immer mehr
+ann&auml;hert, allerdings ohne sie zu erreichen.</p>
+
+<p>Startet man mit dem entsprechenden Schaltknopf die Animation, so werden zus&auml;tzlich eine vom Scheitel (ganz links) ausgehende Halbgerade
+und ein Kreis gezeichnet. Damit soll eine interessante Eigenschaft der geraden Strophoide verdeutlicht werden: 
+Die beiden vom Scheitel verschiedenen Schnittpunkte von Kurve und Halbgerade haben zum Schnittpunkt von Halbgerade und senkrechter
+Koordinatenachse die gleiche Entfernung.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=520 height=420>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 40px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 100px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 380px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script>endPage("strophoid",9,11,2020,31,7,2023);</script>
+
+</body>
+</html>

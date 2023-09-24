@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>&Aacute;ngulos en la Circunferencia</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 180px; }
+input { width: 220px; }
+</style>
+<script src="circleangles.js"></script>
+<script src="circleangles_es.js"></script>
+<script src="page_mes.js"></script>
+<meta name="description" content="App HTML5: &Aacute;ngulos en la Circunferencia">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, matem&aacute;ticas, geometr&iacute;a, &aacute;ngulo inscrito, &aacute;ngulo central, &aacute;ngulo semi-inscrito">
+</head>
+
+<body>
+
+<h1>&Aacute;ngulos en la Circunferencia</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 50px;"><span id="lb0" class="pos1"></span></div>
+    <div style="top: 80px;"><input type="range" id="sl" min=0 max=180 step=1></div>
+    <div style="top: 140px; color: #0000ff;"><span id="lb1a" class="pos1"></span><span id="lb1b" class="pos2"></span></div>
+    <div style="top: 180px; color: #ff0000;"><span id="lb2a" class="pos1"></span><span id="lb2b" class="pos2"></span></div>
+    <div style="top: 220px; color: #000000;"><span id="lb3a" class="pos1"></span><span id="lb3b" class="pos2"></span></div>
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("circleangles",1,11,1997,26,4,2017);</script>
+
+</body>
+
+</html>

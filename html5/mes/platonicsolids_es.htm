@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>S&oacute;lidos Plat&oacute;nicos</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+button.lage { width: 220px; }
+button.navi { width: 50px; background-color: #a0c0ff; }
+td { width: 60px; height: 35px; }
+ul { list-style-type: square; }
+</style>
+<script src="platonicsolids.js"></script>
+<script src="platonicsolids_es.js"></script>
+<script src="page_mes.js"></script>
+<meta name="description" content="App HTML5: S&oacute;lidos Plat&oacute;nicos">
+<meta name="author" content="Walter Fendt, Nicol&aacute;s Rosillo">
+<meta name="keywords" content="app, matem&aacute;ticas, geometr&iacute;a, s&oacute;lidis Plat&oacute;nicos, poliedros regulares, tetraedro, hexaedro, octaedro, dodecaedro, icosaedro">
+</head>
+
+<body>
+
+<h1>Los S&oacute;lidos Plat&oacute;nicos</h1>
+
+<p>Los poliedros cuyas caras son todas pol&iacute;gonos regulares congruentes son denominados 
+&quot;<em class="Begriff">poliedros regulares</em>&quot; o &quot;<em class="Begriff">s&oacute;lidos plat&oacute;nicos</em>&quot;. 
+Existen s&oacute;lamente cinco:</p>
+
+<ul style="list-style-type: square;">
+<li>Tetraedro regular
+(4 v&eacute;rtices, 6 aristas, 4 tri&aacute;ngulos equil&aacute;teros como caras)</li>
+<li>Hexaedro regular o cubo
+(8 v&eacute;rtices, 12 aristas, 6 cuadrados como caras)</li>
+<li>Octaedro regular
+(6 v&eacute;rtices, 12 aristas, 8 tri&aacute;ngulos equil&aacute;teros como caras)</li>
+<li>Dodecaedro regular
+(20 v&eacute;rtices, 30 aristas, 12 pentagonos como caras)</li>
+<li>Icosaedro regular
+(12 v&eacute;rtices, 30 aristas, 20 tri&aacute;ngulos equil&aacute;teros como caras)</li>
+</ul>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><input type="radio" id="rb1" name="bg" value=""><label for="rb1" id="lb1"></label></div>
+    <div style="top: 30px;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="lb2"></label></div>
+    <div style="top: 50px;"><input type="radio" id="rb3" name="bg" value=""><label for="rb3" id="lb3"></label></div>
+    <div style="top: 70px;"><input type="radio" id="rb4" name="bg" value=""><label for="rb4" id="lb4"></label></div>
+    <div style="top: 90px;"><input type="radio" id="rb5" name="bg" value=""><label for="rb5" id="lb5"></label></div>
+    <div style="top: 130px;"><button id="bu" class="lage" style="background-color: #ffc040;"></button></div>
+    <div style="top: 170px; left: 25px;"><table>
+      <tr>
+        <td></td>
+        <td><button id="up" class="navi">&uarr;</button></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button id="left" class="navi">&larr;</button></td>
+        <td><button id="stop" class="navi">&#8226;</button></td>
+        <td><button id="right" class="navi">&rarr;</button></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button id="down" class="navi">&darr;</button></td>
+        <td></td>
+      </tr>
+    </table></div>    
+    
+    <div style="top: 300px;"><input type="checkbox" id="cb1" name="cb1" value="">
+      <label for="cb1" id="lbC" style="color: #ff0000;"></label></div>
+    <div style="top: 320px;"><input type="checkbox" id="cb2" name="cb2" value="">
+      <label for="cb2" id="lbM" style="color: #008000;"></label></div>
+    <div style="top: 340px;"><input type="checkbox" id="cb3" name="cb3" value="">
+      <label for="cb3" id="lbI" style="color: #0000ff;"></label></div>
+    <div style="top: 380px;"><span id="author" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("platonicsolids",8,6,1998,19,10,2015,"Nicol&aacute;s Rosillo, 2002");</script>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Besondere Linien und Kreise im Dreieck</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 680px; height: 400px; }
+div#canvas { width: 500px; height: 400px; }
+div#panel { left: 500px; width: 180px; height: 400px; } 
+.pos1 { left: 10px; }
+</style>
+<script src="triangle.js"></script>
+<script src="triangle_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Besondere Linien und Kreise im Dreieck">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Dreieck, Mittelsenkrechte, Umkreis, Winkelhalbierende, Inkreis, Ankreise, Seitenhalbierende, Schwerpunkt, H&ouml;hen">
+</head>
+
+<body>
+
+<h1>Besondere Linien und Kreise im Dreieck</h1>
+
+<p>Die Ecken des gezeichneten Dreiecks lassen sich mit gedr&uuml;ckter Maustaste ver&auml;ndern.</p>
+
+<p>Folgende Linien und Kreise werden auf Wunsch dargestellt:</p>
+
+<ul>
+<li><span style="color: #0000ff;">Mittelsenkrechte (Mittellote):</span>
+Lote zu den Dreiecksseiten durch deren Mittelpunkte</li>
+<li><span style="color: #0000ff;">Umkreis:</span>
+Kreis um den Schnittpunkt der drei Mittelsenkrechten durch die Ecken des Dreiecks</li>
+<li><span style="color: #ff0000;">Winkelhalbierende:</span>
+Halbierungslinien der Innenwinkel</li>
+<li><span style="color: #ff0000;">Inkreis:</span>
+Kreis um den Schnittpunkt der drei Winkelhalbierenden, der die Seiten des Dreiecks von innen ber&uuml;hrt</li>
+<li><span style="color: #ff0000;">Halbierende der Au&szlig;enwinkel</span></li>
+<li><span style="color: #ff0000;">Ankreise:</span>
+Kreise, die jeweils eine Seite des Dreiecks und die Verl&auml;ngerungen der anderen Seiten ber&uuml;hren; die Mittelpunkte der Ankreise 
+erh&auml;lt man als Schnittpunkte der Halbierungslinien von jeweils einem Innenwinkel und zwei Au&szlig;enwinkeln.</li>
+<li><span style="color: #ff00ff;">Mittelparallelen:</span>
+Verbindungsstrecken der Seitenmittelpunkte</li>
+<li><span style="color: #ff00ff;">Seitenhalbierende (Schwerlinien):</span>
+Verbindungsstrecken zwischen jeweils einer Ecke und dem Mittelpunkt der gegen&uuml;ber liegenden Seite</li>
+<li><span style="color: #ff00ff;">Schwerpunkt:</span>
+Schnittpunkt der drei Seitenhalbierenden, der diese im Verh&auml;ltnis 2:1 teilt</li>
+<li><span style="color: #008000;">H&ouml;hen:</span>
+Lote zu den drei Seiten des Dreiecks (bzw. zu ihren Verl&auml;ngerungen) durch die Ecken</li>
+</ul>
+
+<p>Zus&auml;tzlich f&uuml;r &quot;Profis&quot;:</p>
+
+<ul>
+<li>Eulersche Gerade:
+Gerade durch den Umkreismittelpunkt, den Schwerpunkt und den H&ouml;henschnittpunkt; der Schwerpunkt teilt die Verbindungsstrecke von 
+H&ouml;henschnittpunkt und Umkreismittelpunkt im Verh&auml;ltnis 2:1.</li>
+<li>Feuerbachscher Kreis (Neun-Punkte-Kreis):
+Kreis um den Mittelpunkt von Umkreismittelpunkt und H&ouml;henschnittpunkt, der durch die Seitenmittelpunkte, die Fu&szlig;punkte der H&ouml;hen 
+und die Mittelpunkte zwischen Ecken und H&ouml;henschnittpunkt geht; der Feuerbachsche Kreis ber&uuml;hrt den Inkreis und die drei Ankreise; 
+sein Radius ist halb so gro&szlig; wie der Umkreisradius.</li>
+</ul>
+
+<p>Noch ein kleiner Tipp: Wer alle Felder gleichzeitig ausw&auml;hlt, wird wahrscheinlich den &Uuml;berblick verlieren. Weniger ist in diesem 
+Falle mehr!</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><input type="checkbox" id="cb1" name="cb1" value="">
+      <label for="cb1" id="lb1" style="color: #0000ff;"></label></div>
+    <div style="top: 45px;"><input type="checkbox" id="cb2" name="cb2" value="">
+      <label for="cb2" id="lb2" style="color: #0000ff;"></label></div>
+    <div style="top: 85px;"><input type="checkbox" id="cb3" name="cb3" value="">
+      <label for="cb3" id="lb3" style="color: #ff0000;"></label></div>
+    <div style="top: 110px;"><input type="checkbox" id="cb4" name="cb4" value="">
+      <label for="cb4" id="lb4" style="color: #ff0000;"></label></div>
+    <div style="top: 135px;"><input type="checkbox" id="cb5" name="cb5" value="">
+      <label for="cb5" id="lb5" style="color: #ff0000;"></label></div>
+    <div style="top: 175px;"><input type="checkbox" id="cb6" name="cb6" value="">
+      <label for="cb6" id="lb6" style="color: #ff00ff;"></label></div>
+    <div style="top: 200px;"><input type="checkbox" id="cb7" name="cb7" value="">
+      <label for="cb7" id="lb7" style="color: #ff00ff;"></label></div>
+    <div style="top: 240px;"><input type="checkbox" id="cb8" name="cb8" value="">
+      <label for="cb8" id="lb8" style="color: #008000;"></label></div>
+    <div style="top: 280px;"><input type="checkbox" id="cb9" name="cb9" value="">
+      <label for="cb9" id="lb9" style="color: #000000;"></label></div>
+    <div style="top: 305px;"><input type="checkbox" id="cb10" name="cb10" value="">
+      <label for="cb10" id="lb10" style="color: #000000;"></label></div>
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("triangle",25,10,1998,18,10,2017);</script>
+
+</body>
+</html>

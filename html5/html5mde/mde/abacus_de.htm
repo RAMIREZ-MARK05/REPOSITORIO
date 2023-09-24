@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Abakus</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 750px; height: 400px; }
+div#canvas { width: 500px; height: 400px; }
+div#panel { left: 500px; width: 250px; height: 400px; } 
+select { left: 150px; width: 90px; background-color: #ffffff; }
+input[type="text"] { left: 10px; width: 225px; }
+table#W { margin: 20px auto; text-align: center; }
+td.L { width: 100px; text-align: left; }
+.pos1 { left: 10px; }
+</style>
+<script src="abacus.js"></script>
+<script src="abacus_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Abakus">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="Mathematik, Rechnen, Abakus, Rechenbrett">
+</head>
+
+<body>
+
+<h1>Abakus</h1>
+
+<p>Der <em class="Begriff">Abakus</em> ist ein mechanisches Rechenhilfsmittel, das vermutlich schon im <span class="nobr">3. Jahrtausend</span>
+<span class="nobr">vor Christus</span> in Mesopotamien entwickelt wurde. Er war bis fast in die Gegenwart weit verbreitet,
+vor allem in asiatischen L&auml;ndern. Das Rechnen mit der chinesischen Variante des Abakus (<em>Suanpan</em>) wurde 2013 von der UNESCO 
+in die repr&auml;sentative Liste des immateriellen Kulturerbes der Menschheit aufgenommen.</p>
+
+<p>Die hier dargestellte, einfache Variante entspricht dem r&ouml;mischen Abakus und dem modernen japanischen <em>Soroban</em>. 
+Mehrere Dr&auml;hte sind in einen Rahmen eingespannt. Sie repr&auml;sentieren die Stellen des <em class="Begriff">Dezimalsystems</em> 
+(von rechts nach links: Einer, Zehner, Hunderter, Tausender usw.). An den Dr&auml;hten lassen sich Holzperlen (hier rot bzw. blau) verschieben. 
+Als gesetzt gelten diejenigen Perlen, die zum Trennstab hin geschoben wurden (bei einem realen Abakus typischerweise mit Daumen 
+und Zeigefinger). Die Werte der Perlen sind folgenderma&szlig;en festgelegt:</p>
+
+<table id="W">
+<tr><td class="L"><b>Stelle</b></td>
+<td style="width: 200px;"><b>Wert der unteren Perlen</b></td>
+<td style="width: 200px;"><b>Wert der oberen Perle</b></td></tr>
+<tr style="margin-top: 50px;"><td class="L"><b>Einer</b></td><td>1</td><td>5</td></tr>
+<tr><td class="L"><b>Zehner</b></td><td>10</td><td>50</td></tr>
+<tr><td class="L"><b>Hunderter</b></td><td>100</td><td>500</td></tr>
+<tr><td class="L"><b>Tausender</b></td><td>1000</td><td>5000</td></tr>
+<tr><td class="L">...</td><td>...</td><td>...</td></tr>
+</table>
+
+<p>In der Schaltfl&auml;che dieser Simulation kann man mithilfe eines Auswahlfeldes die Zahl der Dezimalstellen variieren. 
+Die Eingabe einer Zahl erfolgt &uuml;ber eines der beiden Eingabefelder. Im oberen Eingabefeld wird die gewohnte Dezimalschreibweise
+erwartet, im unteren die r&ouml;mische Zahlenschreibweise (allerdings nur f&uuml;r Zahlen bis 5000). Die Eingabe muss
+durch die Enter-Taste abgeschlossen werden. Mithilfe der Maus lassen sich Perlen verschieben, wodurch sich nat&uuml;rlich
+die angezeigte Zahl &auml;ndert.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="lb1" class="pos1"></span><select id="ch"></select></div>
+    <div style="top: 70px;"><span id="lb2" class="pos1"></span></div>
+    <div style="top: 100px;"><input type="text" id="ip1"></div>
+    <div style="top: 150px;"><span id="lb3" class="pos1"></span></div>
+    <div style="top: 180px;"><input type="text" id="ip2"></div>    
+    <div style="top: 360px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 380px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script>endPage("abacus",6,8,2023,7,8,2023,false);</script>
+
+</body>
+</html>

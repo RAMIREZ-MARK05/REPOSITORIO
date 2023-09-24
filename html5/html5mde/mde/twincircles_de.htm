@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Zwillingskreise des Archimedes</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 600px; height: 400px; }
+div#canvas { width: 600px; height: 360px; }
+div#panel { top: 360px; width: 600px; height: 40px; }
+.pos1 { left: 20px; }
+.pos2a { left: 220px; }
+.pos2b { left: 245px; }
+.pos3a { left: 300px; }
+.pos3b { left: 325px; }
+.pos4 { left: 450px; }
+input[type="checkbox"] { position: absolute; }
+label { position: absolute; }
+</style>
+<script src="twincircles.js"></script>
+<script src="twincircles_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Zwillingskreise des Archimedes">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Archimedes, Zwillingskreise">
+</head>
+
+<body>
+
+<h1>Die Zwillingskreise des Archimedes</h1>
+
+<p>Der <em class="Begriff">Arbelos</em> (altgriechisch f&uuml;r &quot;Schustermesser&quot;) ist eine geometrische Figur, die bereits
+von Archimedes aus Syrakus erforscht wurde und daher auch als <em class="Begriff">Sichel des Archimedes</em> bezeichnet wird.
+Sie wird begrenzt von drei Halbkreisen und ist hier in gr&uuml;ner Farbe dargestellt. Eine interessante Eigenschaft wird erkennbar,
+wenn man die gemeinsame Tangente der beiden kleinen Halbkreise hinzuf&uuml;gt (senkrechte Linie). In die beiden Teile der Sichel,
+die durch diese Linie getrennt werden, zeichnet man nun die gr&ouml;&szlig;ten Kreise (violett), die noch hineinpassen. Weil
+diese Kreise den gleichen Radius haben, nennt man sie die <em class="Begriff">Zwillingskreise des Archimedes</em>.</p>
+
+<p>Durch Ziehen der Maus mit gedr&uuml;ckter Maustaste lassen sich die senkrechte Linie und die beiden kleineren Halbkreise 
+ver&auml;ndern. Setzt man in den beiden Optionsfeldern H&auml;kchen, so werden links und/oder rechts einige Hilfslinien eingezeichnet.
+Diese Linien werden ben&ouml;tigt, um mithilfe des Satzes von Pythagoras die Kreisradien zu berechnen und so deren Gleichheit
+zu beweisen.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=600 height=360>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel"><div style="top: 10px;">
+    <span id="text1" class="pos1"></span>
+    <input type="checkbox" id="cb1" class="pos2a" name="cb1" value=""><label for="cb1" id="text2" class="pos2b"></label> 
+    <input type="checkbox" id="cb2" class="pos3a" name="cb2" value=""><label for="cb2" id="text3" class="pos3b"></label> 
+    <span id="author" class="pos4"></span>
+  </div></div>
+</div>
+
+<p>Ein ausf&uuml;hrlicher Beweis daf&uuml;r, dass die Radien der beiden Kreise &uuml;bereinstimmen, findet sich unter 
+<span class="nobr"><a href="https://www.walter-fendt.de/math/geo/zwillarch.pdf">www.walter-fendt.de/math/geo/zwillarch.pdf</a>.</span></p>
+
+<script>endPage("twincircles",11,4,2000,10,8,2023);</script>
+
+</body>
+
+</html>

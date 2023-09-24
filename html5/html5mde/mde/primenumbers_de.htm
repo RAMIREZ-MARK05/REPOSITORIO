@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<meta charset="utf-8">
+<title>Primzahlentabelle bis 1 000 000 000 000</title>
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 800px; height: 400px; }
+div#canvas { width: 800px; height: 360px; }
+div#panel { top: 360px; width: 800px; height: 60px; }
+.pos1 { left: 100px; }
+input[type="text"] { position: absolute; left: 10px; top: 10px; width: 120px; }
+span#op1 { position: absolute; left: 150px; top: 10px; }
+span#op2 { position: absolute; left: 150px; top: 30px; }
+</style>
+<script src="primenumbers.js"></script>
+<script src="primenumbers_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Primzahlentabelle bis 1000000000000">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Arithmetik, Zahlentheorie, Primzahl, Primfaktoren">
+</head>
+
+<body>
+
+<h1>Primzahlentabelle bis 1 000 000 000 000</h1>
+
+<p>Mit Hilfe dieser App kann man nat&uuml;rliche Zahlen bis <span class="nobr">1 000 000 000 000</span> <span class="nobr">(1 Billion)</span> 
+in Primfaktoren zerlegen.
+Primzahlen sind in der dargestellten Tabelle orange gekennzeichnet, andere Zahlen gelb. Die Eingabe einer Zahl ist mithilfe des Eingabefeldes 
+oder durch Mausklick m&ouml;glich. Die Tabelle l&auml;sst sich durch Ziehen der Maus verschieben.</p>
+
+<p>Hinweis: Bei sehr gro&szlig;en Zahlen kann der Aufbau der Tabelle mehrere Sekunden dauern.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=800 height=360>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <input type="text" id="ip"><span id="op1"></span>
+    <span id="op2"></span>
+  </div>
+</div>
+
+<script>endPage("primenumbers",17,10,2003,18,10,2017);</script>
+
+</body>
+</html>

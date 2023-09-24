@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>1. und 2. Ableitungsfunktion</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 700px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 300px; height: 400px; } 
+button { width: 280px; }
+.pos1 { left: 10px; }
+.pos2 { left: 60px; width: 220px; }
+.pos3 { left: 160px; width: 120px; }
+table { width: 500px; margin: 20px auto; border: #000000 solid 1px; }
+td { width: 50%; }
+.symbol { font-family: monospace; }
+</style>
+<script src="derivative12.js"></script>
+<script src="derivative12_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: 1. und 2. Ableitungsfunktion">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="Mathematik, Differentialrechnung, Infinitesimalrechnung, Ableitung, Ableitungsfunktion">
+</head>
+
+<body>
+
+<h1>1. und 2. Ableitungsfunktion</h1>
+
+<p>Bei dieser HTML5-App handelt es sich um einen Funktionen-Plotter, der auf Wunsch auch die Graphen der 1. und 2. Ableitungsfunktion zeichnet. 
+Folgende Symbole k&ouml;nnen eingegeben werden:</p>
+
+<table>
+<tr><td class="symbol">x</td><td>unabh&auml;ngige Variable</td></tr>
+<tr><td class="symbol">+</td><td>plus</td></tr>
+<tr><td class="symbol">&minus;</td><td>minus</td></tr>
+<tr><td class="symbol">*</td><td>mal</td></tr>
+<tr><td class="symbol">/</td><td>dividiert durch</td></tr>
+<tr><td class="symbol">^</td><td>hoch</td></tr>
+<tr><td class="symbol">(...)</td><td>Klammer</td></tr>
+<tr><td class="symbol">abs(...)</td><td>Absolutbetrag</td></tr>
+<tr><td class="symbol">sqrt(...)</td><td>Quadratwurzel</td></tr>
+<tr><td class="symbol">exp(...)</td><td>e-Funktion</td></tr>
+<tr><td class="symbol">ln(...)</td><td>nat&uuml;rlicher Logarithmus</td></tr>
+<tr><td class="symbol">sin(...)</td><td>Sinus</td></tr>
+<tr><td class="symbol">cos(...)</td><td>Cosinus</td></tr>
+<tr><td class="symbol">tan(...)</td><td>Tangens</td></tr>
+<tr><td class="symbol">arcsin(...)</td><td>Arcussinus</td></tr>
+<tr><td class="symbol">arccos(...)</td><td>Arcuscosinus</td></tr>
+<tr><td class="symbol">arctan(...)</td><td>Arcustangens</td></tr>
+<tr><td class="symbol">sinh(...)</td><td>Hyperbelsinus</td></tr>
+<tr><td class="symbol">cosh(...)</td><td>Hyperbelcosinus</td></tr>
+<tr><td class="symbol">tanh(...)</td><td>Hyperbeltangens</td></tr>
+<tr><td class="symbol">arsinh(...)</td><td>Areasinus</td></tr>
+<tr><td class="symbol">arcosh(...)</td><td>Areacosinus</td></tr>
+<tr><td class="symbol">artanh(...)</td><td>Areatangens</td></tr>
+<tr><td class="symbol">e</td><td>Eulersche Zahl e</td></tr>
+<tr><td class="symbol">pi</td><td>Kreiszahl &pi;</td></tr>
+</table>
+
+<p>Man beachte, dass Multiplikationszeichen (<span class="symbol">*</span>) nicht weggelassen werden d&uuml;rfen.
+Beispielsweise muss <span class="symbol">2*x</span> statt <span class="symbol">2x</span> eingegeben werden.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><span class="pos1" id="lb1"></span></div>
+    <div style="top: 40px;"><span class="pos1" id="ip1a"></span><input type="text" class="pos2" id="ip1b"></div>    
+    <div style="top: 80px;"><input id="cb1" type="checkbox" name="cb1" value=""><label id="cb1a" for="cb1" style="color: #ff0000;"></label></div>
+    <div style="top: 110px;"><input id="cb2" type="checkbox" name="cb2" value=""><label id="cb2a" for="cb2" style="color: #0000ff;"></label></div>
+    <div style="top: 150px;"><span class="pos1" id="ip2a"></span><input type="text" class="pos3" id="ip2b"></div>
+    <div style="top: 190px;"><span class="pos1" id="ip3a"></span><input type="text" class="pos3" id="ip3b"></div>
+    <div style="top: 230px;"><span class="pos1" id="ip4a"></span><input type="text" class="pos3" id="ip4b"></div>
+    <div style="top: 270px;"><span class="pos1" id="op5a"></span><span class="pos3" id="op5b"></span></div>
+    <div style="top: 320px;"><button id="bu" style="background-color: #ffff00;"></button></div>
+    <div style="top: 370px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script>endPage("derivative12",10,10,1999,18,10,2017);</script>
+
+</body>
+</html>

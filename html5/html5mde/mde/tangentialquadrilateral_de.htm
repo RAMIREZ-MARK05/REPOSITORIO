@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Tangentenviereck</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+canvas { border: 1px solid black; display: block; margin: 20px auto; }
+#Fragen { color: #0000ff; }
+#Auswahl { margin-left: 20px; }
+td.links { width: 20px; vertical-align: top; }
+</style>
+<script src="tangentialquadrilateral.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Tangentenviereck">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="Mathematik, Geometrie, Tangentenviereck">
+</head>
+
+<body>
+
+<h1>Das Tangentenviereck</h1>
+
+<div class="Def" style="width: 600px;">
+Definition:<br>
+Ein Viereck, das einen Inkreis besitzt, nennt man ein <b>Tangentenviereck</b>.
+</div>
+
+<canvas id="cv" width=600 height=400> HTML5-Canvas nicht unterst&uuml;tzt!</canvas>
+
+<p>Verschiebe mit gedr&uuml;ckter Maustaste die Ecken des gezeichneten Tangentenvierecks.</p>
+
+<p id="Fragen">Fragen</p>
+
+<table id="Auswahl"><tr>
+<td class="links">a)</td>
+<td>Welche der bekannten Viereckstypen geh&ouml;ren zu den Tangentenvierecken?</td>
+</tr><tr>
+<td class="links">b)</td>
+<td>Warum sind die gleichfarbig gezeichneten Strecken jeweils gleich lang?</td>
+</tr><tr>
+<td class="links">c)</td>
+<td>Wieso sind zwei gegen&uuml;ber liegende Seiten des Tangentenvierecks zusammen genau so gro&szlig; wie die beiden anderen Seiten 
+zusammen?</td>
+</tr></table>
+
+<p><a href="tangentialquadrilateral1_de.htm">Antworten</a></p>
+
+<div class="Satz" style="width: 600px;">
+In einem Tangentenviereck sind zwei gegen&uuml;ber liegende Seiten zusammen genau so lang wie die beiden anderen Seiten.
+</div>
+
+<script>endPage("tangentialquadrilateral",1,10,2000,18,10,2017);</script>
+
+</body>
+</html>

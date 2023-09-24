@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Berechnung des Kugelvolumens</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+canvas { border: 1px solid black; display: block; margin: 20px auto; }
+</style>
+<script src="volumesphere.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Berechnung des Kugelvolumens">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Mathematik-Unterricht, Geometrie, Kugel, Kugelvolumen, Cavalieri">
+</head>
+
+<body>
+
+<h1>Berechnung des Kugelvolumens</h1>
+
+<p>Um das Volumen einer Halbkugel vom Radius r (Schr&auml;gbild links oben) herauszufinden, verwendet man einen Vergleichsk&ouml;rper 
+(Schr&auml;gbild rechts oben), dessen Volumen einfacher zu berechnen ist: Es handelt sich um einen geraden Kreiszylinder mit Radius r und 
+H&ouml;he r, aus dem ein gerader Kreiskegel, ebenfalls mit Radius r und H&ouml;he r, herausgenommen wurde.</p>
+
+<p>Es l&auml;sst sich nun zeigen, dass die Halbkugel und der Vergleichsk&ouml;rper das gleiche Volumen besitzen. Dazu stellt man sich vor, dass 
+beide K&ouml;rper parallel zur jeweiligen Grundfl&auml;che durchgeschnitten werden. Im Fall der Halbkugel entsteht als Schnittfl&auml;che ein 
+Kreis (gr&uuml;n), im Fall des Vergleichsk&ouml;rpers ein Kreisring (orange). Der Abstand (h) der Schnittebene von der Ebene der 
+Grundfl&auml;che kann jeden Wert zwischen 0 und r annehmen. Durch Ziehen der Maus mit gedr&uuml;ckter Maustaste l&auml;sst sich dieser Abstand h 
+ver&auml;ndern. Im unteren Teil der App sind die beiden Schnittfl&auml;chen in wahrer Gr&ouml;&szlig;e zu sehen.</p>
+
+<canvas id="cv" width=480 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas>
+
+<p>Wenn man r und h kennt, lassen sich die Inhalte der beiden Schnittfl&auml;chen leicht berechnen.</p>
+
+<p>F&uuml;r den Inhalt der gr&uuml;nen Schnittfl&auml;che ergibt sich zun&auml;chst 
+<span class="nobr">A<sub>1</sub>&nbsp;&nbsp;=&nbsp;&nbsp;s<sup>2</sup>&pi;.</span> 
+Da das eingezeichnete Dreieck links oben in der App rechtwinklig ist, erh&auml;lt man nach Pythagoras 
+<span class="nobr">s<sup>2</sup>&nbsp;+&nbsp;h<sup>2</sup>&nbsp;&nbsp;=&nbsp;&nbsp;r<sup>2</sup>,</span> das hei&szlig;t 
+<span class="nobr">s<sup>2</sup>&nbsp;&nbsp;=&nbsp;&nbsp;r<sup>2</sup>&nbsp;&minus;&nbsp;h<sup>2</sup>.</span> 
+Daher hat die gr&uuml;ne Schnittfl&auml;che den Inhalt 
+<span class="nobr">A<sub>1</sub>&nbsp;&nbsp;=&nbsp;&nbsp;(r<sup>2</sup>&nbsp;&minus;&nbsp;h<sup>2</sup>)&nbsp;&pi;.</span></p>
+
+<p>Noch einfacher ist die Rechnung f&uuml;r die orange gezeichnete Schnittfl&auml;che: Man nimmt den Inhalt der &auml;u&szlig;eren 
+Kreisfl&auml;che minus den Inhalt der inneren Kreisfl&auml;che und erh&auml;lt 
+<span class="nobr">A<sub>2</sub>&nbsp;&nbsp;=&nbsp;&nbsp;r<sup>2</sup>&pi;&nbsp;&minus;&nbsp;h<sup>2</sup>&pi;&nbsp;&nbsp;=&nbsp;&nbsp;(r<sup>2</sup>&nbsp;&minus;&nbsp;h<sup>2</sup>)&nbsp;&pi;.</span></p>
+
+<p>Die Inhalte der beiden Schnittfl&auml;chen stimmen also tats&auml;chlich &uuml;berein, und zwar f&uuml;r <em>jeden</em> Wert von h zwischen 
+0 und r. Nach dem <em class="Begriff">Prinzip von Cavalieri</em> muss folglich auch das Volumen der Halbkugel gleich dem Volumen des 
+Vergleichsk&ouml;rpers sein.</p>
+
+<p>V<sub>Halbkugel</sub>&nbsp;&nbsp;=&nbsp;&nbsp;V<sub>Vergleichsk&ouml;rper</sub>&nbsp;&nbsp;=&nbsp;&nbsp;V<sub>Zylinder</sub>&nbsp;&minus;&nbsp;V<sub>Kegel</sub>&nbsp;&nbsp;=&nbsp;&nbsp;r<sup>2</sup>&pi;&nbsp;&middot;&nbsp;r&nbsp;&minus;&nbsp;(1/3)&nbsp;r<sup>2</sup>&pi;&nbsp;&middot;&nbsp;r&nbsp;&nbsp;=&nbsp;&nbsp;(2/3)&nbsp;r<sup>3</sup>&pi;</p>
+
+<p>Wenn man das Volumen einer ganzen Kugel berechnen will, ist dieses Ergebnis noch zu verdoppeln. Somit lautet die endg&uuml;ltige Formel:</p>
+
+<div class="Satz" style="width: 500px;">
+<div style="margin-top: 5px;">Volumen einer Kugel mit Radius r:</div>
+<div><span class="Formel" style="width: 160px;">V = (4/3)&nbsp;r<sup>3</sup>&nbsp;&pi;</span></div>
+</div>
+
+<script>endPage("volumesphere",4,9,2000,18,10,2017);</script>
+
+</body>
+
+</html>

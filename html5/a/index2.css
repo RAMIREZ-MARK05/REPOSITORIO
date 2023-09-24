@@ -1,0 +1,242 @@
+/*=========================================*/
+/* Neues Stylesheet für Inhaltsverzeichnis */
+/* 19.01.2021 - 21.01.2021                 */
+/*=========================================*/
+
+/* Reset für Blockelemente */
+
+div, h1, h2, hr, p, table, ul {
+  margin: 0;
+  padding: 0;
+  }
+  
+/* Noch nicht besuchter Link */
+
+a:link {                    
+  color: #0000ff;
+  }
+
+/* Schon besuchter Link */  
+  
+a:visited {                            
+  color: #0000ff;    
+  }
+  
+/* Mauszeiger auf Link */
+
+a:hover {                                   
+  color: #ff0000;
+  text-decoration: underline;
+  }
+  
+/* Inhalt der Seite */
+
+body {
+  background-color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  }
+  
+/* Autorenangabe unterhalb der Überschrift */
+  
+div#Autor1 {
+  font-size: 16px;
+  }
+  
+/* Übersetzerangabe unterhalb der Überschrift */
+
+div#Uebersetzung {
+  margin-top: 10px;
+  font-size: 14px;
+  }
+  
+/* Flagge für aktuelle Sprachversion */
+  
+div#Flagge {
+  margin-top: 10px;
+  }
+  
+/* Download-Link */
+  
+div#Download {
+  margin-right: 20px;
+  border: double 10px #ff0000;
+  background-color: #ffff00;
+  padding: 5px;
+  }
+  
+/* Autorenangabe im Fußbereich */
+  
+div#Autor2 {
+  padding: 10px;
+  font-size: 20px;
+  color: #00ffff;
+  }  
+  
+/* Überschrift der Seite (innerhalb einer Tabelle) */
+
+h1 {
+  margin-bottom: 20px;
+  }
+  
+/* Überschrift zu einem Teilgebiet */
+
+h2 {
+  margin-top: 5px; 
+  height: 25px;
+  border: 3px solid #000000;
+  padding: 10px;
+  background-color: #40c0ff;
+  font-size: 20px;
+  font-weight: bold;
+  }
+  
+/* Trennlinie */
+
+hr {
+  margin: 20px 0px 20px 0px;
+  border: 3px solid #000000;
+  height: 3px;
+  color: #00ffff;
+  background-color: #00ffff;
+  }
+  
+/* Bild (Flagge) für aktuelle Sprachversion */
+  
+td.Sprachen img {
+  border: 1px solid #000000; 
+  }
+  
+/* Tabelle für den Kopfbereich (Logo, Überschrift, Autor, ggf. Übersetzer) */
+  
+table#Kopf {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  }
+  
+/* Tabelle für den Infobereich (Sprachversion, URL, Anzahl/Datum, Download) */
+  
+table#Info {
+  margin-top: 5px;
+  border: 3px solid #000000;
+  width: 100%;
+  height: 100px;
+  background-color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  }
+  
+/* Tabelle für Links zu anderen Sprachversionen */
+  
+table#Sprachen {
+  margin-top: 5px;
+  border: 3px solid #000000;
+  width: 100%;
+  background-color: #ffffff; 
+  }
+  
+/* Tabelle für ein Teilgebiet */
+
+table.Gebiet {
+  border: 3px solid #000000;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #a0ff40;
+  }
+  
+/* Tabelle für den Fußbereich */
+  
+table#Fuss {
+  margin: 20px auto 20px auto;
+  background-color: #ffff00;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  }
+  
+/* Tabellenzelle Kopfbereich, linker Teil (Logo) */
+  
+td#Logo {
+  border: 1px solid #000000;
+  width: 20%;
+  height: 150px;
+  background-color: #ffff00;
+  }
+  
+/* Tabellenzelle Kopfbereich, rechter Teil (Überschrift, Autor, ggf. Übersetzer */
+  
+td#Titel {
+  border: 1px solid #000000;
+  width: 100%;
+  height: 150px;
+  background-color: #ff40a0;
+  font-weight: bold;
+  }
+  
+/* Tabellenzelle Infobereich, 1. Teil (Sprachversion) */
+  
+td#Info1 { width: 20%; }
+
+/* Tabellenzelle Infobereich, 2. Teil (URL) */
+  
+td#Info2 { width: 30%; }
+
+/* Tabellenzelle Infobereich, 3. Teil (Anzahl/Datum) */
+
+td#Info3 { width: 30%; }
+
+/* Tabellenzelle Infobereich, 4. Teil (Download) */
+
+td#Info4 { width: 20%; }
+
+/* Tabellenzelle Sprachversion (Flagge) */
+
+td.Sprachen {
+  width: 10%;
+  padding: 10px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  }
+  
+/* Tabellenzelle für eine App im Inhaltsverzeichnis */
+  
+td.App {
+  border: 2px solid #000000;
+  width: 70%; 
+  background-color: #a0ff40;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  }
+  
+/* Tabellenzelle für eine Datumsangabe zu einer App im Inhaltsverzeichnis */
+  
+td.Datum {
+  border: 2px solid #000000;
+  width: 30%; 
+  background-color: #a0ff40;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  }
+  
+/* Tabellenzelle im Fußbereich */
+  
+td.Fuss {
+  padding: 10px;
+  }
+  
+  
+ 
+
+  
+
+  
+
+  

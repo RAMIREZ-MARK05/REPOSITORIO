@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Formaci&oacute;n de una Imagen por una Lente Convergente</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+div#total { width: 820px; height: 420px; }
+div#canvas { width: 560px; height: 420px; }
+div#panel { left: 560px; width: 260px; height: 420px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 140px; }
+.pos3 { left: 220px; }
+select { width: 240px; }
+input[type="text"] { left: 140px; width: 60px; }
+</style>
+<script src="imageconverginglens.js"></script>
+<script src="imageconverginglens_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Formaci&oacute;n de una imagen por una lente convergente">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, f&iacute;sica, &oacute;ptica, refracci&oacute;n, lente, lente convergente, distancia objeto, distancia focal, distancia imagen, imagen real, imagen virtual">
+
+</head>
+
+<body>
+
+<h1>Formaci&oacute;n de una Imagen por una Lente Convergente</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=560 height=420>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span class="pos1" id="ip1a"></span><input type="text" id="ip1b"><span class="pos3" id="ip1c"></span></div>
+    <div style="top: 50px;"><span class="pos1" id="ip2a"></span><input type="text" id="ip2b"><span class="pos3" id="ip2c"></span></div>
+    <div style="top: 80px;"><span class="pos1" id="ip3a"></span><input type="text" id="ip3b"><span class="pos3" id="ip3c"></span></div>
+    <div style="top: 110px;"><span class="pos1" id="op1a"></span><span class="pos2" id="op1b"></span><span class="pos3" id="op1c"></span></div>
+    <div style="top: 140px;"><span class="pos1" id="op2a"></span><span class="pos2" id="op2b"></span><span class="pos3" id="op2c"></span></div>
+    <div style="top: 170px;"><span class="pos1" id="op3x"></span><span class="pos2" id="op3a"></span></div>
+    <div style="top: 200px;"><span class="pos2" id="op3b"></span></div>
+    <div style="top: 230px;"><span class="pos2" id="op3c"></span></div>
+    <div style="top: 270px;"><input type="radio" id="rb1" name="bg" value=""><label for="rb1" id="lb1"></label></div>
+    <div style="top: 300px;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="lb2"></label></div>
+    <div style="top: 330px;"><span class="pos1" id="lb3"></span></div>
+    <div style="top: 360px;"><select id="ch"></select></div>
+    <div style="top: 390px;"><span class="pos1" id="author"></span></div>
+    
+  </div>
+</div>
+
+<script>endPage("imageconverginglens",23,12,2008,11,3,2020);</script>
+
+</body>
+</html>

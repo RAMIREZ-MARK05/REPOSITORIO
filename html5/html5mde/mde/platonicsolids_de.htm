@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Platonische K&ouml;rper</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+button.lage { width: 220px; }
+button.navi { width: 50px; background-color: #a0c0ff; }
+td { width: 60px; height: 35px; }
+ul { list-style-type: square; }
+</style>
+<script src="platonicsolids.js"></script>
+<script src="platonicsolids_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Platonische K&ouml;rper">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, platonische K&ouml;rper, regul&auml;re Polyeder, Tetraeder, Hexaeder, Oktaeder, Dodekaeder, Ikosaeder">
+</head>
+
+<body>
+
+<h1>Die platonischen K&ouml;rper</h1>
+
+<p>Als <em class="Begriff">platonische K&ouml;rper</em> (benannt nach dem griechischen Philosophen und Mathematiker Platon) bezeichnet man 
+diejenigen geometrischen K&ouml;rper, die &#8211; abgesehen von der Kugel &#8211; das h&ouml;chste Ma&szlig; an Symmetrie zeigen. 
+Pr&auml;ziser: Platonische K&ouml;rper sind konvexe Polyeder (Vielfl&auml;chner mit Ecken nach au&szlig;en), bei denen alle Fl&auml;chen 
+kongruente regelm&auml;&szlig;ige Vielecke sind und in einer Ecke jeweils gleich viele Fl&auml;chen zusammentreffen. Es gibt genau 
+f&uuml;nf platonische K&ouml;rper:</p>
+
+<ul>
+<li>Regelm&auml;&szlig;iges Tetraeder
+(4 Ecken, 6 Kanten, 4 gleichseitige Dreiecke als Fl&auml;chen)</li>
+<li>Regelm&auml;&szlig;iges Hexaeder oder W&uuml;rfel
+(8 Ecken, 12 Kanten, 6 Quadrate als Fl&auml;chen)</li>
+<li>Regelm&auml;&szlig;iges Oktaeder
+(6 Ecken, 12 Kanten, 8 gleichseitige Dreiecke als Fl&auml;chen)</li>
+<li>Regelm&auml;&szlig;iges Dodekaeder
+(20 Ecken, 30 Kanten, 12 regelm&auml;&szlig;ige F&uuml;nfecke als Fl&auml;chen)</li>
+<li>Regelm&auml;&szlig;iges Ikosaeder
+(12 Ecken, 30 Kanten, 20 gleichseitige Dreiecke als Fl&auml;chen)</li>
+</ul>
+
+<p>Rechts oben in der Schaltfl&auml;che dieser App kann man einen der platonischen K&ouml;rper ausw&auml;hlen. Mit dem gro&szlig;en Schaltknopf 
+l&auml;sst sich die Lage im Raum festlegen; je nach Einstellung liegt eine Ecke, ein Kantenmittelpunkt oder ein Fl&auml;chenmittelpunkt auf der
+nach oben gerichteten z-Achse (nicht eingezeichnet). Die kleinen Schaltkn&ouml;pfe darunter dienen dazu, den K&ouml;rper zu drehen bzw. die 
+Drehung wieder zu stoppen. Im unteren Teil der Schaltfl&auml;che befinden sich au&szlig;erdem noch drei Optionsfelder. Sie erm&ouml;glichen die 
+Darstellung der Umkugel (durch alle Ecken des Polyeders), der Kantenkugel (durch alle Kantenmittelpunkte) sowie der Inkugel, die alle 
+Fl&auml;chen in den jeweiligen Mittelpunkten von innen ber&uuml;hrt.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><input type="radio" id="rb1" name="bg" value=""><label for="rb1" id="lb1"></label></div>
+    <div style="top: 30px;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="lb2"></label></div>
+    <div style="top: 50px;"><input type="radio" id="rb3" name="bg" value=""><label for="rb3" id="lb3"></label></div>
+    <div style="top: 70px;"><input type="radio" id="rb4" name="bg" value=""><label for="rb4" id="lb4"></label></div>
+    <div style="top: 90px;"><input type="radio" id="rb5" name="bg" value=""><label for="rb5" id="lb5"></label></div>
+    <div style="top: 130px;"><button id="bu" class="lage" style="background-color: #ffc040;"></button></div>
+    <div style="top: 170px; left: 25px;"><table>
+      <tr>
+        <td></td>
+        <td><button id="up" class="navi">&uarr;</button></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button id="left" class="navi">&larr;</button></td>
+        <td><button id="stop" class="navi">&#8226;</button></td>
+        <td><button id="right" class="navi">&rarr;</button></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button id="down" class="navi">&darr;</button></td>
+        <td></td>
+      </tr>
+    </table></div>    
+    
+    <div style="top: 300px;"><input type="checkbox" id="cb1" name="cb1" value="">
+      <label for="cb1" id="lbC" style="color: #ff0000;"></label></div>
+    <div style="top: 320px;"><input type="checkbox" id="cb2" name="cb2" value="">
+      <label for="cb2" id="lbM" style="color: #008000;"></label></div>
+    <div style="top: 340px;"><input type="checkbox" id="cb3" name="cb3" value="">
+      <label for="cb3" id="lbI" style="color: #0000ff;"></label></div>
+    <div style="top: 380px;"><span id="author" class="pos1"></span></div>
+  </div>
+</div>
+
+<p>Genauere Informationen zu den beiden kompliziertesten platonischen K&ouml;rpern: 
+<a href="https://www.walter-fendt.de/math/geo/dodekaeder.pdf">Dodekaeder</a>, 
+<a href="https://www.walter-fendt.de/math/geo/ikosaeder.pdf">Ikosaeder</a></p>
+
+<script>endPage("platonicsolids",8,6,1998,18,10,2017);</script>
+
+</body>
+
+</html>

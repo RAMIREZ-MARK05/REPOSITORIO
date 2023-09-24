@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Sinus, Cosinus und Tangens eines Winkels</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 800px; height: 360px; }
+div#canvas { width: 600px; height: 360px; }
+div#panel { left: 600px; width: 200px; height: 360px; } 
+.pos1 { left: 10px; }
+</style>
+<script src="sincostan.js"></script>
+<script src="sincostan_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Sinus, Cosinus und Tangens eines Winkels">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Mathematikunterricht, Trigonometrie, Winkelfunktionen, Sinus, Cosinus, Tangens">
+</head>
+
+<body>
+
+<h1>Sinus, Cosinus und Tangens eines Winkels</h1>
+
+<p>In dieser App wird die elementargeometrische Definition f&uuml;r den Sinus-, Cosinus- bzw. Tangenswert eines Winkels dargestellt. Mit Hilfe 
+der drei Radiobuttons kann man eine dieser trigonometrischen Funktionen ausw&auml;hlen. Im linken Teil (Einheitskreis) l&auml;sst sich der 
+voreingestellte Winkel durch Ziehen mit der Maus ver&auml;ndern. Rechts ist der Graph der betrachteten Winkelfunktion gezeichnet. Die 
+gleichfarbig gekennzeichneten Strecken bzw. Kreisb&ouml;gen sind jeweils gleich lang.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=600 height=360>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 40px;"><span class="pos1" id="lb0"></span></div>
+    <div style="top: 80px;"><input type="radio" id="rb1" name="bg" value=""><label for="rb1" id="lb1" style="color: #008000;"></label></div>
+    <div style="top: 120px;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="lb2" style="color: #ff0000;"></label></div>
+    <div style="top: 160px;"><input type="radio" id="rb3" name="bg" value=""><label for="rb3" id="lb3" style="color: #0000ff;"></label></div>
+    <div style="top: 320px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 340px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("sincostan",25,12,1997,18,10,2017);</script>
+
+</body>
+
+</html>

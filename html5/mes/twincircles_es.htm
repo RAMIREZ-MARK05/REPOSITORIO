@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>C&iacute;rculos gemelos de Arqu&iacute;medes</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 600px; height: 400px; }
+div#canvas { width: 600px; height: 360px; }
+div#panel { top: 360px; width: 600px; height: 40px; }
+.pos1 { left: 20px; }
+.pos2a { left: 180px; }
+.pos2b { left: 205px; }
+.pos3a { left: 300px; }
+.pos3b { left: 325px; }
+.pos4 { left: 450px; }
+input[type="checkbox"] { position: absolute; }
+label { position: absolute; white-space: nowrap; }
+</style>
+<script src="twincircles.js"></script>
+<script src="twincircles_es.js"></script>
+<script src="page_mes.js"></script>
+<meta name="description" content="App HTML5: C&iacute;rculos gemelos de Arqu&iacute;medes">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, matem&aacute;ticas, geometr&iacute;a, Arqu&iacute;medes, c&iacute;rculos gemelos">
+</head>
+
+<body>
+
+<h1>C&iacute;rculos Gemelos de Arqu&iacute;medes</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=600 height=360>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel"><div style="top: 10px;">
+    <span id="text1" class="pos1"></span>
+    <input type="checkbox" id="cb1" class="pos2a" name="cb1" value=""><label for="cb1" id="text2" class="pos2b"></label> 
+    <input type="checkbox" id="cb2" class="pos3a" name="cb2" value=""><label for="cb2" id="text3" class="pos3b"></label> 
+    <span id="author" class="pos4"></span>
+  </div></div>
+</div>
+
+<script>endPage("twincircles",11,4,2000,19,1,2016);</script>
+
+</body>
+
+</html>

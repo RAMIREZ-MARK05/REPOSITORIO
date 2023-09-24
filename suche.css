@@ -1,0 +1,12 @@
+/* Stylesheet f�r alphabetische Suche, letzte �nderung 2022-03-11 */
+
+table.abc {margin: auto; border-spacing: 8px;}
+
+table.abc td {width: 24px; padding: 5px; background-color: #ffff80; font-size: 24px; font-weight: bold; color: #000000; border: solid 2px; text-align: center;}
+
+a {text-decoration: none;}
+
+a:hover {background-color: #ff8080;}
+
+div#mitte1 {background-color: #f0f0f0; padding: 20px;}
+

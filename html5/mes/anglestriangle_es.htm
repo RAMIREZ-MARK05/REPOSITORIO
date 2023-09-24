@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Suma de los &aacute;ngulos de un tri&aacute;ngulo</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 740px; height: 400px; }
+div#canvas { width: 500px; height: 400px; }
+div#panel { left: 500px; width: 240px; height: 400px; }
+select.ch { left: 170px; width: 60px; }
+.pos1 { left: 10px; }
+</style>
+<script src="anglestriangle.js"></script>
+<script src="anglestriangle_es.js"></script>
+<script src="page_mes.js"></script>
+<meta name="description" content="App HTML5: Suma de los &aacute;ngulos de un tri&aacute;ngulo">
+<meta name="author" content="Walter Fendt, Nicol&aacute;s Rosillo">
+<meta name="keywords" content="app, matem&aacute;ticas, geometr&iacute;a, tri&aacute;ngulo, &aacute;ngulo">
+</head>
+
+<body>
+
+<h1>Suma de los &Aacute;ngulos de un Tri&aacute;ngulo</h1>
+
+<p>Puedes mover los v&eacute;rtices del tri&aacute;ngulo dado pulsando sobre ellos el rat&oacute;n.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="lb1" class="pos1"></span></div>  
+    <div style="top: 60px;"><span id="op1" class="pos1"></span></div>
+    <div style="top: 100px;"><span id="op2" class="pos1"></span></div>  
+    <div style="top: 140px;"><span id="op3" class="pos1"></span></div> 
+    <div style="top: 200px;"><span id="lb2" class="pos1"></span><select class="ch" id="ch"></select></div> 
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<div class="Satz" id="satz" style="width: 600px;">La suma de los &aacute;ngulos de un tri&aacute;ngulo es 180&deg;.</div>
+
+<script>endPage("anglestriangle",11,6,1998,5,4,2018,"Nicol&aacute;s Rosillo, 2002");</script>
+
+</body>
+
+</html>

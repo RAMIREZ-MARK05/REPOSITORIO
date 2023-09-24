@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Teorema de Pit&aacute;goras (1)</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 740px; height: 400px; }
+div#canvas { width: 500px; height: 400px; }
+div#panel { left: 500px; width: 240px; height: 400px; } 
+div.Abstand { margin-top: 30px; }
+.pos1 { left: 10px; }
+.pos2 { left: 130px; }
+input { width: 220px; }
+</style>
+<script src="pythagoras2.js"></script>
+<script src="pythagoras2_es.js"></script>
+<script src="page_mes.js"></script>
+<meta name="description" content="App HTML5: Teorema de Pit&aacute;goras (1)">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, matem&aacute;ticas, geometr&iacute;a, Pit&aacute;goras">
+</head>
+
+<body>
+
+<h1>Teorema de Pit&aacute;goras (1)</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 40px;"><input type="range" id="sl1" min=0 max=100 step=1></div>
+    <div style="top: 80px;"><input type="range" id="sl2" min=0 max=100 step=1></div>
+    <div style="top: 140px; color: #0000ff;"><span id="lb1a" class="pos1"></span><span id="lb1b" class="pos2"></span></div>
+    <div style="top: 180px; color: #ff0000;"><span id="lb2a" class="pos1"></span><span id="lb2b" class="pos2"></span></div>
+    <div style="top: 220px; color: #000000;"><span id="lb3a" class="pos1"></span><span id="lb3b" class="pos2"></span></div>
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<div class="Abstand"><span class="Formel" style="width: 120px;">a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></span></div>
+
+<script>endPage("pythagoras2",19,2,2001,25,4,2017);</script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Die Napoleon-Punkte eines Dreiecks</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+select { width: 220px; height: 22px; }
+button { width: 220px; }
+textarea { width: 210px; height: 140px; line-height: 18px; } 
+.pos1 { left: 10px; }
+#ABC { margin-top: 30px; font-weight: bold; }
+</style>
+<script src="tl_napoleonpoints.js"></script>
+<script src="tl_napoleonpoints_de.js"></script>
+<script src="tl_page_de.js"></script>
+<meta name="description" content="HTML5-App: Die Napoleon-Punkte eines Dreiecks">
+<meta name="keywords" content="Mathematik, Geometrie, Dreieck, Dreiecksgeometrie, Napoleon-Punkte">
+<meta name="author" content="Walter Fendt">
+</head>
+
+<body>
+
+<h1>Die Napoleon-Punkte eines Dreiecks</h1>
+
+<p>&Uuml;ber den Seiten eines gegebenen Dreiecks werden nach au&szlig;en gleichseitige Dreiecke gezeichnet. Jede Ecke des gegebenen 
+Dreiecks wird mit dem <a href="tl_centroid_de.htm">Schwerpunkt</a> des gegen&uuml;berliegenden gleichseitigen Dreiecks verbunden.
+Diese Konstruktion ergibt den <em class="Begriff">1. Napoleon-Punkt</em>.</p>
+
+<p>Das Ganze funktioniert auch, wenn man die gleichseitigen Dreiecke nach innen zeichnet (<em class="Begriff">2. Napoleon-Punkt</em>). 
+Allerdings ist dieser Fall etwas un&uuml;bersichtlich.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><select id="ch"></select></div>
+    <div style="top: 70px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 120px;"><button id="bu2" style="background-color: #ffff00;"></button></div> 
+    <div style="top: 170px;"><textarea id="ta"></textarea></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<p id="ABC"><a href="tl_start_de.htm#abc">&Uuml;bersicht</a></p>
+
+<script>endPage("tl_napoleonpoints",28,10,2004,20,10,2017);</script>
+
+</body>
+
+</html>

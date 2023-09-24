@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Curvas El&iacute;pticas</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+table { margin: auto; padding: 20px; }
+td { padding: 10px; }
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+input { width: 220px; }
+.pos1 { left: 10px; }
+</style>
+<script src="ellipticcurve.js"></script>
+<script src="ellipticcurve_es.js"></script>
+<script src="page_mes.js"></script>
+<meta name="description" content="App HTML5: Curvas el&iacute;pticas">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, mathem&aacute;ticas, curva el&iacute;ptica">
+</head>
+
+<body>
+
+<h1>Curvas El&iacute;pticas</h1>
+
+<table>
+<tr><td style="width: 150px;"><em class="Begriff">Ecuacion:</em></td><td>y<sup>2</sup> = x<sup>3</sup> + a x + b</td></tr>
+<tr><td><em class="Begriff">Discriminante:</em></td><td>&Delta; = &minus; 4 a<sup>3</sup> &minus; 27 b<sup>2</sup></td></tr>
+</table>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 50px;"><span id="lb1" class="pos1"></span></div>
+    <div style="top: 80px;"><input type="range" id="ra1" min=0 max=200 step=1></div>
+    <div style="top: 130px;"><span id="lb2" class="pos1"></span></div>
+    <div style="top: 160px;"><input type="range" id="ra2" min=0 max=200 step=1></div>
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("ellipticcurve",19,11,2020,5,1,2021);</script>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Los polos celestes</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../a/app.css">
+<style>
+canvas { border: 1px solid black; display: block; margin: 20px auto; }
+</style>
+<script src="celestialpoles.js"></script>
+<script src="celestialpoles_es.js"></script>
+<script src="page_aes.js"></script>
+<meta name="description" content="App HTML5: Polos Celestes">
+<meta name="author" content="Walter Fendt, Tom&aacute;s Fdez de Sevilla">
+<meta name="keywords" content="app, astronom&iacute;a, polos celestes">
+</head>
+
+<body>
+
+<h1>Los Polos Celestes</h1>
+
+<p>Cuando se calcula la posici&oacute;n de las estrellas, se parte de la idea de una esfera celeste que gira aproximadamente 
+<span class="nobr">23 h y 56 minutos</span> alrededor del eje de la tierra. En realidad, como sabemos, no es la esfera celeste la que rota 
+sino la Tierra. Los dos puntos proyectados sobre la esfera celeste por la extensi&oacute;n del eje de rotaci&oacute;n de la tierra se llaman 
+polos celestes (Polo Norte y Polo Sur). El Polo Norte es f&aacute;cil de ver en el cielo ya que se encuentra pr&aacute;cticamente donde 
+est&aacute; la Estrella Polar que tiene una cierta magnitud. Sin embargo, cerca del Polo Sur celeste no hay estrellas conocidas. Este App HTML5
+muestra c&oacute;mo la posici&oacute;n de los polos celestes depende de la latitud geogr&aacute;fica (&aacute;ngulo dibujado en azul) del punto 
+de observaci&oacute;n.</p>
+
+<p>En la ilustraci&oacute;n, el gr&aacute;fico de la izquierda corresponde a la Tierra con el Ecuador, Polo Norte, Polo Sur y eje de 
+rotaci&oacute;n. El plano horizontal se ha dibujado con una posici&oacute;n preseleccionada en el hemisferio norte; la flecha roja representa 
+la direcci&oacute;n norte y la verde la direcci&oacute;n sur. Se puede variar la posici&oacute;n del observador haciendo &quot;click&quot; con 
+el rat&oacute;n y se podr&aacute; ver el cambio en el plano horizontal, la direcci&oacute;n del cenit (flecha rosa) y la direcci&oacute;n del 
+polo celeste visible (flecha azul).</p>
+
+<p>El gr&aacute;fico de la derecha representa la situaci&oacute;n tal como la como la percibe un observador en la Tierra: el plano del horizonte 
+aparece dibujado horizontalmente y el cenit se observa directamente encima de la esfera celeste. La flecha azul indica la altitud del polo 
+celeste visible en el horizonte.</p>
+
+<canvas id="cv" width=700 height=420>This browser doesn't support HTML5 canvas!</canvas>
+
+<div class="Satz" style="width: 500px;"><strong>Resultado:</strong>La altitud del polo celeste visible en el horizonte 
+(medido en grados) es igual al valor absoluto de la latitud geogr&aacute;fica.</div>
+
+<p>Si se observa el cielo desde el hemisferio norte de la Tierra, el polo norte celeste est&aacute; localizado hacia el norte, y las estrellas 
+rotan, aparentemente, en sentido contrario a las agujas del reloj; si se est&aacute; en el hemisferio sur, se puede observar el polo sur celeste 
+en direcci&oacute;n sur, y las estrellas giran aparentemente, en el sentido de las agujas del reloj.<br>
+Si se observaran las estrellas desde el Polo Norte o el Polo Sur terrestres, el polo visible celeste aparecer&iacute;a directamente sobre 
+nosotros. Si estuvi&eacute;ramos en el Ecuador, los dos polos celestes se encontrar&iacute;an sobre el horizonte.</p>
+
+<script>endPage("celestialpoles",12,7,1998,20,11,2017,"Tom&aacute;s Fdez. de Sevilla, 2002");</script>
+
+</body>
+</html>

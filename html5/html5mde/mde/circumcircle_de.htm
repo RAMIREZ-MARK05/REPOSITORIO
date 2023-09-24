@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Umkreis eines Dreiecks</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; }
+div#text { font-size: 12px; }
+button { width: 220px; }
+.pos1 { left: 10px; }
+canvas#ta { border: solid #808080 1px; }
+</style>
+<script src="circumcircle.js"></script>
+<script src="circumcircle_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="Umkreis eines Dreiecks">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="Mathematik, Geometrie, Dreieck, Umkreis, Umkreismittelpunkt, Mittellot, Mittelsenkrechte, Streckensymmetrale">
+</head>
+
+<body>
+
+<h1>Umkreis eines Dreiecks</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 70px;"><button id="bu2" style="background-color: #ffff00;"></button></div> 
+    <div id="text" style="top: 140px; left: 10px;"><canvas id="ta" width=218 height=150>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<div class="Satz" style="width: 600px;">
+Die drei Mittelsenkrechten eines Dreiecks schneiden sich in einem Punkt.
+Dieser Punkt ist von den drei Ecken des Dreiecks gleich weit entfernt.</div>
+
+<script>endPage("circumcircle",25,11,1997,26,3,2020);</script>
+
+</body>
+
+</html>

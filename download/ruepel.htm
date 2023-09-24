@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+<title>Rechentrainer R&Uuml;PEL</title>
+<meta charset="utf-8">
+<style>
+body {font-family: sans-serif;}
+h1 {font-size: 24px; font-weight: bold; text-align: center; background-color: #ffff00; border: 10px solid #0000ff; padding: 5px;}
+ul {margin-top: 10px;}
+li {margin-top: 8px;}
+.klein {font-size: 10px;}
+a {text-decoration: none; color: #0000ff; padding: 2px;}
+a:hover, a:active {background-color: #ffc040; border: 2px solid #000000;}
+#programm {margin: auto; background-color: #c0ff00; width: 400px; padding: 10px; border: 3px solid #0000ff; 
+font-weight: bold; text-align: center;}
+</style>
+<meta name="description" content="Rechentrainer R&Uuml;PEL">
+<meta name="keywords" content="Rechentrainer">
+</head>
+
+<body>
+
+<h1>Rechentrainer R&Uuml;PEL</h1>
+
+<h2>&Uuml;bersicht</h2>
+
+<ul>
+<li><a href="#zweck">Zweck des Programms</a></li>
+<li><a href="#system">Systemvoraussetzungen</a></li>
+<li><a href="#hinweise">Hinweise zu Eingabe und Bedienung</a></li>
+<li><a href="#grenzen">Einschr&auml;nkungen</a></li>
+<li><a href="#download">Herunterladen des Programms</a></li>
+</ul>
+
+<h2 id="zweck">Zweck des Programms</h2>
+
+<p>Der Name R&Uuml;PEL t&auml;uscht: R&uuml;pelhaft geht das Programm h&ouml;chstens mit Rechenfehlern um, aber nicht mit seinen Benutzern. Mit R&Uuml;PEL k&ouml;nnen Sch&uuml;ler Rechenaufgaben (im Wesentlichen bis zur 8. Klasse Gymnasium) Zeile f&uuml;r Zeile eingeben und vom Computer korrigieren lassen. Von den mir bekannten Programmen dieser Art unterscheidet sich R&Uuml;PEL in einigen Punkten deutlich:</p>
+
+<ul>
+<li>Die Rechenausdr&uuml;cke sehen (fast) genau so aus wie auf dem Papier.</li>
+<li>Es k&ouml;nnen sowohl Br&uuml;che und gemischte Zahlen als auch endliche und unendliche Dezimalbr&uuml;che verwendet werden.</li>
+<li>Das Programm versucht, Rechenfehler m&ouml;glichst genau zu lokalisieren.</li>
+</ul>
+
+<p>Das Programm ist geeignet f&uuml;r Arithmetik- und Algebra-Aufgaben aus folgenden Bereichen:</p>
+
+<ul>
+<li>Rechnen mit nat&uuml;rlichen Zahlen</li>
+<li>Rechnen mit Br&uuml;chen</li>
+<li>Rechnen mit endlichen und periodisch unendlichen Dezimalbr&uuml;chen</li>
+<li>Rechnen mit negativen Zahlen</li>
+<li>Aufl&ouml;sen von linearen Gleichungen</li>
+<li>Vereinfachen von Rechenausdr&uuml;cken</li>
+</ul>
+
+<h2 id="system">Systemvoraussetzungen</h2>
+
+<p>Das Programm l&auml;uft &#8211; jedenfalls prinzipiell &#8211; auf allen g&auml;ngigen Plattformen (Windows, Linux, Macintosh). 
+Voraussetzung ist die Installation einer aktuellen Java-Laufzeitumgebung (mindestens Java 7), bezeichnet als JRE 
+(Java Runtime Environment) oder VM (Virtual Machine). Diese kann bei 
+<a href="http://www.java.com/de/download/" target="_blank">Oracle</a> heruntergeladen werden.</p>
+
+<h2 id="hinweise">Hinweise zur Bedienung</h2>
+
+<p>Alle Eingaben erfolgen &uuml;ber die Tastatur. Das Men&uuml; &quot;Hilfe&quot; (rechts) bietet genauere Informationen, 
+wie bestimmte Rechenausdr&uuml;cke einzutippen sind. Wenn das Programm einmal nicht mehr auf Tasten reagiert (zum Beispiel 
+nach einem Scrollvorgang), hilft mit hoher Wahrscheinlichkeit ein Mausklick. Jede Zeile muss mit der Enter- oder Return-Taste 
+abgeschlossen werden.</p>
+
+<p>Wichtig ist die Einstellung im Men&uuml; &quot;Aufgabentyp&quot;. Hier ist (vor dem Eintippen!) auszuw&auml;hlen, 
+ob es sich bei der aktuellen Aufgabe um eine reine Zahlenrechnung, eine Termvereinfachung oder um das Aufl&ouml;sen 
+einer Gleichung handelt.</p>
+
+<p>Es k&ouml;nnen bis zu 20 Rechenaufgaben bearbeitet werden. &Uuml;ber das Men&uuml; &quot;Wechsel&quot; kann man um eine Zeile 
+zur&uuml;ckgehen (verbunden mit der L&ouml;schung der aktuellen Zeile), zu einer anderen Aufgabe wechseln oder alle Aufgaben 
+l&ouml;schen.</p>
+
+<h2 id="grenzen">Einschr&auml;nkungen</h2>
+
+<p>Wie die Versionsnummer andeutet, handelt es sich bei R&Uuml;PEL&nbsp;0.76 um eine Testversion, die noch einige 
+Unzul&auml;nglichkeiten und m&ouml;glicherweise auch noch grobe Fehler enth&auml;lt. Insbesondere bestehen die folgenden 
+Einschr&auml;nkungen:</p>
+
+<ul>
+<li>Die Fehlersuche bei Termvereinfachungen und Gleichungen arbeitet noch sehr unpr&auml;zise.</li>
+<li>Beim Rechnen mit Buchstaben kann das Programm in den meisten F&auml;llen noch nicht feststellen, wann die Rechnung beendet ist.</li>
+<li>Beim Aufl&ouml;sen von Gleichungen kommt das Programm mit Sonderf&auml;llen (keine L&ouml;sung, unendlich viele L&ouml;sungen, 
+notwendige Fallunterscheidungen bei Gleichungen mit Parametern) noch nicht hundertprozentig zurecht. Quadratische Gleichungen 
+werden nur akzeptiert, wenn sie keinen Parameter enthalten und keine irrationalen L&ouml;sungen haben. Gleichungen h&ouml;heren 
+Grades werden zur&uuml;ckgewiesen.</li>
+</ul>
+
+<h2 id="download">Herunterladen des Programms</h2>
+
+<p>Die Nutzung f&uuml;r private Zwecke unterliegt keinen Einschr&auml;nkungen. Die Weitergabe des Programms ist nur erlaubt, 
+wenn kein Geld daf&uuml;r verlangt wird und die Programmdatei unver&auml;ndert bleibt.</p>
+
+<div id="programm"><a href="ruepel.jar" target="_blank">www.walter-fendt.de/download/ruepel.jar</a></div>
+
+<p class="klein">URL: https://www.walter-fendt.de/download/ruepel.htm<br>
+Walter Fendt, 11. Februar 2019</p>
+
+</body>
+</html>

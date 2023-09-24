@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Umrechnung von Einheiten</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 440px; }
+div#canvas { width: 400px; height: 360px; }
+div#panel { left: 400px; width: 240px; height: 360px; } 
+div#panel2 { top: 360px; width: 640px; height: 80px; position: absolute; background-color: #ffc040; }
+button { width: 220px; }
+select#ch1 { left: 180px; width: 50px; }
+select#ch2 { left: 10px; width: 620px; }
+.pos1 { left: 10px; }
+.pos2 { left: 280px; }
+.pos3 { left: 600px; }
+input[type=text] { left: 300px; width: 250px; height: 20px; font-size: 16px; }
+div#panel2 span { font-size: 16px; }
+</style>
+<script src="bigint.js"></script>
+<script src="conversionunits.js"></script>
+<script src="conversionunits_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Umrechnung von Einheiten">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Arithmetik, Einheiten, Umrechnung">
+</head>
+
+<body>
+
+<h1>Umrechnung von Einheiten</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=360>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 70px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 130px;"><input type="checkbox" id="cb1"><label id="lb1" for="cb1"></label></div>
+    <div style="top: 160px;"><input type="checkbox" id="cb2"><label id="lb2" for="cb2"></label></div>
+    <div style="top: 190px;"><input type="checkbox" id="cb3"><label id="lb3" for="cb3"></label></div>
+    <div style="top: 220px;"><input type="checkbox" id="cb4"><label id="lb4" for="cb4"></label></div>
+    <div style="top: 250px;"><input type="checkbox" id="cb5"><label id="lb5" for="cb5"></label></div>
+    <div style="top: 290px;">
+      <span id="lb" class="pos1"></span>
+      <select id="ch1"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+    </div>
+    <div style="top: 330px;"><span id="author" class="pos1"></span></div>
+  </div>
+  <div id="panel2">
+    <div style="top: 10px;">
+      <span id="item" class="pos1"></span><span class="pos2">=</span>
+      <input type="text" id="ip"><span id="unit" class="pos3"></span>
+    </div>
+    <div style="top: 50px;"><select id="ch2"></select></div>
+  </div>
+</div>
+
+<script>endPage("conversionunits",25,3,2001,18,10,2017);</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Pendiente de una secante / recta tangente</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 800px; height: 400px; }
+div#canvas { width: 500px; height: 400px; }
+div#panel { left: 500px; width: 300px; height: 400px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 200px; }
+input { width: 280px; }
+</style>
+<script src="secanttangent.js"></script>
+<script src="secanttangent_es.js"></script>
+<script src="page_mes.js"></script>
+<meta name="description" content="App HTML5: Pendiente de una secante / recta tangente">
+<meta name="author" content="Walter Fendt, Nicol&aacute;s Rosillo">
+<meta name="keywords" content="app, matem&aacute;ticas, an&aacute;lisis, pendiente, secante, tangente">
+</head>
+
+<body>
+
+<h1>Pendiente de una Secante / Recta Tangente</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 40px; color: #ff0000;"><span id="lb1a" class="pos1"></span><span id="lb1b" class="pos2"></span></div>
+    <div style="top: 70px;"><input type="range" id="sl" min=0 max=8 step=1 value=""></div>
+    <div style="top: 120px; color: #0000ff;"><span id="lb2a" class="pos1"></span><span id="lb2b" class="pos2"></span></div>
+    <div style="top: 200px; color: #0000ff;"><span id="lb3a" class="pos1"></span><span id="lb3b" class="pos2"></span></div>
+    <div style="top: 240px; color: #ff0000;"><span id="lb4a" class="pos1"></span><span id="lb4b" class="pos2"></span></div>
+    <div style="top: 350px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 370px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("secanttangent",22,2,1998,19,10,2015,"Nicol&aacute;s Rosillo, 2002");</script>
+
+</body>
+
+</html>

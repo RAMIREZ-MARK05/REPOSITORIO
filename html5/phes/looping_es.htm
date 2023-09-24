@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Modelo de Monta&ntilde;a Rusa Invertida (Fuerza Centr&iacute;peta)</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+div#total { width: 840px; height: 440px; }
+div#canvas { width: 560px; height: 440px; }
+div#panel { left: 560px; width: 280px; height: 440px; } 
+button { width: 260px; }
+input[type="text"] { left: 170px; width: 60px; }
+.pos1 { left: 10px; }
+.pos3 { left: 245px; }
+</style>
+<script src="looping.js"></script>
+<script src="looping_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Modelo de Monta&ntilde;a Rusa Invertida (Fuerza Centr&iacute;peta)">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, movimiento circular, fuerza centr&iacute;peta, monta&ntilde;a rusa invertida">
+</head>
+
+<body>
+
+<h1>Modelo de Monta&ntilde;a Rusa Invertida (Fuerza Centr&iacute;peta)</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=560 height=440>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 50px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 95px;"><input type="radio" id="rb1" name="bg1" value=""><label for="rb1" id="lb1"></label></div>
+    <div style="top: 120px;"><input type="radio" id="rb2" name="bg1" value=""><label for="rb2" id="lb2"></label></div>
+    <div style="top: 150px;"><span class="pos1" id="ip1a"></span><input type="text" id="ip1b"><span class="pos3" id="ip1c"></span></div>
+    <div style="top: 180px;"><span class="pos1" id="ip2a"></span><input type="text" id="ip2b"><span class="pos3" id="ip2c"></span></div>
+    <div style="top: 210px;"><span class="pos1" id="ip3a"></span><input type="text" id="ip3b"><span class="pos3" id="ip3c"></span></div>
+    <div style="top: 240px;"><span class="pos1" id="ip4a"></span><input type="text" id="ip4b"><span class="pos3" id="ip4c"></span></div>
+    <div style="top: 280px;"><input type="checkbox" id="cbV" name="cbV" value=""><label for="cbV" id="lbV" style="color: #ff00ff;"></label></div>
+    <div style="top: 310px;"><input type="radio" id="rb3" name="bg2" value=""><label id="lb3" for="rb3" style="color: #008000;"></label></div>
+    <div style="top: 340px;"><input type="radio" id="rb4" name="bg2" value=""><label id="lb4" for="rb4" style="color: #008000;"></label></div>
+    <div style="top: 370px;"><input type="checkbox" id="cbF" name="cbV" value=""><label for="cbV" id="lbF" style="color: #000000;"></label></div>
+    <div style="top: 410px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 420px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script>endPage("looping",8,3,2020,12,12,2020);</script>
+
+</body>
+</html>

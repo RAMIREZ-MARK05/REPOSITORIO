@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Einfache geometrische Abbildungen</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 130px; }
+select { width: 220px; }
+button { width: 220px; }
+</style>
+<script src="congruencemappings.js"></script>
+<script src="congruencemappings_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Einfache geometrische Abbildungen: Achsenspiegelung, Punktspiegelung, Verschiebung und Drehung">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Spiegelung, Symmetrie, Achsenspiegelung, Achsensymmetrie, Punktspiegelung, Punktsymmetrie, Verschiebung, Parallelverschiebung, Drehung">
+</head>
+
+<body>
+
+<h1>Einfache geometrische Abbildungen:<br>Achsenspiegelung, Punktspiegelung, Verschiebung und Drehung</h1>
+
+<p>Mit dieser HTML5-App lassen sich die Eigenschaften einfacher geometrischer Abbildungen untersuchen. Vier Typen von 
+<em class="Begriff">Kongruenzabbildungen</em> (also Abbildungen, die alle Streckenl&auml;ngen und Winkelgr&ouml;&szlig;en 
+unver&auml;ndert lassen) sind m&ouml;glich:</p>
+
+<ul>
+<li><em class="Begriff">Achsenspiegelung</em></li>
+<li><em class="Begriff">Punktspiegelung</em></li>
+<li><em class="Begriff">(Parallel-)Verschiebung</em></li>
+<li><em class="Begriff">Drehung</em></li>
+</ul>
+
+<p>Im Auswahlfeld rechts oben wird die Art der Abbildung festgelegt. Klickt man mit der Maus auf den Schaltknopf 
+&quot;Neue Zeichnung&quot;, so werden die Objekte der alten Zeichnung und ihre Bilder gel&ouml;scht. In dem Auswahlfeld darunter 
+kann man angeben, was man als n&auml;chstes zeichnen will. Nach einem Mausklick auf &quot;Hinzuf&uuml;gen&quot; erscheint in roter Farbe 
+ein neues Objekt (also ein Punkt, eine Gerade, eine Halbgerade, eine Strecke, ein Kreis, ein Dreieck oder ein Viereck). Mit einem 
+Mausklick kann man ein Objekt ausw&auml;hlen (erkennbar an der roten Farbe). Dieses Objekt l&auml;sst sich durch Ziehen der Maus mit 
+gedr&uuml;ckter Maustaste 
+ver&auml;ndern. Entsprechendes gilt f&uuml;r die Spiegelachse, das Symmetriezentrum, den Verschiebungspfeil beziehungsweise 
+den Drehpfeil. Die Wirkung des Schaltknopfs &quot;L&ouml;schen&quot; bezieht sich ebenfalls auf das rot markierte Objekt. 
+Das Optionsfeld &quot;Bild&quot; entscheidet dar&uuml;ber, ob die Bildobjekte gezeichnet werden sollen oder nicht. Die Farbe der 
+Bildobjekte ist blau.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><select id="ch1"></select></div>
+    <div style="top: 70px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 140px;"><select id="ch2"></select></div>
+    <div style="top: 180px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 230px;"><button id="bu3" style="background-color: #ff40ff;"></button></div>
+    <div style="top: 300px;"><input id="cb" type="checkbox"><label id="lb" for="cb" style="color: #0000ff"></label></div>
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("congruencemappings",19,6,1999,18,10,2017);</script>
+
+</body>
+
+</html>

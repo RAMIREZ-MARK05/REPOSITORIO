@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Gravedad, Problema de los Dos Cuerpos</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+div#total { width: 900px; height: 480px; }
+div#canvas { width: 560px; height: 480px; }
+div#panel { left: 560px; width: 340px; height: 480px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 220px; }
+.pos3 { left: 290px; }
+input[type="text"].mant { left: 150px; width: 60px; }
+input[type="text"].expo { left: 245px; width: 30px; bottom: -5px; }
+select { width: 320px; }
+button { width: 320px; }
+button.half { width: 155px; background-color: #ffc040; }
+label.cb { margin-left: 5px; vertical-align: 1px; }
+</style>
+<script src="gravity.js"></script>
+<script src="gravity_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Gravedad, Problema de los Dos Cuerpos">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, gravedad, ley de gravitaci&oacute;n universal, Newton, problema de los dos cuerpos">
+</head>
+
+<body>
+
+<h1>Gravedad, Problema de los Dos Cuerpos</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=560 height=480>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 50px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 95px;"><input class="pos1" id="cbSlow" name="cbSlow" type="checkbox" value="">
+      <label id="lbSlow" for="cbSlow" class="cb"></label></div>
+    <div style="top: 135px;"><span class="pos1" id="ipDa"></span><input type="text" id="ipDb" class="mant"><span class="pos2" id="ipDc"></span>
+      <input type="text" id="ipDd" class="expo"><span id="ipDe" class="pos3"></span></div>      
+    <div style="top: 180px;"><span class="pos1" id="ipM1a"></span><input type="text" id="ipM1b" class="mant"><span class="pos2" id="ipM1c"></span>
+      <input type="text" id="ipM1d" class="expo"><span id="ipM1e" class="pos3"></span></div>      
+    <div style="top: 215px;"><span class="pos1" id="ipV1a"></span><input type="text" id="ipV1b" class="mant"><span class="pos2" id="ipV1c"></span>
+      <input type="text" id="ipV1d" class="expo"><span id="ipV1e" class="pos3"></span></div>      
+    <div style="top: 260px;"><span class="pos1" id="ipM2a"></span><input type="text" id="ipM2b" class="mant"><span class="pos2" id="ipM2c"></span>
+      <input type="text" id="ipM2d" class="expo"><span id="ipM2e" class="pos3"></span></div>      
+    <div style="top: 295px;"><span class="pos1" id="ipV2a"></span><input type="text" id="ipV2b" class="mant"><span class="pos2" id="ipV2c"></span>
+      <input type="text" id="ipV2d" class="expo"><span id="ipV2e" class="pos3"></span></div>      
+    <div style="top: 350px;"><button id="bu3" class="half"></button><button id="bu4" class="half"></button></div>      
+    <div style="top: 405px;"><select id="ch"></select></div>
+    <div style="top: 450px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script>endPage("gravity",29,12,2020,1,1,2021);</script>
+
+</body>
+</html>

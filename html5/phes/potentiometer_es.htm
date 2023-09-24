@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Potenci&oacute;metro</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+div#total { width: 700px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 300px; height: 400px; } 
+input[type="text"] { left: 190px; width: 60px; }
+input[type="range"] { left: 35px; width: 230px; }
+button { width: 280px; }
+button.small { width: 20px; height: 20px; background-color: #c0c0c0;}
+.pos1 { left: 10px; }
+.pos3 { left: 270px; }
+</style>
+<script src="potentiometer.js"></script>
+<script src="potentiometer_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Potenci&oacute;metro">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, f&iacute;sica, electrodin&aacute;mica, voltaje, Volt, corriente, amperaje, Ampere, resistencia, Ohm, potenci&oacute;metro">
+</head>
+
+<body>
+
+<h1>Potenci&oacute;metro</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="ip1a" class="pos1"></span><input type="text" id="ip1b"><span id="ip1c" class="pos3"></span></div>
+    <div style="top: 70px;"><span id="ip2a" class="pos1"></span><input type="text" id="ip2b"><span id="ip2c" class="pos3"></span></div>
+    <div style="top: 120px;"><span id="sla" class="pos1"></span></div>
+    <div style="top: 145px;">
+      <button id="slb" class="small">&lt;</button>
+      <input type="range" id="slc" min=0 max=200 step=1>
+      <button id="sld" class="small" style="margin-left: 240px;">&gt;</button>
+    </div>
+    <div style="top: 200px;"><span id="ip3a" class="pos1"></span><input type="text" id="ip3b"><span id="ip3c" class="pos3"></span></div>
+    <div style="top: 250px;"><input type="checkbox" id="cb1a" name="cb1" value=""><label for="cb1a" id="cb1b"></label></div>
+    <div style="top: 290px;"><input type="checkbox" id="cb2a" name="cb2" value=""><label for="cb2a" id="cb2b"></label></div>
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("potentiometer",16,2,2006,11,3,2020);</script>
+
+</body>
+</html>

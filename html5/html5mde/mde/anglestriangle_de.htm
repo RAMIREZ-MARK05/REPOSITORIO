@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Innenwinkelsumme eines Dreiecks</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 740px; height: 400px; }
+div#canvas { width: 500px; height: 400px; }
+div#panel { left: 500px; width: 240px; height: 400px; }
+select.ch { left: 170px; width: 60px; }
+.pos1 { left: 10px; }
+</style>
+<script src="anglestriangle.js"></script>
+<script src="anglestriangle_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Innenwinkelsumme eines Dreiecks">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Dreieck, Winkelsumme">
+</head>
+
+<body>
+
+<h1>Die Innenwinkelsumme eines Dreiecks</h1>
+
+<p>Die Ecken des gezeichneten Dreiecks (A, B und C) lassen sich mit gedr&uuml;ckter Maustaste ver&auml;ndern.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="lb1" class="pos1"></span></div>  
+    <div style="top: 60px;"><span id="op1" class="pos1"></span></div>
+    <div style="top: 100px;"><span id="op2" class="pos1"></span></div>  
+    <div style="top: 140px;"><span id="op3" class="pos1"></span></div> 
+    <div style="top: 200px;"><span id="lb2" class="pos1"></span><select class="ch" id="ch"></select></div> 
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<p>Die Seiten des Dreiecks sind zu Geraden verl&auml;ngert; au&szlig;erdem ist als Hilfslinie die Parallele zu einer Dreiecksseite durch 
+die gegen&uuml;ber liegende Ecke eingezeichnet. Die beiden violett markierten Winkel sind gleich gro&szlig;, da es sich um Wechselwinkel 
+(Z-Winkel) an parallelen Geraden handelt. Aus dem gleichen Grund haben die gr&uuml;n gezeichneten Winkel die gleiche Gr&ouml;&szlig;e.</p>
+
+<p>Aus der Zeichnung ist zu erkennen, dass die drei nebeneinander liegenden, farbig gezeichneten Winkel zusammen einen gestreckten Winkel 
+(180&deg;) ergeben. Daher muss auch die Summe der drei Innenwinkelgr&ouml;&szlig;en gleich 180&deg; sein.</p>
+
+
+<script>endPage("anglestriangle",11,6,1998,2,4,2018);</script>
+
+</body>
+
+</html>

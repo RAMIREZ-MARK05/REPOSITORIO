@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Tri&aacute;ngulo Esf&eacute;rico</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 40px; }
+div.Abstand { margin-top: 30px; }
+</style>
+<script src="sphericaltriangle.js"></script>
+<script src="sphericaltriangle_es.js"></script>
+<script src="page_mes.js"></script>
+<meta name="description" content="App HTML5: Tri&aacute;ngulo esf&eacute;rico, lados y &aacute;ngulos">
+<meta name="author" content="Walter Fendt, Nicol&aacute;s Rosillo">
+<meta name="keywords" content="app, matem&aacute;ticas, geometr&iacute;a, geometr&iacute;a esf&eacute;rica, tri&aacute;ngulo esf&eacute;rico">
+</head>
+
+<body>
+
+<h1>Tri&aacute;ngulo Esf&eacute;rico</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="lb1" class="pos1"></span></div>
+    <div style="top: 50px;"><span id="op1a" class="pos2"></span></div>
+    <div style="top: 75px;"><span id="op1b" class="pos2"></span></div>
+    <div style="top: 100px;"><span id="op1c" class="pos2"></span></div>
+    <div style="top: 130px;"><span id="op1s" class="pos1"></span></div>
+    <div style="top: 170px;"><span id="lb2" class="pos1"></span></div>
+    <div style="top: 200px;"><span id="op2a" class="pos2"></span></div>
+    <div style="top: 225px;"><span id="op2b" class="pos2"></span></div>
+    <div style="top: 250px;"><span id="op2c" class="pos2"></span></div>
+    <div style="top: 280px;"><span id="op2s" class="pos1"></span></div>            
+    <div style="top: 350px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 370px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<div class="Abstand"><span class="Formel" style="width: 240px;">180&deg; &lt; &alpha; + &beta; + &gamma; &lt; 540&deg;</span></div>
+
+<div class="Abstand"><span class="Formel" style="width: 240px;">0&deg; &lt; a + b + c &lt; 360&deg;</span></div>
+
+<script>endPage("sphericaltriangle",6,2,1999,5,4,2018,"Nicol&aacute;s Rosillo, 2002");</script>
+
+</body>
+
+</html>

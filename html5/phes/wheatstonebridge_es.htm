@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Puente de Wheatstone</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+div#total { width: 700px; height: 450px; }
+div#canvas { width: 400px; height: 450px; }
+div#panel { left: 400px; width: 300px; height: 450px; } 
+select { width: 220px; height: 22px; font-family: monospace; }
+input[type="text"] { left: 190px; width: 60px; }
+input[type="range"] { left: 35px; width: 230px; }
+button { width: 280px; }
+button.small { width: 20px; height: 20px; background-color: #c0c0c0;}
+.pos1 { left: 10px; }
+.pos3 { left: 270px; }
+</style>
+<script src="wheatstonebridge.js"></script>
+<script src="wheatstonebridge_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Puente de Wheatstone">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, f&iacute;sica, electrodin&aacute;mica, voltaje, Volt, corriente, amperaje, Ampere, resistencia, Ohm, Wheatstone, Puente de Wheatstone">
+
+</head>
+
+<body>
+
+<h1>Puente de Wheatstone</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=450>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 70px;"><span id="ip1a" class="pos1"></span><input type="text" id="ip1b"><span id="ip1c" class="pos3"></span></div>
+    <div style="top: 110px;"><span id="ip2a" class="pos1"></span><input type="text" id="ip2b"><span id="ip2c" class="pos3"></span></div>
+    <div style="top: 150px;"><span id="sla" class="pos1"></span></div>
+    <div style="top: 175px;">
+      <button id="slb" class="small">&lt;</button>
+      <input type="range" id="slc" min=0 max=200 step=1>
+      <button id="sld" class="small" style="margin-left: 240px;">&gt;</button>
+    </div>
+    <div style="top: 220px;"><span id="ip3a" class="pos1"></span><input type="text" id="ip3b"><span id="ip3c" class="pos3"></span></div>
+    <div style="top: 260px;"><span id="ip4a" class="pos1"></span><input type="text" id="ip4b"><span id="ip4c" class="pos3"></span></div>
+    <div style="top: 300px;"><button id="bu2" style="background-color: #ffffff;"></button></div>   
+    <div style="top: 350px;"><input type="checkbox" id="cb1a" name="cb1" value=""><label for="cb1a" id="cb1b"></label></div>
+    <div style="top: 380px;"><input type="checkbox" id="cb2a" name="cb2" value=""><label for="cb2a" id="cb2b"></label></div>
+    <div style="top: 420px;"><span id="author" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("wheatstonebridge",11,2,2006,11,3,2020);</script>
+
+</body>
+</html>

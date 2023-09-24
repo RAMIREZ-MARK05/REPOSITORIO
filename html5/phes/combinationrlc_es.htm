@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Combinaciones de Resistores, Inductores (Bobinas) y Capacitores</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+div#total { width: 800px; height: 480px; }
+div#canvas { width: 500px; height: 480px; }
+div#panel { left: 500px; width: 300px; height: 480px; } 
+button { width: 280px; }
+.pos1 { left: 10px; }
+.pos3 { left: 270px; }
+input[type="text"] { left: 180px; width: 70px; }
+select { width: 280px; }
+span { white-space: nowrap; }
+</style>
+<script src="page_phes.js"></script>
+<script src="combinationrlc.js"></script>
+<script src="combinationrlc_es.js"></script>
+<meta name="description" content="App HTML5: Combinaciones de Resistores, Inductores (Bobinas) y Capacitores">
+<meta name="author" content="Walter Fendt, Mario Alberto G&oacute;mez Garc&iacute;a">
+<meta name="keywords" content="f&iacute;sica, electrodin&aacute;mica, voltaje, Volt, corriente alterna, AC, amperaje, resistor, bobina, inductor, capacitor, impedancia, Ohm">
+</head>
+
+<body>
+
+<h1>Combinaciones de Resistores, Inductores (Bobinas) y Capacitores</h1>
+
+<p>Esta aplicaci&oacute;n permite la construcci&oacute;n de <em class="Begriff">circuitos el&eacute;ctricos</em> simples alimentados 
+con <em class="Begriff">corriente alterna</em> y en los cuales se pueden conectar <em class="Begriff">resistencias (&oacute;hmicas)</em>, 
+<em class="Begriff">bobinas</em> ideales (sin resistencia) y <em class="Begriff">capacitores</em>. En la parte 
+&quot;Fuente de voltaje alterno&quot; se introducen los valores de voltaje y frecuencia, en ambos casos es necesario presionar 
+la tecla &quot;Intro&quot; para aceptar los valores. En la secci&oacute;n &quot;Componente&quot; puede elegirse de la lista 
+los elementos a incluir en el circuito ya sea Resistor, Bobina o Capacitor; esta secci&oacute;n est&aacute; relacionada con la parte 
+de abajo en la cual se introduce el valor de la Resistencia, Inductancia o Capacitancia dependiendo del componente seleccionado. 
+Para agregar componentes en serie con el elemento seleccionado del circuito solamente se presiona el bot&oacute;n 
+&quot;Agregar (en serie)&quot; (la selecci&oacute;n del elemento se hace mediante un clic). Asimismo para a&ntilde;adir componentes 
+en paralelo con el elemento seleccionado del circuito solamente se presiona el bot&oacute;n &quot;Agregar (en paralelo)&quot;. 
+El bot&oacute;n &quot;Sustituir&quot; reemplaza el elemento seleccionado por el componente elegido; mientras que el bot&oacute;n 
+&quot;Eliminar&quot; remueve el elemento seleccionado. Activando la secci&oacute;n de &quot;Medidores&quot; puede conectarse 
+un volt&iacute;metro y un amper&iacute;metro con el(los) componente(s) seleccionado(s) para medir el &quot;Voltaje&quot; 
+y &quot;Amperaje&quot;, respectivamente. Puede realizarse un an&aacute;lisis completo del circuito construido en el cual 
+se determina el voltaje, el amperaje (la intensidad de corriente el&eacute;ctrica), las impedancias compleja y real, 
+y el &aacute;ngulo de fase del elemento seleccionado. El an&aacute;lisis tambi&eacute;n puede realizarse en un grupo de componentes 
+seleccionados mediante una acci&oacute;n de arrastre del apuntador del rat&oacute;n; las elementos agrupados aparecen 
+dentro de una secci&oacute;n rectangular.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=480>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 15px;"><span class="pos1" id="lb1"></span></div>
+    <div style="top: 40px;"><span class="pos1" id="ip1a"></span><input type="text" id="ip1b"><span id="ip1c" class="pos3"></span></div>
+    <div style="top: 65px;"><span class="pos1" id="ip2a"></span><input type="text" id="ip2b"><span id="ip2c" class="pos3"></span></div>  
+    <div style="top: 95px;"><span class="pos1" id="lb2"></span></div>
+    <div style="top: 125px;"><span class="pos1" id="ch1a"></span><select id="ch1b"></select></div>
+    <div style="top: 155px;"><span class="pos1" id="ip3a"></span><input type="text" id="ip3b"><span id="ip3c" class="pos3"></span></div>
+    <div style="top: 185px;"><button id="bu1" style="background-color: #ffff00;"></button></div>
+    <div style="top: 225px;"><button id="bu2" style="background-color: #ffc800;"></button></div>
+    <div style="top: 265px;"><button id="bu3" style="background-color: #ffc800;"></button></div>
+    <div style="top: 305px;"><button id="bu4" style="background-color: #00ffff;"></button></div>
+    <div style="top: 360px;"><span class="pos1" id="lb3"></span></div>
+    <div style="top: 385px;"><input type="checkbox" id="cb1a" name="cb1" value=""><label for="cb1" id="cb1b"></label></div>
+    <div style="top: 410px;"><input type="checkbox" id="cb2a" name="cb2" value=""><label for="cb2" id="cb2b"></label></div>
+    <div style="top: 440px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 460px;"><span class="pos1" id="translator"></span></div> 
+  </div>
+</div>
+
+<script>endPage("combinationrlc",19,3,2004,21,3,2020,"Mario Alberto G&oacute;mez Garc&iacute;a, 2008");</script>
+
+</body>
+</html>

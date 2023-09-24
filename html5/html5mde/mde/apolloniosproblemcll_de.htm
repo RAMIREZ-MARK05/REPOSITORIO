@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Problem des Apollonios, CLL-Problem</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 670px; height: 420px; }
+div#canvas { width: 420px; height: 420px; }
+div#panel { left: 420px; width: 250px; height: 420px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 200px; }
+</style>
+<script src="apolloniosproblemcll.js"></script>
+<script src="apolloniosproblemcll_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Problem des Apollonios, CLL-Problem">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Apollonios, Apollonius, Problem des Apollonios, Apollonisches Problem, Ber&uuml;hrkreis, CLL-Problem">
+</head>
+
+<body>
+
+<h1>Problem des Apollonios, CLL-Problem</h1>
+
+<p>Gegeben sind ein Kreis k und zwei Geraden g<sub>1</sub> und g<sub>2</sub>. Es sollen die Kreise gefunden werden, die zugleich den
+gegebenen Kreis und die gegebenen Geraden ber&uuml;hren.</p>
+
+<p>Der Mittelpunkt und der Radius von k und die Geraden g<sub>1</sub> und g<sub>2</sub> lassen sich mit gedr&uuml;ckter Maustaste 
+variieren. In den Optionsfeldern der Schaltfl&auml;che kann eingestellt werden, welche L&ouml;sungen dargestellt werden sollen.
+Die Zahl der L&ouml;sungen wird jeweils angegeben.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=420 height=420>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 15px;"><span id="text1" class="pos1"></span></div>
+    <div style="top: 40px;"><span id="text2a" class="pos1"></span></div>
+    <div style="top: 55px;"><span id="text2b" class="pos1"></span></div>
+    <div style="top: 70px;"><span id="text2c" class="pos1"></span></div>
+    <div style="top: 85px;"><span id="text2d" class="pos1"></span></div>   
+    <div style="top: 110px;"><input type="checkbox" id="cb1"><label for="cb1" id="lb1"></label>
+      <input type="checkbox" id="cb11"><input type="checkbox" id="cb12"><input type="checkbox" id="cb13"><span id="lb1n" class="pos2"></span></div>
+    <div style="top: 140px;"><input type="checkbox" id="cb2"><label for="cb2" id="lb2"></label>
+      <input type="checkbox" id="cb21"><input type="checkbox" id="cb22"><input type="checkbox" id="cb23"><span id="lb2n" class="pos2"></span></div>
+    <div style="top: 170px;"><input type="checkbox" id="cb3"><label for="cb3" id="lb3"></label>
+      <input type="checkbox" id="cb31"><input type="checkbox" id="cb32"><input type="checkbox" id="cb33"><span id="lb3n" class="pos2"></span></div>
+    <div style="top: 200px;"><input type="checkbox" id="cb4"><label for="cb4" id="lb4"></label>
+      <input type="checkbox" id="cb41"><input type="checkbox" id="cb42"><input type="checkbox" id="cb43"><span id="lb4n" class="pos2"></span></div>
+    <div style="top: 230px;"><input type="checkbox" id="cb5"><label for="cb5" id="lb5"></label>
+      <input type="checkbox" id="cb51"><input type="checkbox" id="cb52"><input type="checkbox" id="cb53"><span id="lb5n" class="pos2"></span></div>
+    <div style="top: 260px;"><input type="checkbox" id="cb6"><label for="cb6" id="lb6"></label>
+      <input type="checkbox" id="cb61"><input type="checkbox" id="cb62"><input type="checkbox" id="cb63"><span id="lb6n" class="pos2"></span></div>
+    <div style="top: 290px;"><input type="checkbox" id="cb7"><label for="cb7" id="lb7"></label>
+      <input type="checkbox" id="cb71"><input type="checkbox" id="cb72"><input type="checkbox" id="cb73"><span id="lb7n" class="pos2"></span></div>
+    <div style="top: 320px;"><input type="checkbox" id="cb8"><label for="cb8" id="lb8"></label>
+      <input type="checkbox" id="cb81"><input type="checkbox" id="cb82"><input type="checkbox" id="cb83"><span id="lb8n" class="pos2"></span></div>
+    <div style="top: 350px;"><span id="text4" class="pos1"></span><span id="lbn" class="pos2"></span></div>
+    <div style="top: 380px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 400px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("apolloniosproblemcll",12,1,2009,19,10,2017);</script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Epizykloiden und Hypozykloiden</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 700px; height: 420px; }
+div#canvas { width: 420px; height: 420px; }
+div#panel { left: 420px; width: 280px; height: 420px; } 
+button { width: 260px; }
+select { width: 40px; }
+.pos1 { left: 10px; }
+.pos2 { left: 150px; }
+.pos3 { left: 200px; }
+.pos4 { left: 220px; }
+</style>
+<script src="epihypocycloids.js"></script>
+<script src="epihypocycloids_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Epizykloiden und Hypozykloiden">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Rollkurve, Epizykloide, Hypozykloide">
+</head>
+
+<body>
+
+<h1>Epizykloiden und Hypozykloiden</h1>
+
+<p><em class="Begriff">Epizykloiden</em> und <em class="Begriff">Hypozykloiden</em> sind Kurven, die sich mithilfe von Kreisen
+definieren lassen. Gegeben ist ein fester Kreis (schwarz). Ein zweiter, beweglicher Kreis (blau) rollt auf der Au&szlig;enseite 
+(im Falle der Epizykloide) bzw. Innenseite (im Falle der Hypozykloide) des festen Kreises ab. Durch einen Punkt am Rand des bewegten Kreises
+wird die Kurve (rot) erzeugt. Stehen die Radien der beiden Kreise in einem ganzzahligen Verh&auml;ltnis, so ist die Kurve 
+geschlossen.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=420 height=420>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><input type="radio" id="rb1" name="bg" value=""><label for="rb1" id="lb1"></label></div>
+    <div style="top: 50px;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="lb2"></label></div>
+    <div style="top: 100px;">
+      <span id="lb3" class="pos1"></span>
+      <select id="ch1" class="pos2"></select>
+      <span class="pos3">:</span>
+      <select id="ch2" class="pos4"></select>
+    </div>
+    <div style="top: 160px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 210px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 390px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script>endPage("epihypocycloids",23,10,2017,27,7,2023);</script>
+
+</body>
+</html>

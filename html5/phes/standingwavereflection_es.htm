@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Onda Estacionaria (Explicaci&oacute;n por Superposici&oacute;n con la Onda Reflejada)</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+div#total { width: 720px; height: 440px; }
+div#canvas { width: 480px; height: 440px; }
+div#panel { left: 480px; width: 240px; height: 440px; } 
+button { width: 220px; }
+select { width: 220px; }
+.pos1 { left: 10px; }
+</style>
+<script src="standingwavereflection.js"></script>
+<script src="standingwavereflection_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Onda Estacionaria (Explicaci&oacute;n por Superposici&oacute;n con la Onda Reflejada)">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, f&iacute;sica, onda, onda estacionaria, interferencia, nodo, vientre">
+</head>
+
+<body>
+
+<h1>Onda Estacionaria<br>(Explicaci&oacute;n por Superposici&oacute;n con la Onda Reflejada)</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=480 height=440>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span class="pos1" id="lb1"></span></div>
+    <div style="top: 45px;"><input type="radio" id="rb1a" name="bg1" value=""><label for="rb1a" id="rb1b"></label></div>
+    <div style="top: 70px;"><input type="radio" id="rb2a" name="bg1" value=""><label for="rb2a" id="rb2b"></label></div>
+    <div style="top: 105px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 150px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 200px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 230px;"><input type="radio" id="rb3a" name="bg2" value=""><label for="rb3a" id="rb3b"></label></div>
+    <div style="top: 255px;"><input type="radio" id="rb4a" name="bg2" value=""><label for="rb4a" id="rb4b"></label></div>
+    <div style="top: 285px;"><select id="ch"></select></div>  
+    <div style="top: 320px;"><input type="checkbox" id="cb1a" name="cb1a" value=""><label for="cb1a" id="cb1b"></label></div>
+    <div style="top: 345px;"><input type="checkbox" id="cb2a" name="cb2a" value=""><label for="cb2a" id="cb2b"></label></div>
+    <div style="top: 370px;"><input type="checkbox" id="cb3a" name="cb3a" value=""><label for="cb3a" id="cb3b"></label></div>
+    <div style="top: 410px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 420px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script>endPage("standingwavereflection",9,7,2003,9,3,2020);</script>
+
+</body>
+</html>

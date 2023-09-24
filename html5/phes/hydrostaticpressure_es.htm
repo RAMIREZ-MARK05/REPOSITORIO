@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Presi&oacute;n Hidrost&aacute;tica en L&iacute;quidos</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+div#total { width: 600px; height: 400px; }
+div#canvas { width: 320px; height: 400px; }
+div#panel { left: 320px; width: 280px; height: 400px; }
+input[type="text"] { left: 160px; width: 60px; }
+select { width: 260px; }
+.pos1 { left: 10px; }
+.pos2 { left: 160px; }
+.pos3 { left: 240px; }
+</style>
+<script src="hydrostaticpressure.js"></script>
+<script src="hydrostaticpressure_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Presi&oacute;n Hidrost&aacute;tica en L&iacute;quidos">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, mec&aacute;nica, presi&oacute;n hidrost&aacute;tica, l&iacute;quido">
+</head>
+
+<body>
+
+<h1>Presi&oacute;n Hidrost&aacute;tica en L&iacute;quidos</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=320 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span class="pos1" id="lb"></span></div>
+    <div style="top: 60px;"><select id="ch"></select></div>
+    <div style="top: 140px;"><span class="pos1" id="ip1a"></span><input type="text" id="ip1b"><span class="pos3" id="ip1c"></span></div>   
+    <div style="top: 190px;"><span class="pos1" id="ip2a"></span><input type="text" id="ip2b"><span class="pos3" id="ip2c"></span></div>
+    <div style="top: 240px;"><span class="pos1" id="opa"></span><span class="pos2" id="opb"></span><span class="pos3" id="opc"></span></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 370px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<div class="center"><span class="Formel" style="width: 150px;">p &nbsp; = &nbsp; g &rho; h</span></div>
+
+<p class="Formel">
+p ... presi&oacute;n hidrost&aacute;tica del l&iacute;quido<br>
+g ... aceleraci&oacute;n gravitatoria<br>
+&rho; ... densidad del l&iacute;quido<br>
+h ... profundidad</p>
+
+<script>endPage("hydrostaticpressure",3,2,1999,3,2,2019,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Regelm&auml;&szlig;ige Sternpolygone</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { position: relative; margin-top: 20px; margin-left: auto; margin-right: auto; width: 660px; height: 440px; }
+div#canvas { position: absolute; background-color: #ffff00; border: 1px solid #000000; width: 440px; height: 440px; }
+div#panel { position: absolute; left: 440px; width: 220px; height: 440px; } 
+input#ip1 { left: 20px; width: 20px; }
+input#ip2 { left: 60px; width: 20px; }
+.pos1 { left: 10px; }
+.pos2 { left: 20px; }
+.pos3 { left: 50px; }
+.pos4 { left: 60px; }
+.pos5 { left: 90px; }
+</style>
+<script src="polygon2.js"></script>
+<script src="polygon_de.js"></script>
+<script src="page_mde.js"></script>
+</head>
+
+<body>
+
+<h1>Regelm&auml;&szlig;ige Sternpolygone</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=440 height=440>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="lb" class="pos1"></span></div>
+    <div style="top: 60px;">
+      <span class="pos1">{</span>
+      <input type="text" id="ip1" class="pos2">
+      <span class="pos3">,</span>
+      <input type="text" id="ip2" class="pos4">
+      <span class="pos5">}</span>
+    </div> 
+    <div style="top: 400px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 420px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("polygon2",26,4,2018,2,12,2022);</script>
+
+</body>
+
+</html>

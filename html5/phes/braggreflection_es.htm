@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+<title>Difracci&oacute;n de Bragg</title>
+<meta charset="utf-8">	
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+div#total { width: 700px; height: 420px; }
+div#canvas { width: 420px; height: 420px; }
+div#panel { left: 420px; width: 280px; height: 420px; } 
+input[type="text"] { left: 170px; width: 60px; }
+button { width: 260px; }
+.pos1 { left: 10px; }
+.pos2 { left: 170px; }
+.pos3 { left: 245px; }
+</style>
+<script src="braggreflection.js"></script>
+<script src="braggreflection_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Difracci&oacute;n de Bragg">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, f&iacute;sica, f&iacute;sica del estado s&oacute;lido, cristal, Bragg">
+</head>
+
+<body>
+
+<h1>Difracci&oacute;n de Bragg</h1>
+
+<p><b>Ley de Bragg:</b></p>
+
+<div class="center"><span class="Formel" style="width: 200px;">&Delta;s = 2 d sin &theta; = k &lambda;</span></div>
+
+<p class="Formel">
+&Delta;s ... Diferencia de camino<br>
+d&nbsp; ... Distancia entre los planos<br>
+&theta;&nbsp; ... &Aacute;ngulo entre los rayos incidentes y los planos de dispersi&oacute;n<br>
+k&nbsp; ... N&uacute;mero entero (1, 2, 3, ...)<br>
+&lambda;&nbsp; ... Longitud de onda
+</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=420 height=420>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 70px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 120px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 170px;"><span class="pos1" id="ipD1"></span><input type="text" id="ipD2"><span class="pos3" id="ipD3"></span></div>
+    <div style="top: 210px;"><span class="pos1" id="ipLambda1"></span><input type="text" id="ipLambda2"><span class="pos3" id="ipLambda3"></span></div>
+    <div style="top: 250px;"><span class="pos1" id="ipTheta1"></span><input type="text" id="ipTheta2"><span class="pos3" id="ipTheta3"></span></div>
+    <div style="top: 290px;"><span class="pos1" id="ipN1"></span><input type="text" id="ipN2"></div>
+    <div style="top: 330px;"><span class="pos1" id="opDS1"></span><span class="pos2" id="opDS2"></span><span class="pos3" id="opDS3"></span></div>
+    <div style="top: 390px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 390px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script>endPage("braggreflection",13,3,2021,10,2,2022,false);</script>
+
+</body>
+</html>

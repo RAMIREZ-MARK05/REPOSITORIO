@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>T&uuml;rme von Hanoi</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 800px; height: 400px; }
+div#canvas { width: 540px; height: 400px; }
+div#panel { left: 540px; width: 260px; height: 400px; } 
+.pos1 { left: 10px; }
+select { left: 200px; width: 50px; }
+button { width: 240px; }
+textarea { width: 230px; height: 80px; }
+</style>
+<script src="towerhanoi.js"></script>
+<script src="towerhanoi_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: T&uuml;rme von Hanoi">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Unterhaltungsmathematik, T&uuml;rme von Hanoi">
+</head>
+
+<body>
+
+<h1>Die T&uuml;rme von Hanoi</h1>
+
+<p>Bei den <em class="Begriff">T&uuml;rmen von Hanoi</em> handelt es sich um eine bekannte Denkaufgabe, bei der gelochte Scheiben 
+zwischen drei St&auml;ben (A, B und C) hin- und herbewegt werden. Zu Beginn befinden sich alle Scheiben in der Position A.
+Ziel ist es, alle Scheiben in die Position B zu bringen, wobei auch der Stab C als Zwischenablage verwendet werden kann.
+Entscheidend ist die Bedingung, dass niemals eine gr&ouml;&szlig;ere Scheibe auf einer kleineren liegen darf.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=540 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="lb1" class="pos1"></span><select id="ch"></select></div>
+    <div style="top: 60px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 120px;"><input type="radio" id="rb1" name="bg" value=""><label for="rb1" id="rb1t"></label></div>
+    <div style="top: 160px;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="rb2t"></label></div>
+    <div style="top: 200px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 250px;"><textarea id="ta"></textarea></div>    
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<p>In Lehrb&uuml;chern der Informatik dienen die T&uuml;rme von Hanoi oft als Standardbeispiel f&uuml;r 
+<em class="Begriff">rekursive Programmierung</em>. Der Aufwand des zugeh&ouml;rigen Algorithmus steigt (im Wesentlichen) exponentiell 
+mit der Zahl der Scheiben, wie die folgende Formel zeigt:</p>
+
+<div class="center">z = 2<sup>n</sup> &minus; 1</div>
+
+<p class="Formel">
+n ... Zahl der Scheiben<br>
+z ... Zahl der Z&uuml;ge
+</p>
+
+<script>endPage("towerhanoi",6,2,2022,7,2,2022);</script>
+
+</body>
+
+</html>

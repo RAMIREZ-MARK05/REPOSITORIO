@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Rechnen mit komplexen Zahlen</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 620px; height: 440px; }
+div#canvas { width: 400px; height: 440px; }
+div#panel { left: 400px; width: 220px; height: 440px; } 
+.pos1 { left: 10px; }
+</style>
+<script src="complexnumbers.js"></script>
+<script src="complexnumbers_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Rechnen mit komplexen Zahlen">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, komplexe Zahlen">
+</head>
+
+<body>
+
+<h1>Rechnen mit komplexen Zahlen</h1>
+
+<p>Diese HTML5-App zeigt, wie die <em class="Begriff">Grundrechenarten</em> mit <em class="Begriff">komplexen Zahlen</em> geometrisch 
+gedeutet werden k&ouml;nnen. In der gr&uuml;nen Schaltfl&auml;che lassen sich die Rechenart und das Koordinatensystem einstellen. 
+Der erste Operand ist durch einen blauen Punkt in der Gau&szlig;schen Zahlenebene dargestellt, der zweite durch einen roten. 
+Beide Operanden k&ouml;nnen mit gedr&uuml;ckter Maustaste ver&auml;ndert werden. Das Ergebnis l&auml;sst sich an der Position 
+des schwarzen Punktes ablesen.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=440>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="lb1" class="pos1"></span></div>
+    <div style="top: 50px;"><input type="radio" id="rb1a" name="bg" value=""><label for="rb1a" id="rb1b"></label></div>
+    <div style="top: 80px;"><input type="radio" id="rb2a" name="bg" value=""><label for="rb2a" id="rb2b"></label></div>
+    <div style="top: 110px;"><input type="radio" id="rb3a" name="bg" value=""><label for="rb3a" id="lb3b"></label></div>
+    <div style="top: 140px;"><input type="radio" id="rb4a" name="bg" value=""><label for="rb4a" id="lb4b"></label></div>
+    <div style="top: 190px;"><span id="lb2" class="pos1"></span></div>
+    <div style="top: 220px;"><input type="radio" id="rb5a" name="bgCS" value=""><label for="rb5a" id="rb5b"></label></div>
+    <div style="top: 250px;"><input type="radio" id="rb6a" name="bgCS" value=""><label for="rb6a" id="rb6b"></label></div>        
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("complexnumbers",4,12,1999,18,10,2017);</script>
+
+</body>
+
+</html>

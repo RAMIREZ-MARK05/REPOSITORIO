@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Sehnenviereck</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+canvas { border: 1px solid black; display: block; margin: 20px auto; }
+#Fragen { color: #0000ff; }
+#Auswahl { margin-left: 20px; }
+td.links { width: 20px; vertical-align: top; }
+</style>
+<script src="cyclicquadrilateral.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Sehnenviereck">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Sehnenviereck">
+</head>
+
+<body>
+
+<h1>Sehnenviereck</h1>
+
+<div class="Def" style="width: 600px;">
+Definition:<br>
+Ein Viereck, das einen Umkreis besitzt, nennt man ein <b>Sehnenviereck</b>.
+</div>
+
+<canvas id="cv" width=500 height=500>HTML5-Canvas nicht unterst&uuml;tzt!</canvas>
+
+<p>Verschiebe mit gedr&uuml;ckter Maustaste die Ecken des gezeichneten Sehnenvierecks.</p>
+
+<p id="Fragen">Fragen</p>
+
+<table id="Auswahl"><tr>
+<td class="links">a)</td>
+<td>Welche der bekannten Viereckstypen geh&ouml;ren zu den Sehnenvierecken?</td>
+</tr><tr>
+<td class="links">b)</td>
+<td>Warum sind die gleichfarbig gezeichneten Winkel jeweils gleich gro&szlig;?</td>
+</tr><tr>
+<td class="links">c)</td>
+<td>Wieso sind zwei gegen&uuml;ber liegende Innenwinkel des Sehnenvierecks zusammen genau so gro&szlig; wie die beiden anderen Innenwinkel 
+zusammen?</td>
+</tr><tr>
+<td class="links">d)</td>
+<td>Wie gro&szlig; ist demnach die Summe der Gr&ouml;&szlig;en von zwei gegen&uuml;ber liegenden Winkeln?</td>
+</tr></table>
+
+<p><a href="cyclicquadrilateral1_de.htm">Antworten</a></p>
+
+<div class="Satz" style="width: 600px;">
+In einem Sehnenviereck betr&auml;gt die Summe der Gr&ouml;&szlig;en von zwei gegen&uuml;ber liegenden Innenwinkeln 180&deg;.
+</div>
+
+<script>endPage("cyclicquadrilateral",1,11,1997,18,10,2017);</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Online-Rechner Aussagenlogik</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 880px; height: 500px; }
+div#canvas { width: 600px; height: 500px; }
+div#panel { left: 600px; width: 280px; height: 500px; } 
+.pos1 { left: 15px; }
+button.b1 { margin-left: 15px; width: 120px; background-color: #00ffff; }
+button.b2 { margin-left: 15px; width: 120px; background-color: #fff000; }
+select.s1 { left: 200px; width: 70px; }
+</style>
+<script src="calculatorlogic_parser.js"></script>
+<script src="calculatorlogic_term.js"></script>
+<script src="calculatorlogic.js"></script>
+<script src="calculatorlogic_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Online-Rechner Aussagenlogik">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Logik, Aussagenlogik">
+</head>
+
+<body>
+
+<h1>Online-Rechner Aussagenlogik</h1>
+
+<p>Dieser Rechner ermittelt Wahrheitswerte f&uuml;r einfache aussagenlogische Terme.
+Folgende Symbole d&uuml;rfen in den Termen vorkommen:</p>
+
+<ul>
+<li>Variable x, y, z</li>
+<li>Konstanten W (wahr) und F (falsch)</li>
+<li>Negation (Verneinung), Symbol &not;</li>
+<li>Konjunktion (Und-Verkn&uuml;pfung), Symbol &and;</li>
+<li>Disjunktion (Oder-Verkn&uuml;pfung), Symbol &or;</li>
+<li>Implikation, Symbol &rArr;</li>
+<li>&Auml;quivalenz, Symbol &hArr;</li>
+<li>Runde Klammern</li>
+</ul>
+
+<p>F&uuml;r <span class="nobr">&not;, &and;, &or;, &rArr; und &hArr;</span> gilt die Vereinbarung,
+dass ein Symbol umso st&auml;rker bindet, je weiter links es in dieser Aufz&auml;hlung steht.
+Durch diese Festlegung ist es in vielen F&auml;llen m&ouml;glich, Klammern einzusparen.</p>
+
+<p>Im Ausgabebereich (links) sind folgende Informationen abzulesen:</p>
+
+<ul>
+<li>Eingegebener Term</li>
+<li>Bemerkung (Art des Gesamtterms oder Hinweis auf unvollst&auml;ndigen Term)</li>
+<li>Wahrheitstabelle (Wahrheitswerte der Variablen und des eingegebenen Terms)</li>
+<li>Disjunktive Normalform</li>
+<li>Konjunktive Normalform</li>
+</ul>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=600 height=500>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;">
+      <button id="clear" class="b1"></button>
+      <button id="reset" class="b1"></button>
+    </div>
+    <div style="top: 90px;">
+      <span id="num" class="pos1"></span><select id="selNum" class="s1"></select>
+    </div> 
+    <div style="top: 150px;">
+      <span id="var" class="pos1"></span><select id="selVar" class="s1"></select>
+    </div>
+    <div style="top: 200px;">
+      <button id="buNeg" class="b2"></button>
+    </div>
+    <div style="top: 250px;">
+      <button id="buAnd" class="b2"></button><button id="buOr" class="b2"></button>
+    </div>
+    <div style="top: 300px;">
+      <button id="buImp" class="b2"></button><button id="buEqu" class="b2"></button>
+    </div> 
+    <div style="top: 350px;">
+      <button id="buOpen" class="b2"></button>
+      <button id="buClose" class="b2"></button>
+    </div>
+    <div style="top: 400px;">
+      <button id="buFalse" class="b2"></button><button id="buTrue" class="b2"></button>
+    </div>
+ 
+    <div style="top: 470px;"><span id="author" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("calculatorlogic",18,8,2021,19,8,2021);</script>
+
+</body>
+
+</html>

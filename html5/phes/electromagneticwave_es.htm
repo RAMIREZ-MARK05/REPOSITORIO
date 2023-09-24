@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Onda Electromagn&eacute;tica</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+.electric { color: #ff0000; }
+.magnetic { color: #0000ff; }
+canvas { border: 1px solid black; margin: 20px auto 20px; display: block; }
+</style>
+<script src="electromagneticwave.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Onda Electromagn&eacute;tica">
+<meta name="author" content="Walter Fendt, Jos&eacute; Miguel Zamarro">
+<meta name="keywords" content="app, f&iacute;sica, electrodin&aacute;mica, onda electromagn&eacute;tica">
+</head>
+
+<body>
+
+<h1>Onda Electromagn&eacute;tica</h1>
+
+<p>Esta animaci&oacute;n muestra una onda electromagn&eacute;tica, concretamente una onda polarizada plana que se propaga en la direcci&oacute;n 
+positiva de x. Los vectores del <span class="electric">campo el&eacute;ctrico (en rojo)</span> son paralelos al eje y, los vectores del 
+<span class="magnetic">campo magn&eacute;tico (en azul)</span> son paralelos al eje z.</p>
+
+<canvas id="cv" width=600 height=400>This browser doesn't support HTML5 canvas!</canvas>
+
+<script>endPage("electromagneticwave",20,9,1999,14,12,2017,"Jos&eacute; Miguel Zamarro, 2001");</script>
+
+</body>
+
+</html>

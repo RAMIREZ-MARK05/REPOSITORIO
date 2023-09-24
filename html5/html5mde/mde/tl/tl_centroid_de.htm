@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Seitenhalbierende und Schwerpunkt eines Dreiecks</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+button { width: 220px; }
+textarea { width: 210px; height: 160px; line-height: 18px; } 
+.pos1 { left: 10px; }
+#ABC { margin-top: 30px; font-weight: bold; }
+</style>
+<script src="tl_centroid.js"></script>
+<script src="tl_centroid_de.js"></script>
+<script src="tl_page_de.js"></script>
+<meta name="description" content="HTML5-App: Seitenhalbierende und Schwerpunkt eines Dreiecks">
+<meta name="keywords" content="Mathematik, Geometrie, Dreieck, Dreiecksgeometrie, Schwerpunkt, Seitenhalbierende, Schwerlinien">
+<meta name="author" content="Walter Fendt">
+</head>
+
+<body>
+
+<h1>Seitenhalbierende und Schwerpunkt eines Dreiecks</h1>
+
+<p>Eine <em class="Begriff">Seitenhalbierende</em> (<em class="Begriff">Schwerlinie</em>) im Dreieck ist die Verbindungsstrecke 
+zwischen einer Ecke und dem Mittelpunkt der gegen&uuml;ber liegenden Seite.
+Hier werden alle drei Seitenhalbierenden eines Dreiecks betrachtet.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 70px;"><button id="bu2" style="background-color: #ffff00;"></button></div> 
+    <div style="top: 140px;"><textarea id="ta"></textarea></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<div class="Satz" style="width: 600px;">
+Je zwei Seitenhalbierenden (Schwerlinien) eines Dreiecks schneiden sich im Verh&auml;ltnis 2:1.</div>
+
+<div class="Satz" style="width: 600px;">
+Die drei Seitenhalbierenden (Schwerlinien) eines Dreiecks schneiden sich in einem Punkt.</div>
+
+<div class="Def" style="width: 600px;">
+Der Schnittpunkt der drei Seitenhalbierenden (Schwerlinien) eines Dreiecks hei&szlig;t der <em class="Begriff">Schwerpunkt</em> 
+des Dreiecks.</div>
+
+<p id="ABC"><a href="tl_start_de.htm#abc">&Uuml;bersicht</a></p>
+
+<script>endPage("tl_centroid",28,10,2004,20,10,2017);</script>
+
+</body>
+
+</html>

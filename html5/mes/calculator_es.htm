@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Calcular sin errores de redondeo</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<script src="calculator_parser.js"></script>
+<script src="calculator_te.js"></script>
+<script src="calculator_ratval.js"></script>
+<script src="calculator.js"></script>
+<script src="calculator_es.js"></script>
+<script src="page_mes.js"></script>
+<style>
+div#total { width: 920px; height: 500px; }
+div#canvas { width: 600px; height: 500px; }
+div#panel { left: 600px; width: 320px; height: 500px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 50px; }
+button.b1 { margin-left: 15px; width: 135px; background-color: #00ffff; } /* Löschen */
+button.b2 { margin-left: 15px; width: 25px; background-color: #ffffff; } /* Ziffern */
+button.b3 { margin-left: 230px; width: 25px; background-color: #fff000; } /* Prozent */
+button.b4 { margin-left: 15px; width: 25px; background-color: #fff000; } /* Rechenarten, Klammern */
+select.s1 { left: 150px; width: 160px; }
+select.s2 { width: 300px; }
+</style>
+<meta name="description" content="App HTML5: Calcular sin errores de redondeo">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, calcular, calculadora online">
+</head>
+
+<body>
+
+<h1>Calcular sin Errores de Redondeo</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=600 height=500>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;">
+      <button id="clear" class="b1"></button>
+      <button id="reset" class="b1"></button>
+    </div>
+    <div style="top: 80px;">
+      <button id="bu0" class="b2">0</button>
+      <button id="bu1" class="b2">1</button>
+      <button id="bu2" class="b2">2</button>
+      <button id="bu3" class="b2">3</button>
+      <button id="bu4" class="b2">4</button>
+    </div>
+    <div style="top: 120px;">
+      <button id="bu5" class="b2">5</button>
+      <button id="bu6" class="b2">6</button>
+      <button id="bu7" class="b2">7</button>
+      <button id="bu8" class="b2">8</button>
+      <button id="bu9" class="b2">9</button>
+    </div>
+    <div style="top: 100px;">
+      <button id="buPerc" class="b3">%</button>
+    </div>
+    <div style="top: 160px;">
+      <button id="plus" class="b4">+</button>
+      <button id="minus" class="b4">&minus;</button>
+      <button id="mult" class="b4">&middot;</button>
+      <button id="div" class="b4">&divide;</button>
+    </div>  
+    <div style="top: 200px;">
+      <button id="open" class="b4">(</button>
+      <button id="close" class="b4">)</button>
+    </div>
+    <div style="top: 260px;">
+      <span id="frac" class="pos1"></span><select id="selFN" class="s1"></select>
+    </div>    
+    <div style="top: 300px;">
+      <span id="dec" class="pos1"></span><select id="selDN" class="s1"></select>
+    </div> 
+    <div style="top: 340px;">
+      <span id="fracterm" class="pos1"></span><select id="selFT" class="s1"></select>
+    </div>        
+    <div style="top: 380px;">
+      <span id="pow" class="pos1"></span><select id="selPow" class="s1"></select>
+    </div>
+    <div style="top: 430px;"><select id="sel" class="s2"></select></div>
+    <div style="top: 470px;"><span id="author" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("calculator",22,6,2020,18,8,2020);</script>
+
+</body>
+
+</html>

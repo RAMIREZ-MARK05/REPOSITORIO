@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Kugeldreieck, Seiten und Winkel</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 40px; }
+.Abstand { margin-top: 30px; }
+</style>
+<script src="sphericaltriangle.js"></script>
+<script src="sphericaltriangle_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Kugeldreieck">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Kugelgeometrie, sph&auml;rische Geometrie, Kugeldreieck, sph&auml;risches Dreieck">
+</head>
+
+<body>
+
+<h1>Kugeldreieck</h1>
+
+<p>Ein <em class="Begriff">Kugeldreieck</em> (auch <em class="Begriff">sph&auml;risches Dreieck</em>) ist ein Teil einer Kugeloberfl&auml;che, 
+der von drei Gro&szlig;kreisen begrenzt wird.</p>
+
+<p>Die Ecken des gezeichneten Kugeldreiecks lassen sich mit gedr&uuml;ckter Maustaste ver&auml;ndern. Auf der rechten Seite kann man die 
+Gr&ouml;&szlig;en der Seiten und Winkel ablesen. (Hier werden nur Eulersche Kugeldreiecke betrachtet, d.h. es kommen nur Seiten und Winkel 
+unter 180&deg; vor.)</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="lb1" class="pos1"></span></div>
+    <div style="top: 50px;"><span id="op1a" class="pos2"></span></div>
+    <div style="top: 75px;"><span id="op1b" class="pos2"></span></div>
+    <div style="top: 100px;"><span id="op1c" class="pos2"></span></div>
+    <div style="top: 130px;"><span id="op1s" class="pos1"></span></div>
+    <div style="top: 170px;"><span id="lb2" class="pos1"></span></div>
+    <div style="top: 200px;"><span id="op2a" class="pos2"></span></div>
+    <div style="top: 225px;"><span id="op2b" class="pos2"></span></div>
+    <div style="top: 250px;"><span id="op2c" class="pos2"></span></div>
+    <div style="top: 280px;"><span id="op2s" class="pos1"></span></div>            
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<p class="Abstand">Ebene Dreiecke haben bekanntlich eine Winkelsumme von exakt 180&deg;. Die Winkelsumme eines Kugeldreiecks 
+dagegen kann beliebige Werte zwischen 180&deg; und 540&deg; annehmen: F&uuml;r sehr kleine Kugeldreiecke betr&auml;gt sie nur wenig mehr 
+als 180&deg;. Bei sehr gro&szlig;en Kugeldreiecken, die fast die halbe Kugeloberfl&auml;che &uuml;berdecken, ist die Winkelsumme 
+beinahe 540&deg;.</p>
+
+<div class="Abstand"><span class="Formel" style="width: 240px;">180&deg; &lt; &alpha; + &beta; + &gamma; &lt; 540&deg;</span></div>
+
+<p class="Abstand">F&uuml;r die Summe der Seitenl&auml;ngen gilt folgende Absch&auml;tzung:</p>
+
+<div class="Abstand"><span class="Formel" style="width: 240px;">0&deg; &lt; a + b + c &lt; 360&deg;</span></div>
+
+<p class="Abstand">Bemerkung: Die Zahlenwerte werden auf drei Nachkommastellen gerundet. Wenn f&uuml;r die Winkelsumme 540,000&deg; 
+oder f&uuml;r die Seitensumme 360,000&deg; angegeben wird, ist der tats&auml;chliche Wert etwas kleiner.</p>
+
+<script>endPage("sphericaltriangle",6,2,1999,1,8,2023);</script>
+
+</body>
+
+</html>

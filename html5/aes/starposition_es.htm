@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Movimiento aparente de una estrella</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../a/app.css">
+<style>
+div#total { width: 780px; height: 440px; }
+div#canvas { width: 360px; height: 440px; }
+div#panel { left: 360px; width: 420px; height: 440px; } 
+input[type="text"] { width: 50px; }
+input[type="range"] { width: 400px; }
+select { left: 220px; width: 190px; }
+button { width: 400px; }
+.pos1 { left: 10px; }
+.pos2 { left: 130px; }
+.pos3 { left: 195px; }
+.pos4 { left: 220px; }
+.pos5 { left: 285px; }
+.pos6 { left: 310px; }
+</style>
+<script src="starposition.js"></script>
+<script src="starposition_es.js"></script>
+<script src="page_aes.js"></script>
+<meta name="description" content="App HTML5: Movimiento aparente de una estrella">
+<meta name="author" content="Walter Fendt, Tom&aacute;s Fdez. de Sevilla">
+<meta name="keywords" content="app, astronom&iacute;a">
+</head>
+
+<body>
+
+<h1>Movimiento aparente de una estrella</h1>
+
+<p>Cuando los astr&oacute;nomos rellenan los estadillos para anotar la posici&oacute;n de las estrellas, utilizan dos &aacute;ngulos llamados 
+ascensi&oacute;n recta y declinaci&oacute;n. Sin embargo, y dado que la Tierra gira alrededor de su propio eje, la posici&oacute;n de una 
+estrella depende tambi&eacute;n del lugar de observaci&oacute;n (que viene dado por su latitud y longitud geogr&aacute;ficas) y del instante 
+de observaci&oacute;n (fecha y hora). Con este app se puede ver c&oacute;mo estos par&aacute;metros influyen sobre la posici&oacute;n 
+de la estrella. El bot&oacute;n &quot;Reinici&aacute;r&quot; restablece los valores precedentes. El bot&oacute;n 
+&quot;Rotaci&oacute;n/Pausa/Reanudar&quot; sirve para simular el movimiento de la estrella. Para observar la estrella desde otro punto se 
+utilizan las dos barras de la parte de abajo.</p>
+
+<p>El desplegable &quot;Reiniciar&quot; ofrece la posibilidad de representar diferentes elementos de la astronom&iacute;a esf&eacute;rica.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=360 height=440>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="ip1a" class="pos1"></span><input id="ip1b" type="text" class="pos2">
+      <span id="ip1c" class="pos3"></span><select id="ip1d"></select></div>
+    <div style="top: 50px;"><span id="ip2a" class="pos1"></span><input id="ip2b" type="text" class="pos2">
+      <span id="ip2c" class="pos3"></span><select id="ip2d"></select></div>
+    <div style="top: 90px;"><span id="ip3a" class="pos1"></span><input id="ip3b" type="text" class="pos2"><span id="ip3c" class="pos3"></span>
+      <input id="ip3d" type="text" class="pos4"><span id="ip3e" class="pos5"></span><input id="ip3f" type="text" class="pos6"></div>
+    <div style="top: 120px;"><span id="ip4a" class="pos1"></span><input id="ip4b" type="text" class="pos2"><span id="ip4c" class="pos3"></span>
+      <input id="ip4d" type="text" class="pos4"><span id="ip4e" class="pos5"></span></div>
+    <div style="top: 160px;"><span id="ip5a" class="pos1"></span><input id="ip5b" type="text" class="pos2">
+      <span id="ip5c" class="pos3"></span></div>
+    <div style="top: 190px;"><span id="ip6a" class="pos1"></span><input id="ip6b" type="text" class="pos2">
+      <span id="ip6c" class="pos3"></span></div>
+    <div style="top: 230px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 270px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 320px;"><span id="ip7a" class="pos1"></span><select id="ip7b"></select></div>
+    <div style="top: 350px;"><input id="ip8" type="range" min=0 max=36 step=1 value=0></div>
+    <div style="top: 380px;"><input id="ip9" type="range" min=0 max=18 step=1 value=0></div>
+    <div style="top: 410px;"><span id="author" class="pos1"></span></div>
+  </div>
+</div>
+
+<p>Nota: Ascensi&oacute;n recta y hora siderea vienen dadas en grados. En astronom&iacute;a estos dos &aacute;ngulos se expresan en unidades 
+horarias <span class="nobr">(1 hora</span> corresponde a <span class="nobr">15 grados).</span></p>
+
+<script>endPage("starposition",11,2,1999,25,3,2016,"Tom&aacute;s Fdez. de Sevilla, 2002");</script>
+
+</body>
+</html>

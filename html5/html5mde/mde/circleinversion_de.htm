@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Kreisspiegelung</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 130px; }
+select { width: 220px; }
+button { width: 220px; }
+</style>
+<script src="circleinversion.js"></script>
+<script src="circleinversion_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Kreisspiegelung">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Kreisspiegelung, Inversion">
+</head>
+
+<body>
+
+<h1>Kreisspiegelung</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 80px;"><select id="ch"></select></div>
+    <div style="top: 140px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 200px;"><button id="bu3" style="background-color: #ff40ff;"></button></div>
+    <div style="top: 260px;"><input id="cb" type="checkbox"><label id="lb" for="cb" style="color: #0000ff"></label></div>
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("circleinversion",23,3,2017,18,10,2017);</script>
+
+</body>
+
+</html>

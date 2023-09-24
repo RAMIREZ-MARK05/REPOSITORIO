@@ -1,0 +1,382 @@
+/* Stylesheet f�r Homepage Walter Fendt  */
+/* 23.06.2015 - 11.03.2022               */
+
+/* ==============================================
+   Allgemeine Vorgaben
+   ============================================== */
+
+* {
+  margin: 0;                           /* Vorgaben f�r Au�enabstand l�schen */
+  padding: 0;                          /* Vorgaben f�r Innenabstand l�schen */
+  font-family: Arial, sans-serif;      /* Zeichensatz */
+  }
+  
+/* Einzelseite */
+
+body {
+  background-color: #4040ff;           /* Hintergrundfarbe */
+  }
+  
+/* �berschrift einer Einzelseite */
+  
+h1 {
+  font-size: 30px;                     /* Schriftgr��e */
+  color: #00ffff;                      /* Schriftfarbe */
+  text-align: center;                  /* Zentrierter Text */
+  margin-top: 20px;                    /* Au�enrand oben */
+  margin-bottom: 20px;                 /* Au�enrand unten */
+  }
+  
+/* Au�enrand f�r einige wichtige Elemente */
+   
+img, tr, ul, p {
+  margin: 10px;                        /* Au�enrand */
+  }
+  
+/* Trennlinie */
+  
+hr {
+  margin: 20px auto 20px auto;         /* Au�enrand, Zentrierung */
+  width: 300px;                        /* L�nge */
+  color: #0000ff;                      /* Farbe */
+  }
+  
+span.nobr {
+  white-space: nowrap;                       /* Zeilenumbruch verhindern */
+  }
+   
+.auswahl img, #mitte1 img {
+  margin-left: 50px;
+  }
+  
+.auswahl a {
+  color: #80ff80;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 2px;
+  }
+  
+.auswahl a:hover {
+  background-color: #ff4040;
+  }
+  
+.auswahl img {
+  width:80px;
+  }
+  
+table.auswahl {
+  margin-top: 20px;
+  }
+  
+.auswahl td {
+  padding-left: 50px;
+  text-align: left;
+  }
+  
+/* Kleine Schrift */
+  
+.klein {
+  font-size: 70%;
+  padding-top: 10px; padding-bottom: 10px;
+  }
+  
+/* ==============================================
+   �bergeordneter Bereich f�r die seitlichen Navigationsspalten und den zentralen Bereich
+   ============================================== */
+   
+#oben {
+  margin: 10px;                        /* Au�enrand */
+  min-height: 580px;                   /* Minimale H�he */
+  }
+  
+/* ==============================================
+   Seitliche Navigationsspalten
+   ============================================== */
+   
+/* Gemeinsame Vorgaben f�r beide Navigationsspalten */
+   
+#links, #rechts {
+  background-color: #e0e0e0;           /* Hintergrundfarbe */
+  border: 1px solid #000000;           /* Rand */
+  }
+  
+/* Linke Navigationsspalte */
+
+#links {
+  left: 10px;                          /* Abstand links */
+  position: fixed;                     /* Spalte fixiert */
+  }
+  
+/* Rechte Navigationsspalte */
+    
+#rechts {
+  right: 10px;                         /* Abstand rechts */
+  position: fixed;                     /* Spalte fixiert */
+  } 
+  
+/* =============================================
+   Untere Navigationsleiste
+   ============================================= */ 
+  
+/* Untere Navigationsleiste (insgesamt) */
+  
+div#unten {
+  background-color: #e0e0e0;           /* Hintergrundfarbe hellgrau */
+  height: 40px;                        /* H�he */
+  margin: 30px 10px 20px 10px;         /* Au�enabstand */
+  border: 1px solid #000000;           /* Rand */
+  }
+  
+/* Untere Navigationsleiste, ungeordnete Liste */
+  
+#unten ul {
+  width: 100%;                         /* Breite */
+  margin: 0;                           /* Au�enabstand */
+  }
+  
+/* Untere Navigationsleiste, einzelner Listeneintrag */
+  
+#unten li {
+  float: left;                         /* Nach links floaten */
+  list-style: none;                    /* Kein Symbol */
+  }
+  
+/* Untere Navigationsleiste, einzelner Link */
+  
+#unten a {
+  color: #000000;                      /* Schriftfarbe */
+  display: block;
+  padding: 8px;                        /* Innenabstand */
+  text-decoration: none;               /* Nicht unterstreichen */
+  margin: 2px;                         /* Au�enrand */
+  }
+  
+/* Untere Navigationsleiste, aktiver Link */
+  
+#unten a:hover, #unten:active {
+  background-color: #ff8080;           /* Hintergrundfarbe */
+  }  
+  
+/* ==============================================
+   Zentraler Bereich der Startseite
+   ============================================== */
+
+/* Zentraler Bereich (Startseite) */   
+         
+#mitteStart {
+  clear: both;                         /* Nicht mehr floaten */
+  display: inline;                     /* Inline-Element */
+  margin-left: 200px;                  /* Abstand links */
+  margin-right: 200px;                 /* Abstand rechts */
+  text-align: center;                  /* Enthaltene Elemente zentrieren */
+  }
+  
+/* Zentraler Bereich (au�er Startseite) */
+  
+#mitte {
+  margin-left: 200px;                  /* Abstand links */
+  margin-right: 200px;                 /* Abstand rechts */
+  text-align: center;
+  }
+  
+/* Foto der Startseite */
+  
+#foto {
+  margin-top: 30px;                    /* Au�enabstand (oben) */
+  }
+  
+/* Neues auf diesen Seiten */
+  
+#neu1 {
+  text-align: left;                    /* Linksb�ndige Ausrichtung */
+  margin-top: 10px;                    /* Au�enabstand (oben) */
+  margin-left: 240px;                  /* Au�enabstand (links) */
+  font-size: 18px;                     /* Schriftgr��e */
+  font-weight: bold;                   /* Fettdruck */
+  color: #00ffff;                      /* Schriftfarbe */
+  }
+
+/* Neues auf diesen Seiten, Einzelheiten */  
+    
+.neu2 {
+  margin-top: 10px;                    /* Au�enabstand (oben) */
+  margin-left: 80px;                  /* Au�enabstand (links) */
+  }
+  
+/* Neues auf diesen Seiten, Links */
+  
+.neu2 a {
+  color: #80ff80;                      /* Schriftfarbe */
+  text-decoration: none;               /* Nicht unterstreichen */        
+  padding: 2px;                        /* Innenabstand */
+  }
+  
+/* Maus �ber dem Link, aktiver Link */
+ 
+.neu2 a:hover, .neu2 a:active {
+  background-color: #ff4040;           /* Hintergrundfarbe */
+  }
+  
+/* Download-Seite */
+  
+.download {
+  text-align: left;
+  margin-top: 10px;                    /* Au�enabstand (oben) */
+  margin-left: 240px;                  /* Au�enabstand (links) */
+  font-size: 18px;                     /* Schriftgr��e */
+  font-weight: bold;                   /* Fettdruck */
+  color: #00ffff;                      /* Schriftfarbe */
+  }
+  
+.download a {
+  color: #80ff80;                      /* Schriftfarbe */
+  text-decoration: none;               /* Nicht unterstreichen */        
+  padding: 2px;                        /* Innenabstand */
+  }
+  
+.download a:hover, .download a:active {
+  background-color: #ff4040;           /* Hintergrundfarbe */
+  }
+  
+/* ==============================================
+   Zentraler Bereich der Seiten Mathematik, Physik, Astronomie, Computer, Verschiedenes, Autor, Impressum
+   ============================================== */
+
+/* Zentraler Bereich insgesamt */
+     
+#mitte1 {
+  margin-left: 200px;                  /* Au�enabstand links */
+  margin-right: 200px;                 /* Au�enabstand rechts */
+  text-align: left;                    /* Linksb�ndige Ausrichtung */
+  }
+  
+/* Zentraler Bereich, einzelne Listeneintr�ge */
+  
+#mitte1 li {
+  margin: 5px 40px 5px 40px;           /* Au�enabstand */        
+  }
+  
+/* Zentraler Bereich, Gesamt�berschrift */
+  
+#mitte1 h1 {
+  color: #000000;                      /* Schriftfarbe */
+  }
+  
+#mitte h1 {
+  color: #00ffff;                      /* Schriftfarbe */
+  left: 100px;
+  }
+  
+/* Zentraler Bereich, kleinere �berschriften */
+  
+#mitte1 h2, #mitte1 h3 {
+  margin: 10px;                        /* Au�enabstand */
+  }
+  
+/* Zentraler Bereich, Abs�tze */
+  
+#mitte1 p {
+  margin-top: 10px;                    /* Au�enabstand oben */
+  margin-left: 30px;                   /* Au�enabstand links */
+  }
+  
+/* ==============================================
+   Zentraler Bereich der Autorenseite
+   ============================================== */
+  
+/* Autorenseite, Text */
+
+.autor {
+  margin: 20px 150px 20px 150px;       /* Au�enrand */
+  text-align: left;                    /* Linksb�ndige Ausrichtung */
+  font-weight: bold;                   /* Fettdruck */
+  color: #80ff80;                      /* Schriftfarbe */
+  }
+
+/* Autorenseite, einzelne Links */
+   
+.autor a {
+  color: #80ff80;                      /* Schriftfarbe */
+  text-decoration: none;               /* Nicht unterstreichen */
+  }
+  
+/* ============================================== 
+   Zentraler Bereich der Impressumseite
+   ============================================== */
+  
+/* Impressum insgesamt */
+  
+#impressum {
+  padding: 80px;                       /* Innenabstand */
+  text-align: left;                    /* Linksb�ndige Ausrichtung */
+  color: #80ff80;                      /* Schriftfarbe */
+  font-weight: bold;                   /* Fettdruck */
+  }
+  
+/* Impressum, einzelne Zelle der Tabelle */
+  
+#impressum td {
+  width: 200px;                        /* Breite */
+  padding: 15px;                       /* Innenabstand */
+  }
+  
+/* Impressum, einzelne Zellen rechts in der Tabelle */
+  
+#impressum td.rechts {
+  width: 400px;                        /* Gr��ere Breite */
+  }
+
+/* Impressum, Link auf E-Mail-Adresse */  
+    
+#email a {
+  color: #80ff80;                      /* Schriftfarbe */
+  text-decoration: none;               /* Nicht unterstreichen */
+  }
+
+/* ============================================== 
+   Spezielle Seiten 
+   ============================================== */
+ 
+/* Lottoseite, einzelne Zellen der Tabelle mit den Zahlen */
+ 
+#lotto td {
+  padding: 20px;                       /* Innenabstand */
+  font-weight: bold;                   /* Fettdruck */
+  }
+  
+/* Linksammlung, Tabelle f�r Bereiche */ 
+  
+table.bereiche {
+  width: 90%;                          /* Gesamtbreite */
+  }
+  
+/* Linksammlung, einzelne Zellen der Tabelle */
+  
+td.bereiche {
+  width: 50%;                          /* Breite (wegen zweispaltiger Darstellung) */
+  vertical-align: top;                 /* Ausrichtung am oberen Tabellenrand */
+  }
+  
+/* Linksammlung, Rahmen f�r eigene Inhalte */
+  
+.eigenes {
+  background-color: #ffff00;           /* Hintergrundfarbe */
+  padding: 10px;                       /* Innenabstand */
+  }
+
+/* Linksammlung, Rahmen f�r besondere Seiten */  
+   
+.besonderes {
+  background-color: #ffffff;           /* Hintergrundfarbe */
+  padding: 10px;                       /* Innenabstand */
+  }
+  
+/* Linksammlung, Stern-Symbol f�r einzelne Listeneintr�ge */
+  
+li.links {
+  list-style-image: url(stern.gif);    /* Symbol als GIF-Datei */
+  }
+  
+
+  
+

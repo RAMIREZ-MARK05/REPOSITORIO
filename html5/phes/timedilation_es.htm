@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Ejemplo de Dilataci&oacute;n del Tiempo</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+div#total { width: 720px; height: 500px; }
+div#panel1, div#panel2 { width: 720px; height: 50px; }
+div#canvas { top: 50px; width: 720px; height: 300px; }
+div#panel2 { top: 350px; }
+.pos1 { left: 100px; }
+button { position: absolute; margin-top: 10px; }
+button#buSlower { left: 60px; width: 240px; background-color: #ff0000; }
+button#buFaster { left: 420px; width: 240px; background-color: #80c0ff; }
+button#buReset { left: 50px; width: 150px; background-color: #00ffff; }
+button#buStart { left: 250px; width: 150px; background-color: #ffff00; }
+img { border: 2px solid #000000; }
+</style>
+<script src="timedilation.js"></script>
+<script src="timedilation_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Ejemplo de Dilataci&oacute;n del Tiempo">
+<meta name="author" content="Walter Fendt, Juan Mu&ntilde;oz">
+<meta name="keywords" content="app, f&iacute;sica, teor&iacute;a de la relatividad, dilataci&oacute;n del Tiempo, Einstein">
+</head>
+
+<body>
+
+<h1>Ejemplo de Dilataci&oacute;n del Tiempo</h1>
+
+<p>Una nave espacial est&aacute; volando a una distancia de <span class="nobr">5&nbsp;horas-luz</span> desde la Tierra hasta el 
+planeta enano Plut&oacute;n, por ejemplo. La velocidad puede ser regulada con el bot&oacute;n superior.</p>
+
+<p>La aplicaci&oacute;n demuestra que el reloj de la nave va m&aacute;s lento que los dos relojes del sistema en el que la Tierra 
+y Plut&oacute;n est&aacute;n en reposo.</p>
+
+<div id="total">
+  <div id="panel1">
+    <button id="buSlower"></button>
+    <button id="buFaster"></button>
+  </div>
+  <div id="canvas"><canvas id="cv" width=720 height=300>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel2">
+    <button id="buReset"></button>
+    <button id="buStart"></button>
+    <span id="author" style="left: 500px; top: 16px;"></span>
+  </div>
+</div>
+
+<p><b>F&oacute;rmula:</b></p>
+
+<div class="center"><img src="math/timedilation_f1.gif" alt="Formula"></div>
+
+<p class="Formel">t' ... tiempo indicado por el reloj de la nave<br>
+t&nbsp; ... tiempo indicado por los relojes del sistema Tierra-Plut&oacute;n<br>
+v&nbsp; ... velocidad de la nave respecto al sistema Tierra-Plut&oacute;n<br>
+c&nbsp; ... velocidad de la luz</p>
+
+<p><b>Observaciones:</b></p>
+
+<ol>
+<li>Se supone, por simplificaci&oacute;n, que existe un sistema inercial respecto al cual la Tierra y Plut&oacute;n est&aacute;n en reposo; 
+en particular, se ignora el movimiento de los dos planetas alrededor del Sol.</li>
+<li>De acuerdo con un importante resultado de la teor&iacute;a de la relatividad, un observador en el sistema Tierra-Plut&oacute;n 
+ver&iacute;a contraerse la nave en la direcci&oacute;n del movimiento. Este efecto, llamado &quot;Contracci&oacute;n de Lorentz&quot;, 
+no se ha tenido en cuenta para as&iacute; poder obtener la lectura del reloj de la nave espacial.</li>
+</ol>
+
+<script>endPage("timedilation",15,11,1997,14,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+
+</html>

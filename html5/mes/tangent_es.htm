@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Tangentes a la Gr&aacute;fica de una Funci&oacute;n</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 700px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 300px; height: 400px; } 
+button { width: 280px; }
+.pos1 { left: 10px; }
+.pos2 { left: 60px; width: 220px; }
+.pos3 { left: 160px; width: 120px; }
+</style>
+<script src="tangent.js"></script>
+<script src="tangent_es.js"></script>
+<script src="page_mes.js"></script>
+<meta name="description" content="App HTML5: Tangentes a la Gr&aacute;fica de una Funci&oacute;n">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, matem&aacute;ticas, c&aacute;lculo diferencial, tangente">
+</head>
+
+<body>
+
+<h1>Tangentes a la Gr&aacute;fica de una Funci&oacute;n</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><span class="pos1" id="lb1"></span></div>
+    <div style="top: 40px;"><span class="pos1" id="ip1a"></span><input type="text" class="pos2" id="ip1b"></div>    
+    <div style="top: 100px;"><span class="pos1" id="ip2a"></span><input type="text" class="pos3" id="ip2b"></div>
+    <div style="top: 140px;"><span class="pos1" id="ip3a"></span><input type="text" class="pos3" id="ip3b"></div>
+    <div style="top: 180px;"><span class="pos1" id="ip4a"></span><input type="text" class="pos3" id="ip4b"></div>
+    <div style="top: 220px;"><span class="pos1" id="op5a"></span><span class="pos3" id="op5b"></span></div>
+    <div style="top: 280px;"><button id="bu" style="background-color: #ffff00;"></button></div>
+    <div style="top: 370px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script>endPage("tangent",6,9,2017,27,2,2020);</script>
+
+</body>
+</html>

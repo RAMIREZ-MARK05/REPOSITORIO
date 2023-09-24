@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Pappos-Kette</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+canvas { border: 1px solid black; display: block; margin: 20px auto; }
+</style>
+<script src="papposchain.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Die Pappos-Kette">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="Mathematik, Geometrie, Pappos-Kette">
+</head>
+
+<body>
+
+<h1>Die Pappos-Kette</h1>
+
+<p>Gegeben sind zwei Kreise (schwarz und rot), von denen einer den anderen einschlie&szlig;end ber&uuml;hrt. Die Gr&ouml;&szlig;e 
+des inneren Kreises l&auml;sst sich mit gedr&uuml;ckter Maustaste ver&auml;ndern. Die <em class="Begriff">Pappos-Kette</em> 
+(auch Pappus-Kette geschrieben) besteht aus unendlich vielen Kreisen (blau). Jeder dieser Kreise ber&uuml;hrt sowohl die beiden 
+gegebenen Kreise als auch die beiden Nachbarkreise. Die Mittelpunkte der Kreise, die zur Pappos-Kette geh&ouml;ren, liegen 
+auf einer Ellipse (violett).</p>
+
+
+<canvas id="cv" width=420 height=420>HTML5-Canvas nicht unterst&uuml;tzt!</canvas>
+
+<script>endPage("papposchain",4,3,2005,18,10,2017);</script>
+
+</body>
+
+</html>

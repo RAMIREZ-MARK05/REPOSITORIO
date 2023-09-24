@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<meta charset="utf-8">
+<title>Primyphos</title>
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 600px; height: 400px; }
+div#canvas { width: 600px; height: 350px; }
+div#panel { top: 350px; width: 600px; height: 50px; }
+.pos1 { left: 10px; }
+.pos1b {left: 180px; }
+.pos2 { left: 220px; }
+.pos3 { left: 300px; }
+.pos4 { left: 320px; }
+.pos5 { left: 460px; }
+input[type="text"] {width: 60px; }
+span#op1 {position: absolute; left: 150px; top: 10px; }
+span#op2 {position: absolute; left: 150px; top: 30px; }
+</style>
+<script src="primyphos.js"></script>
+<script src="primyphos_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Primyphos, ein einfaches Spiel zur Primfaktorzerlegung">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Arithmetik, Zahlentheorie, Primzahl, Primfaktoren">
+</head>
+
+<body>
+
+<h1>Primyphos</h1>
+
+<p>Nach einer alten griechischen Sage muss Sisyphos, der Gr&uuml;nder von Korinth, als Strafe f&uuml;r seine Untaten in der Unterwelt 
+einen schweren Felsbrocken den Berg hinaufw&auml;lzen. Jedesmal, wenn Sisyphos es geschafft hat, rollt der Fels wieder hinunter und 
+die qualvolle Arbeit beginnt von Neuem.</p>
+
+<p>Nicht ganz so schwierig ist das Spiel &quot;Primyphos&quot;. Es geht darum, die Kugeln durch Mausklicks nach oben zu bef&ouml;rdern. 
+Allerdings k&ouml;nnen nur Kugeln, auf denen eine Primzahl steht, die oberste Stufe erreichen. Daher musst du immer wieder eine Zahl 
+in zwei Faktoren zerlegen. Passiert dir dabei ein Fehler, so befinden sich alle Kugeln derselben Farbe pl&ouml;tzlich wieder ganz unten. 
+Wirklich hart aber trifft es dich, wenn dir auf der vorletzten Stufe eine Zerlegung misslingt: Dann musst du &#8211; wie Sisyphos &#8211; 
+v&ouml;llig neu anfangen.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=600 height=350>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 15px;">
+      <span id="text" class="pos1"></span>
+      <span id="number" class="pos1b"></span>
+      <input type="text" id="ip1" class="pos2">
+      <span id="mult" class="pos3"></span>
+      <input type="text" id="ip2" class="pos4">
+      <span id="author" class="pos5"></span>
+    </div>    
+    <span id="op2"></span>
+  </div>
+</div>
+
+<script>endPage("primyphos",18,10,1998,18,10,2017);</script>
+
+</body>
+</html>

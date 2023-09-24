@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>15-Puzzle</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+button { width: 220px; }
+</style>
+<script src="puzzle15.js"></script>
+<script src="puzzle15_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: 15-Puzzle">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Unterhaltungsmathematik, 15-Puzzle">
+</head>
+
+<body>
+
+<h1>15-Puzzle</h1>
+
+<p>Das <em class="Begriff">15-Puzzle</em> wurde gegen Ende des <span class="nobr">19. Jahrhunderts</span> von dem US-amerikanischen
+Postangestellten Noyes Palmer Chapman erfunden. Auf einem <span class="nobr">4&times;4-Spielfeld</span> lassen sich
+<span class="nobr">15 Kacheln</span> mit den Nummern 1 bis 15 verschieben. Das Ziel des Spiels besteht darin, aus einer vorgegebenen
+(ungeordneten) Stellung die geordnete Ausgangsstellung wiederherzustellen.</p>
+
+<p>Nach der Formel f&uuml;r <em class="Begriff">Permutationen</em> gibt es 16! 
+<span class="nobr">&nbsp; = &nbsp; 1 &middot; 2 &middot; 3 &middot; ... &middot; 14 &middot; 15 &middot; 16</span>
+<span class="nobr">&nbsp; = &nbsp; 20.922.789.888.000</span> M&ouml;glichkeiten,
+die <span class="nobr">15 Kacheln</span> und das leere Feld auf dem Spielfeld zu platzieren. Allerdings ist die gestellte Aufgabe
+in der H&auml;lfte dieser F&auml;lle unl&ouml;sbar. Daher ist die Zahl der m&ouml;glichen Stellungen
+10.461.394.944.000.</p>
+
+
+<p>Um herauszufinden, ob f&uuml;r eine gegebene Stellung die L&ouml;sung 
+m&ouml;glich ist, verwendet man den sogenannten <em class="Begriff">Umordungsparameter</em> N<sub>1</sub> und den 
+<em class="Begriff">Reihenparameter</em> N<sub>2</sub>.</p>
+
+<ul>
+<li>Beim Umordnungsparameter betrachtet man alle Zahlenpaare (m,n) mit <span class="nobr">m &lt; n,</span> 
+also die Paare (1,2), (1,3), ..., (1,15), (2,3), (2,4), ..., (2,15), (3,4), ..., (14,15).
+Die angestrebte Ordnung sei durch Pfeile veranschaulicht. Z&auml;hlt man nun diejenigen Zahlenpaare,
+bei denen die zweite Zahl in Richtung der Pfeile zuerst kommt, so erh&auml;lt man den Umordnungsparameter N<sub>1</sub>.</li>
+<li>Der Reihenparameter N<sub>2</sub> ist die Nummer der waagrechten Reihe, in der sich das leere Feld befindet.</li>
+</ul>
+
+<p>Das Problem ist f&uuml;r eine bestimmte Anfangsstellung genau dann l&ouml;sbar, wenn die Summe 
+<span class="nobr">N<sub>1</sub> + N<sub>2</sub></span> eine gerade Zahl ist.</p>
+
+<p><b>Beispiel:</b></p>
+
+<div class="center"><img src="puzzle15.gif" alt="Beispiel"></div>
+
+<p>In der abgebildeten Stellung haben die folgenden 9 Zahlenpaare eine &quot;falsche&quot; Reihenfolge:
+(10,11), (10,12), (10,13), (10,14), (11,12), (11,13), (11,14), (12,14), (13,14). Der Umordnungsparameter N<sub>1</sub>
+hat demnach den Wert 9. Das leere Feld befindet sich in der <span class="nobr">3. Reihe</span>, es gilt also
+<span class="nobr">N<sub>2</sub> = 3.</span> Weil <span class="nobr">N<sub>1</sub> + N<sub>2</sub> = 9 + 3 = 12</span>
+eine gerade Zahl ist, ist die Aufgabe f&uuml;r diese Anfangsstellung l&ouml;sbar.</p>
+
+<p><b>Quelle:</b> Wikipedia (deutsch), Artikel &quot;15-Puzzle&quot;</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 80px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 180px;"><span id="lb1" class="pos1"></span></div>
+    <div style="top: 220px;"><span id="lb2" class="pos1"></span></div>
+    <div style="top: 240px;"><span id="lb3" class="pos1"></span></div>
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("puzzle15",24,7,2023,24,7,2023);</script>
+
+</body>
+
+</html>

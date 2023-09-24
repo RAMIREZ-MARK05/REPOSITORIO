@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Satz des Pythagoras</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 740px; height: 400px; }
+div#canvas { width: 500px; height: 400px; }
+div#panel { left: 500px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 130px; }
+input { width: 220px; }
+div.Abstand { margin-top: 30px; }
+</style>
+<script src="pythagoras2.js"></script>
+<script src="pythagoras2_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Satz des Pythagoras">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Pythagoras">
+</head>
+
+<body>
+
+<h1>Satz des Pythagoras</h1>
+
+<p>Die Kathetenl&auml;ngen des gr&uuml;n dargestellten <em class="Begriff">rechtwinkligen Dreiecks</em> (links) lassen sich mit Hilfe 
+der beiden Schieberegler ver&auml;ndern.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=500 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 40px;"><input type="range" id="sl1" min=0 max=100 step=1></div>
+    <div style="top: 80px;"><input type="range" id="sl2" min=0 max=100 step=1></div>
+    <div style="top: 140px; color: #0000ff;"><span id="lb1a" class="pos1"></span><span id="lb1b" class="pos2"></span></div>
+    <div style="top: 180px; color: #ff0000;"><span id="lb2a" class="pos1"></span><span id="lb2b" class="pos2"></span></div>
+    <div style="top: 220px; color: #000000;"><span id="lb3a" class="pos1"></span><span id="lb3b" class="pos2"></span></div>
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<p>Gegeben ist ein rechtwinkliges Dreieck (linke Skizze, gr&uuml;n) mit den Kathetenl&auml;ngen a und b. Es geht um die Frage, wie die 
+L&auml;nge der Hypotenuse (c) von a und b abh&auml;ngt. Im rechten Teil der Zeichenfl&auml;che sind zwei Quadrate mit der 
+Seitenl&auml;nge a+b dargestellt. In beide Quadrate sind je vier Dreiecke (gr&uuml;n) eingezeichnet, die zum gegebenen Dreieck kongruent 
+sind. Die restliche Fl&auml;che besteht im einen Fall (Zeichnung rechts oben) aus den beiden Kathetenquadraten (blau und rot), im anderen 
+Fall (Zeichnung rechts unten) aus dem Hypotenusenquadrat (violett).</p>
+
+<div class="Satz" style="width: 500px;">
+<strong>Satz des Pythagoras:</strong><br>
+Im rechtwinkligen Dreieck haben die beiden Kathetenquadrate zusammen die gleiche Fl&auml;che wie das Hypotenusenquadrat.
+<div><span class="Formel" style="width: 120px;">a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></span></div>
+</div>
+
+<p>Eine andere M&ouml;glichkeit, den Satz des Pythagoras zu begr&uuml;nden (n&auml;mlich mit Hilfe des Kathetensatzes), wird 
+<a href="pythagoras_de.htm">hier</a> erl&auml;utert.</p>
+
+<script>endPage("pythagoras2",19,2,2001,30,7,2023);</script>
+
+</body>
+
+</html>

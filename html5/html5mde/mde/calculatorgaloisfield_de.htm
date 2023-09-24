@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Online-Rechner Galois-Felder</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+.red { color: #ff0000; }
+table { margin-left: 20px; }
+td { padding-left: 20px; }
+div#total { width: 900px; height: 400px; }
+div#canvas { width: 600px; height: 400px; }
+div#panel { left: 600px; width: 300px; height: 400px; } 
+select { background-color: white; }
+.pos1 { left: 10px; }
+.small { left: 210px; width: 70px; }
+.large { left: 140px; width: 140px; }
+input[type="text"].small { width: 65px; }
+input[type="text"].large { width: 135px; }
+</style>
+<script src="calculatorgaloisfield_zp.js"></script>
+<script src="calculatorgaloisfield_po.js"></script>
+<script src="calculatorgaloisfield_gf.js"></script>
+<script src="calculatorgaloisfield.js"></script>
+<script src="calculatorgaloisfield_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Online-Rechner Galois-Felder">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Rechnen, Online-Rechner, Galois-Felder, endliche K&ouml;rper">
+</head>
+
+<body>
+
+<h1>Online-Rechner Galois-Felder</h1>
+
+<p>Der Begriff <em class="Begriff">K&ouml;rper</em> (engl. <em>field</em>) spielt in der Algebra eine wichtige Rolle. 
+Grob gesagt, dr&uuml;ckt dieser Begriff aus, dass in einer gegebenen Menge zwei Rechenarten 
+(<em class="Begriff">Addition</em> und <em class="Begriff">Multiplikation</em>) 
+definiert sind, f&uuml;r die im Wesentlichen die gleichen Regeln gelten wie beim Rechnen mit rationalen Zahlen. Konkreter: 
+Summe und Produkt zweier Elemente m&uuml;ssen wieder zur Menge geh&ouml;ren (<em class="Begriff">Abgeschlossenheit</em>), 
+die <em class="Begriff">Assoziativgesetze</em> und <em class="Begriff">Kommutativgesetze</em> m&uuml;ssen erf&uuml;llt sein,
+f&uuml;r beide Rechenarten muss es <em class="Begriff">neutrale Elemente</em> geben (0 f&uuml;r die Addition, 1 f&uuml;r die
+Multiplikation) und zu einem Element x m&uuml;ssen <em class="Begriff">inverse Elemente</em> existieren (&minus;x 
+bez&uuml;glich der Addition, x<sup>&minus;1</sup> f&uuml;r <span class="nobr">x &ne; 0</span> bez&uuml;glich der Multiplikation).
+Au&szlig;erdem wird noch die G&uuml;ltigkeit des <em class="Begriff">Distributivgesetzes</em> gefordert.</p>
+
+<p>Die bekanntesten Beispiele sind der K&ouml;rper <strong>Q</strong> der rationalen Zahlen, der K&ouml;rper <strong>R</strong>
+der reellen Zahlen und der K&ouml;rper <strong>C</strong> der komplexen Zahlen. Diese K&ouml;rper haben jeweils 
+unendlich viele Elemente.</p>
+
+<p class="red">Frage: Gibt es auch K&ouml;rper mit endlich vielen Elementen?</p>
+
+<p>Antwort: Ja, es gibt K&ouml;rper mit endlich vielen Elementen, aber die Zahl der Elemente muss entweder eine Primzahl (p) sein
+oder eine Potenz davon (p<sup>2</sup>, p<sup>3</sup>, p<sup>4</sup> usw.). Es existiert also zum Beispiel kein K&ouml;rper 
+mit genau <span class="nobr">6 Elementen,</span> weil sich die <span class="nobr">Zahl 6</span> in zwei verschiedene Primfaktoren 
+zerlegen l&auml;sst: <span class="nobr">6 = 2 &middot; 3</span></p>
+
+<p>K&ouml;rper mit endlich vielen Elementen werden nach dem franz&ouml;sischen Mathematiker &Eacute;variste Galois 
+<span class="nobr">(1811 - 1832)</span> als <em class="Begriff">Galois-Felder</em> bezeichnet.
+Im Folgenden soll anhand von zwei typischen Beispielen das Rechnen in Galois-Feldern erl&auml;utert werden.</p>
+
+<h2>Beispiel: Galois-Feld GF(5)</h2>
+
+<p>Hier gibt es nur die Elemente 0, 1, 2, 3 und 4. Damit beim Addieren oder Multiplizieren keine anderen Elemente herauskommen,
+rechnet man <span class="nobr"><em class="Begriff">modulo 5</em>.</span> Das bedeutet, dass man zun&auml;chst &quot;normal&quot;
+rechnet, anschlie&szlig;end durch 5 dividiert und den Divisionsrest als Ergebnis nimmt.</p>
+
+<table>
+<tr>
+<td>Beispiel zur Addition:</td>
+<td>3 + 4 = 2;</td>
+<td>(&quot;normal&quot; 3 + 4 = 7;</td>
+<td>7 : 5 ergibt 1 Rest 2)</td>
+</tr>
+<tr>
+<td>Beispiel zur Multiplikation:</td>
+<td>2 &middot; 4 = 3;</td>
+<td>(&quot;normal&quot; 2 &middot; 4 = 8;</td>
+<td>8 : 5 ergibt 1 Rest 3)</td>
+</tr>
+</table>
+
+<h2>Galois-Felder des Typs GF(p)</h2>
+
+<p>Entsprechend definiert man Addition und Multiplikation in einem Galois-Feld GF(p), wenn p eine beliebige Primzahl ist. 
+Das &quot;kleinste&quot; Galois-Feld ist GF(2) mit den Elementen 0 und 1. Es hat die Besonderheit, dass es keinen Unterschied
+zwischen Addition und Subtraktion gibt.</p>
+
+<h2>Beispiel: Galois-Feld GF(8)</h2>
+
+<p>Hier ist die Sache schon deutlich komplizierter. Wegen <span class="nobr">8 = 2<sup>3</sup></span> geht man vom einfacheren
+Galois-Feld GF(2) aus.<br>
+GF(2) ist der <em class="Begriff">Primk&ouml;rper</em> von GF(8); 
+2 ist die <em class="Begriff">Charakteristik</em> des K&ouml;rpers GF(8).</p>
+
+<p>Zus&auml;tzlich zu den Elementen 0 und 1 von GF(2) ben&ouml;tigt man eine Wurzel (Nullstelle) des Polynoms
+<span class="nobr">x<sup>3</sup> + x + 1</span>, also ein Element &alpha; mit der Eigenschaft 
+<span class="nobr">&alpha;<sup>3</sup> + &alpha; + 1 &nbsp;=&nbsp; 0.</span>
+Alle Elemente von GF(8) lassen sich in der Form 
+<span class="nobr">c<sub>0</sub> + c<sub>1</sub> &alpha; + c<sub>2</sub> &alpha;<sup>2</sup></span> schreiben,
+wobei nur Koeffizienten <span class="nobr">c<sub>0</sub>, c<sub>1</sub>, c<sub>2</sub></span> aus GF(2)
+erlaubt sind.</p>
+
+<p>Die Addition ist nun kein gro&szlig;es Problem mehr, wie das folgende Beispiel zeigt. (Im Grunde muss man nur daran denken,
+dass in GF(2) die Aussage <span class="nobr">1 + 1 = 0</span> gilt.)</p>
+
+<p>(1 + &alpha;<sup>2</sup>) + (1 + &alpha;) &nbsp; = &nbsp; &alpha; + &alpha;<sup>2</sup></p>
+
+<p>Das n&auml;chste Beispiel soll die Multiplikation in GF(8) demonstrieren:</p>
+
+<p>(1 + &alpha;<sup>2</sup>) &middot; (&alpha; + &alpha;<sup>2</sup>)
+&nbsp; = &nbsp; &alpha; + &alpha;<sup>2</sup> + &alpha;<sup>3</sup> + &alpha;<sup>4</sup></p>
+
+<p>Da das Ergebnis noch nicht die gew&uuml;nschte Form hat, muss man noch &alpha;<sup>3</sup> und &alpha;<sup>4</sup>
+durch Potenzen mit kleineren Exponenten ausdr&uuml;cken. Aus <span class="nobr">&alpha;<sup>3</sup> + &alpha; + 1 &nbsp;=&nbsp; 0</span>
+folgt:</p>
+
+<p>&alpha;<sup>3</sup> &nbsp; = &nbsp; &minus;&alpha; &minus; 1 &nbsp; = &nbsp; &alpha; + 1 &nbsp; (wegen Charakteristik 2)<br>
+&alpha;<sup>4</sup> &nbsp; = &nbsp; &alpha;<sup>3</sup> &middot; &alpha; 
+&nbsp; = &nbsp; (&alpha; + 1) &middot; &alpha;
+&nbsp; = &nbsp; &alpha;<sup>2</sup> + &alpha;</p>
+
+<p>Durch Einsetzen erh&auml;lt man demnach:</p>
+
+<p>(1 + &alpha;<sup>2</sup>) &middot; (&alpha; + &alpha;<sup>2</sup>) &nbsp;
+<span class="nobr">= &nbsp; &alpha; + &alpha;<sup>2</sup> + (&alpha; + 1) + (&alpha;<sup>2</sup> + &alpha;) &nbsp;</span>
+<span class="nobr">= &nbsp; 1 + &alpha; &nbsp;</span>
+<span class="nobr">(wegen Charakteristik 2)</span></p>
+
+<h2>Galois-Felder des Typs GF(p<sup>n</sup>)</h2>
+
+<p>Hier geht man vom Primk&ouml;rper GF(p) mit den Elementen <span class="nobr">0, 1, ..., p&minus;1</span> aus.
+Zus&auml;tzlich ben&ouml;tigt man ein geeignetes Polynom vom <span class="nobr">Grad n</span>, das &uuml;ber GF(p)
+irreduzibel (unzerlegbar) ist. Ist &alpha; eine Wurzel dieses Polynoms, dann l&auml;sst sich jedes Element 
+von GF(p<sup>n</sup>) in der Form 
+<span class="nobr">c<sub>0</sub> + c<sub>1</sub> &alpha; + ... + c<sub>n&minus;1</sub> &alpha;<sup>n&minus;1</sup></span>
+ausdr&uuml;cken, wobei die Koeffizienten <span class="nobr">c<sub>0</sub>, c<sub>1</sub>, ..., c<sub>n&minus;1</sub></span>
+aus dem Primk&ouml;rper GF(p) stammen m&uuml;ssen.</p>
+
+<hr class="Trennlinie">
+
+<p>Dieser Online-Rechner ist f&uuml;r Galois-Felder geeignet, deren Ordnung nicht gr&ouml;&szlig;er ist als 100.
+Die Ordnung l&auml;sst sich im Auswahlfeld rechts oben einstellen. Mithilfe von Radiobuttons wird eine 
+zweistellige Verkn&uuml;pfung (Addition, Subtraktion, Multiplikation, Division) oder eine einstellige Verkn&uuml;pfung 
+(Inverses bez&uuml;glich Addition oder Multiplikation) ausgew&auml;hlt. Die Eingabe der Operanden erfolgt
+&uuml;ber Auswahlfelder. 
+Zus&auml;tzlich zum Ergebnis (unten) wird auf der linken Seite eine Verk&uuml;pfungstafel oder eine Tabelle inverser Elemente angezeigt.
+Da diese Tabellen ziemlich umfangreich sein k&ouml;nnen, lassen sie sich mit der Maus beziehungsweise mit einem Finger 
+verschieben.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=600 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="lb1" class="pos1"></span><select id="ch1" class="small"></select></div>
+    <div style="top: 50px;"><span id="lb2" class="pos1"></span><input type="text" id="op2" class="small"></div>
+    <div style="top: 90px;"><input type="radio" id="rb3" name="bg" value=""><label for="rb3" id="lb3"></label></div>    
+    <div style="top: 120px;"><input type="radio" id="rb4" name="bg" value=""><label for="rb4" id="lb4"></label></div>    
+    <div style="top: 150px;"><input type="radio" id="rb5" name="bg" value=""><label for="rb5" id="lb5"></label></div>    
+    <div style="top: 180px;"><input type="radio" id="rb6" name="bg" value=""><label for="rb6" id="lb6"></label></div>    
+    <div style="top: 210px;"><input type="radio" id="rb7" name="bg" value=""><label for="rb7" id="lb7"></label></div>    
+    <div style="top: 240px;"><input type="radio" id="rb8" name="bg" value=""><label for="rb8" id="lb8"></label></div>    
+    <div style="top: 270px;"><span id="lb9" class="pos1"></span><select id="ch9" class="large"></select></div>     
+    <div style="top: 300px;"><span id="lb10" class="pos1"></span><select id="ch10" class="large"></select></div>      
+    <div style="top: 330px;"><span id="lb11" class="pos1"></span><input type="text" id="op11" class="large"></div>
+    <div style="top: 370px;"><span id="author" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("calculatorgaloisfield",5,8,2022,5,8,2022);</script>
+
+</body>
+
+</html>

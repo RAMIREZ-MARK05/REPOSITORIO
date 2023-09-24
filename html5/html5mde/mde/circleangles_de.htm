@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Winkel am Kreis</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 190px; }
+input { width: 220px; }
+</style>
+<script src="circleangles.js"></script>
+<script src="circleangles_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Winkel am Kreis">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Umfangswinkel, Mittelpunktswinkel, Sehnen-Tangenten-Winkel">
+</head>
+
+<body>
+
+<h1>Winkel am Kreis</h1>
+
+<p>In dieser App geht es um Winkel am Kreis. Folgende Begriffe und ihre Zusammenh&auml;nge werden illustriert:</p>
+
+<ul>
+<li><em class="Begriff">Mittelpunktswinkel (Zentriwinkel)</em></li>
+<li><em class="Begriff">Umfangswinkel (Peripheriewinkel)</em></li>
+<li><em class="Begriff">Sehnen-Tangenten-Winkel</em></li>
+</ul>
+
+<p>Der Mittelpunktswinkel (blau) l&auml;sst sich mithilfe des Schiebereglers vergr&ouml;&szlig;ern oder verkleinern. Durch Ziehen mit 
+gedr&uuml;ckter Maustaste kann man den Scheitel des zugeh&ouml;rigen Umfangswinkels (rot) variieren.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 50px;"><span id="lb0" class="pos1"></span></div>
+    <div style="top: 80px;"><input type="range" id="sl" min=0 max=180 step=1></div>
+    <div style="top: 140px; color: #0000ff;"><span id="lb1a" class="pos1"></span><span id="lb1b" class="pos2"></span></div>
+    <div style="top: 180px; color: #ff0000;"><span id="lb2a" class="pos1"></span><span id="lb2b" class="pos2"></span></div>
+    <div style="top: 220px; color: #000000;"><span id="lb3a" class="pos1"></span><span id="lb3b" class="pos2"></span></div>
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<div class="Satz" style="width: 600px;">
+<ol type=1>
+<li>Die Umfangswinkel &uuml;ber einem Kreisbogen sind alle gleich gro&szlig;.</li>
+<li>Die Umfangswinkel &uuml;ber einem Kreisbogen sind halb so gro&szlig; wie der entsprechende Mittelpunktswinkel.</li>
+<li>Die beiden Sehnen-Tangenten-Winkel zu einem Kreisbogen sind gleich gro&szlig; wie die entsprechenden Umfangswinkel und halb so gro&szlig; 
+wie der zugeh&ouml;rige Mittelpunktswinkel.</li>
+</ol>
+</div>
+
+<script>endPage("circleangles",1,11,1997,18,10,2017);</script>
+
+</body>
+
+</html>

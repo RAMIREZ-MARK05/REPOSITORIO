@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Series de Desintegraci&oacute;n Radiactiva</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/app.css">
+<style>
+div#total { width: 800px; height: 300px; }
+div#canvas { width: 600px; height: 300px; }
+div#panel { left: 600px; width: 200px; height: 300px; }
+select { width: 180px; } 
+button { width: 180px; }
+.pos1 { left: 10px; }
+</style>
+<script src="decaychains.js"></script>
+<script src="decaychains_es.js"></script>
+<script src="page_phes.js"></script>
+<meta name="description" content="App HTML5: Series de Desintegraci&oacute;n Radiactiva">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, f&iacute;sica, f&iacute;sica nuclear, radioactivity, desintegraci&oacute;n">
+</head>
+
+<body>
+
+<h1>Series de Desintegraci&oacute;n Radiactiva</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=600 height=300>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span class="pos1" id="lb"></span></div>
+    <div style="top: 50px;"><select id="ch"></select></div> 
+    <div style="top: 100px;"><button id="bu" style="background-color: #ffff00;"></button></div>
+    <div style="top: 250px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 270px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script>endPage("decaychains",20,7,1998,27,12,2017,"Juan Mu&ntilde;oz, 1999");</script>
+
+</body>
+</html>

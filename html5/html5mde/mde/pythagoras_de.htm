@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Kathetensatz und Satz des Pythagoras</title>
+<link rel="stylesheet" href="../m/app.css">
+<style>
+canvas { border: 1px solid black; display: block; margin: 20px auto; }
+div.Abstand { margin-top: 30px; }
+</style>
+<meta charset="utf-8">
+<script src="pythagoras.js"></script>
+<script src="pythagoras_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Kathetensatz und Satz des Pythagoras">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Kathetensatz, Pythagoras, rechtwinkliges Dreieck">
+</head>
+
+<body>
+
+<h1>Kathetensatz und Satz des Pythagoras</h1>
+
+<p>Die folgende HTML5-App zeigt ein <em class="Begriff">rechtwinkliges Dreieck</em>, bei dem der Scheitel des rechten Winkels durch Ziehen 
+mit der Maus ver&auml;ndert werden kann.</p>
+
+<canvas id="cv" width=500 height=420>HTML5-Canvas nicht unterst&uuml;tzt!</canvas>
+
+<div class="Satz" style="width: 500px;">
+<strong>Kathetensatz:</strong><br>
+Im rechtwinkligen Dreieck ist das Quadrat &uuml;ber einer Kathete fl&auml;chengleich zum Rechteck aus der Hypotenuse und dem 
+anliegenden Hypotenusenabschnitt.
+<div><span class="Formel" style="width: 120px;">
+a<sup>2</sup> = c p<br>
+b<sup>2</sup> = c q
+</span></div>
+</div>
+
+<div class="center">a<sup>2</sup> + b<sup>2</sup> = c p + c q = c (p + q) = c &middot; c = c<sup>2</sup></div>
+
+<div class="Satz" style="width: 500px;">
+<strong>Satz des Pythagoras:</strong><br>
+Im rechtwinkligen Dreieck haben die beiden Kathetenquadrate zusammen die gleiche Fl&auml;che wie das Hypotenusenquadrat.
+<div><span class="Formel" style="width: 120px;">a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></span></div>
+</div>
+
+<script>endPage("pythagoras",1,11,1997,30,7,2023);</script>
+
+</body>
+
+</html>

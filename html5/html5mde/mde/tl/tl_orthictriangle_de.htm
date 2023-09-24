@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Das H&ouml;henfu&szlig;punktdreieck eines Dreiecks</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+button { width: 220px; }
+textarea { width: 210px; height: 160px; line-height: 18px; } 
+.pos1 { left: 10px; }
+#ABC { margin-top: 30px; font-weight: bold; }
+</style>
+<script src="tl_orthictriangle.js"></script>
+<script src="tl_orthictriangle_de.js"></script>
+<script src="tl_page_de.js"></script>
+<meta name="description" content="HTML5-App: Das H&ouml;henfu&szlig;punktdreieck eines Dreiecks">
+<meta name="keywords" content="Mathematik, Geometrie, Dreieck, H&ouml;hen, Dreiecksh&ouml;hen, H&ouml;henfu&szlig;punktdreieck">
+<meta name="author" content="Walter Fendt">
+</head>
+
+<body>
+
+<h1>Das H&ouml;henfu&szlig;punktdreieck eines Dreiecks</h1>
+
+<p>Das <em class="Begriff">H&ouml;henfu&szlig;punktdreieck</em> eines gegebenen Dreiecks entsteht dadurch, dass man die Fu&szlig;punkte 
+der <a href="tl_orthocenter_de.htm">Dreiecksh&ouml;hen</a> miteinander verbindet. Im Sonderfall eines rechtwinkligen Dreiecks ist das 
+H&ouml;hen&shy;fu&szlig;punkt&shy;dreieck entartet, da dann zwei der H&ouml;hen&shy;fu&szlig;punkte zusammenfallen.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 70px;"><button id="bu2" style="background-color: #ffff00;"></button></div> 
+    <div style="top: 140px;"><textarea id="ta"></textarea></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<div class="Satz" style="width: 600px;">
+Gegeben seien ein Dreieck und sein H&ouml;hen&shy;fu&szlig;punkt&shy;dreieck. Dann stimmen die Winkelhalbierenden des 
+H&ouml;hen&shy;fu&szlig;punkt&shy;dreiecks mit den H&ouml;hen des Ausgangsdreiecks &uuml;berein.
+</div>
+
+<div class="Satz" style="width: 600px;">
+Ist ein Dreieck spitzwinklig, so stimmt sein H&ouml;hen&shy;schnittpunkt mit dem Inkreismittelpunkt des 
+H&ouml;hen&shy;fu&szlig;punkt&shy;dreiecks &uuml;berein.<br>
+Ist ein Dreieck stumpfwinklig, so stimmt sein H&ouml;hen&shy;schnittpunkt mit einem Ankreismittelpunkt des 
+H&ouml;hen&shy;fu&szlig;punkt&shy;dreiecks &uuml;berein.</div>
+
+<p id="ABC"><a href="tl_start_de.htm#abc">&Uuml;bersicht</a></p>
+
+<script>endPage("tl_orthictriangle",28,10,2004,20,10,2017);</script>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Das Morley-Dreieck eines Dreiecks</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+button { width: 220px; }
+textarea { width: 210px; height: 160px; line-height: 18px; } 
+.pos1 { left: 10px; }
+#ABC { margin-top: 30px; font-weight: bold; }
+</style>
+<script src="tl_morleytriangle.js"></script>
+<script src="tl_morleytriangle_de.js"></script>
+<script src="tl_page_de.js"></script>
+<meta name="description" content="HTML5-App: Das Morley-Dreieck eines Dreiecks">
+<meta name="keywords" content="Mathematik, Geometrie, Dreieck, Dreiecksgeometrie, Morley-Dreieck">
+<meta name="author" content="Walter Fendt">
+</head>
+
+<body>
+
+<h1>Das Morley-Dreieck eines Dreiecks</h1>
+
+<p>Jeder der drei <a href="tl_interiorangles_de.htm">Innenwinkel</a> eines Dreiecks wird in drei gleich gro&szlig;e Winkel unterteilt. 
+Betrachtet wird zu jeder Dreiecksseite jeweils der Schnittpunkt der beiden Teilungslinien, die von den Endpunkten der Seite ausgehen 
+und dieser Seite am n&auml;chsten liegen. Die erhaltenen Schnittpunkte werden zu einem Dreieck verbunden, dem 
+<em class="Begriff">Morley-Dreieck</em>.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 70px;"><button id="bu2" style="background-color: #ffff00;"></button></div> 
+    <div style="top: 140px;"><textarea id="ta"></textarea></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<div class="Satz" style="width: 600px;">Das Morley-Dreieck eines Dreiecks ist gleichseitig.</div>
+
+<p id="ABC"><a href="tl_start_de.htm#abc">&Uuml;bersicht</a></p>
+
+<script>endPage("tl_morleytriangle",28,10,2004,8,1,2018);</script>
+
+</body>
+
+</html>

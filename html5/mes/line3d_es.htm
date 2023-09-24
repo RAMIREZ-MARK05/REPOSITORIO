@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+<title>Ecuaci&oacute;n vectorial de una recta en el espacio</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 610px; height: 420px; }
+div#canvas { width: 360px; height: 420px; }
+div#panel { left: 360px; width: 250px; height: 420px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 90px; }
+.pos3 { left: 170px; }
+input[type="text"] { width: 60px; }
+button.navi { width: 50px; background-color: #a0c0ff; }
+td { width: 60px; height: 35px; }
+</style>
+<script src="line3d.js"></script>
+<script src="line3d_es.js"></script>
+<script src="page_mes.js"></script>
+<meta name="description" content="App HTML5: Ecuaci&oacute;n vectorial de una recta en el espacio">
+<meta name="author" content="Walter Fendt, Nicol&aacute;s Rosillo">
+<meta name="keywords" content="app, matem&aacute;ticas, geometr&iacute;a anal&iacute;tica, ecuaci&oacute;n de una recta, ecuaci&oacute;n vectorial">
+</head>
+
+<body>
+
+<h1>Ecuaci&oacute;n Vectorial de una Recta en el Espacio</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=360 height=420>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="p1" class="pos1"></span></div>
+    <div style="top: 50px;">
+      <input id="ipx1" type="text" class="pos1">
+      <input id="ipy1" type="text" class="pos2">
+      <input id="ipz1" type="text" class="pos3">
+    </div>
+    <div style="top: 90px;"><span id="p2" class="pos1"></span></div>
+    <div style="top: 120px;">
+      <input id="ipx2" type="text" class="pos1">
+      <input id="ipy2" type="text" class="pos2">
+      <input id="ipz2" type="text" class="pos3">
+    </div>
+    
+    <div style="top: 200px; left: 25px;"><table>
+      <tr>
+        <td></td>
+        <td><button id="up" class="navi">&uarr;</button></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button id="left" class="navi">&larr;</button></td>
+        <td><button id="stop" class="navi">&#8226;</button></td>
+        <td><button id="right" class="navi">&rarr;</button></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button id="down" class="navi">&darr;</button></td>
+        <td></td>
+      </tr>
+    </table></div>    
+    
+    <div style="top: 370px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 390px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("line3d",16,9,1999,9,11,2015,"Nicol&aacute;s Rosillo, 2002");</script>
+
+</body>
+
+</html>

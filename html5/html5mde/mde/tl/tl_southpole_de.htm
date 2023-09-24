@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Der S&uuml;dpolsatz</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 400px; height: 400px; }
+div#panel { left: 400px; width: 240px; height: 400px; } 
+button { width: 220px; }
+textarea { width: 210px; height: 160px; line-height: 18px; } 
+.pos1 { left: 10px; }
+#ABC { margin-top: 30px; font-weight: bold; }
+</style>
+<script src="tl_southpole.js"></script>
+<script src="tl_southpole_de.js"></script>
+<script src="tl_page_de.js"></script>
+<meta name="description" content="HTML5-App: Der S&uuml;dpolsatz">
+<meta name="keywords" content="Mathematik, Geometrie, Dreieck, Dreiecksgeometrie, S&uuml;dpolsatz, Mittelsenkrechte, Winkelhalbierende, Umkreis">
+<meta name="author" content="Walter Fendt">
+</head>
+
+<body>
+
+<h1>Der S&uuml;dpolsatz</h1>
+
+<p>F&uuml;r ein gegebenes Dreieck werden die <a href="tl_perpendicularbisectors_de.htm">Mittelsenkrechten</a>, der 
+<a href="tl_circumcircle_de.htm">Umkreis</a> und die <a href="tl_anglebisectors_de.htm">Winkelhalbierenden</a> gezeichnet.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=400 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 70px;"><button id="bu2" style="background-color: #ffff00;"></button></div> 
+    <div style="top: 140px;"><textarea id="ta"></textarea></div>
+    <div style="top: 350px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<div class="Satz" style="width: 600px;">Die Mittelsenkrechte zu einer Dreiecksseite und die Winkelhalbierende 
+des Winkels gegen&uuml;ber dieser Seite schneiden sich jeweils auf dem Umkreis.</div>
+
+<p id="ABC"><a href="tl_start_de.htm#abc">&Uuml;bersicht</a></p>
+
+<script>endPage("tl_southpole",28,10,2004,20,10,2017);</script>
+
+</body>
+
+</html>

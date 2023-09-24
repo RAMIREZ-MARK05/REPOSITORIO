@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Online-Rechner Restklassen</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 880px; height: 400px; }
+div#canvas { width: 600px; height: 400px; }
+div#panel { left: 600px; width: 280px; height: 400px; } 
+.pos1 { left: 10px; }
+select { left: 190px; width: 70px; background-color: white; }
+input[type="text"] { left: 190px; width: 65px; }
+</style>
+<script src="calculatorzn.js"></script>
+<script src="calculatorzn_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Online-Rechner Restklassen">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Rechnen, Online-Rechner, Restklassen, Restklassenring">
+</head>
+
+<body>
+
+<h1>Online-Rechner Restklassen</h1>
+
+<p><b>Beispiel 1:</b>&nbsp; Es ist gerade <span class="nobr">21 Uhr.</span> Welche Uhrzeit wird <span class="nobr">7 Stunden</span> 
+sp&auml;ter angezeigt? Nat&uuml;rlich nicht <span class="nobr">28 Uhr,</span> sondern <span class="nobr">4 Uhr</span>!</p>
+
+<p>Das Beispiel zeigt, dass man mit Uhrzeiten etwas anders rechnet als sonst. <span class="nobr">24 Uhr</span> wird durch 
+<span class="nobr">0 Uhr</span> ersetzt; danach folgt <span class="nobr">1 Uhr</span> und so weiter. Mathematiker sagen,
+dass man hier <em class="Begriff">modulo 24</em> rechnet, und sprechen vom <em class="Begriff">Restklassenring</em> 
+<b>Z</b><sub>24</sub>.</p>
+
+<p>Schreibweise: &nbsp; <span class="nobr">21 + 7 &equiv; 4 mod 24</span> &nbsp; 
+<span class="nobr">(gesprochen: 21 + 7 kongruent zu 4 modulo 24)</span></p>
+
+<p><b>Beispiel 2:</b>&nbsp; Was ist <span class="nobr">21 &middot; 7</span> modulo 24?</p>
+
+<p>Normalerweise w&uuml;rde man <span class="nobr">21 &middot; 7 = 147</span> rechnen. Da jedoch nur die Zahlen 
+<span class="nobr">0 bis 23</span> als Ergebnis erlaubt sind, muss man noch 147 durch 24 dividieren. Das eigentliche Ergebnis 
+<span class="nobr">(die Zahl 6)</span> ist hier ohne Bedeutung; wichtig ist nur der Rest (n&auml;mlich 3).</p>
+
+<p>21 &middot; 7 &equiv; 3 mod 24</p>
+
+<p><b>Beispiel 3:</b>&nbsp; Was ist <span class="nobr">4 &middot; 12</span> modulo 24?</p>
+
+<p>Durch &quot;normales&quot; Multiplizieren erh&auml;lt man zun&auml;chst die Zahl 48. Dividiert man 48 durch 24, 
+so ergibt sich 2, und der Rest ist 0.</p>
+
+<p>4 &middot; 12 &equiv; 0 mod 24</p>
+
+<p>Dieses etwas befremdliche Resultat zeigt, dass Rechengesetze in Restklassenringen von den gewohnten Gesetzen 
+abweichen k&ouml;nnen. Beim Rechnen mit Restklassen kann ein Produkt gleich 0 sein, obwohl beide Faktoren ungleich 0 sind.</p>
+
+<p>Es versteht sich fast von selbst, dass man nicht nur <span class="nobr">modulo 24</span> rechnen kann,
+sondern allgemein <span class="nobr">modulo n,</span> wenn n eine beliebige nat&uuml;rliche Zahl ist.</p>
+
+<p style="margin-top: 30px;">Dieser Online-Rechner ist verwendbar f&uuml;r die Restklassenringe <b>Z</b><sub>1</sub> bis <b>Z</b><sub>100</sub>
+(siehe oberes Auswahlfeld). Mithilfe der Radiobuttons wird die Rechenart (Verkn&uuml;pfung) festgelegt. Im unteren Teil
+der Schaltfl&auml;che erfolgt die Eingabe der Operanden. Ganz unten wird das Ergebnis angezeigt.</p>
+
+<p>Auf der linken Seite wird die Verkn&uuml;pfungstafel der ausgew&auml;hlten Rechenoperation dargestellt. 
+Wenn der Platz nicht ausreicht, l&auml;sst sich diese Tabelle mit der Maus (oder einem Finger) verschieben.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=600 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="lb1" class="pos1"></span><select id="ch1"></select></div>
+    <div style="top: 60px;"><input type="radio" id="rb2" name="bg" value=""><label for="rb2" id="lb2"></label></div>
+    <div style="top: 90px;"><input type="radio" id="rb3" name="bg" value=""><label for="rb3" id="lb3"></label></div>
+    <div style="top: 120px;"><input type="radio" id="rb4" name="bg" value=""><label for="rb4" id="lb4"></label></div>
+    <div style="top: 150px;"><input type="radio" id="rb5" name="bg" value=""><label for="rb5" id="lb5"></label></div>
+    <div style="top: 180px;"><input type="radio" id="rb6" name="bg" value=""><label for="rb6" id="lb6"></label></div>
+    <div style="top: 210px;"><input type="radio" id="rb7" name="bg" value=""><label for="rb7" id="lb7"></label></div>
+    <div style="top: 250px;"><span id="lb8" class="pos1"></span><select id="ch8"></select></div>  
+    <div style="top: 280px;"><span id="lb9" class="pos1"></span><select id="ch9"></select></div>  
+    <div style="top: 310px;"><span id="lb10" class="pos1"></span><input type="text" id="op10"></div>
+    <div style="top: 370px;"><span id="author" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("calculatorzn",21,7,2022,21,7,2022);</script>
+
+</body>
+
+</html>

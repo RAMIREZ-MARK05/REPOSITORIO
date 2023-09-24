@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Vektorgleichung einer Geraden</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 610px; height: 420px; }
+div#canvas { width: 360px; height: 420px; }
+div#panel { left: 360px; width: 250px; height: 420px; } 
+.pos1 { left: 10px; }
+.pos2 { left: 90px; }
+.pos3 { left: 170px; }
+input[type="text"] { width: 60px; }
+button.navi { width: 50px; background-color: #a0c0ff; }
+td { width: 60px; height: 35px; }
+</style>
+<script src="line3d.js"></script>
+<script src="line3d_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Vektorgleichung einer Geraden im dreidimensionalen Raum">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Analytische Geometrie, Geradengleichung, Vektorgleichung">
+</head>
+
+<body>
+
+<h1>Vektorgleichung einer Geraden im dreidimensionalen Raum</h1>
+
+<p>Eine <em class="Begriff">Gerade</em> im dreidimensionalen Raum sei durch zwei Punkte A und B gegeben. Die Koordinaten dieser beiden 
+Punkte (in einem kartesischen Koordinatensystem) lassen sich mit Hilfe der Textfelder rechts oben variieren; erlaubt sind ganzzahlige Werte 
+zwischen &minus;5 und +5 (einschlie&szlig;lich). Durch Verwendung der Schaltkn&ouml;pfe im unteren Teil der Schaltfl&auml;che l&auml;sst sich 
+die Projektionsrichtung beeinflussen.</p>
+
+<p>Die App zeichnet ein Schr&auml;gbild des Koordinatensystems und der Geraden (schwarz); der Richtungsvektor ist durch einen violetten Pfeil 
+dargestellt. Unterhalb der Zeichnung wird eine <em class="Begriff">Vektorgleichung</em> (<em class="Begriff">Parametergleichung</em>)
+der Geraden angegeben.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=360 height=420>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="p1" class="pos1"></span></div>
+    <div style="top: 50px;">
+      <input id="ipx1" type="text" class="pos1">
+      <input id="ipy1" type="text" class="pos2">
+      <input id="ipz1" type="text" class="pos3">
+    </div>
+    <div style="top: 90px;"><span id="p2" class="pos1"></span></div>
+    <div style="top: 120px;">
+      <input id="ipx2" type="text" class="pos1">
+      <input id="ipy2" type="text" class="pos2">
+      <input id="ipz2" type="text" class="pos3">
+    </div>
+    
+    <div style="top: 200px; left: 25px;"><table>
+      <tr>
+        <td></td>
+        <td><button id="up" class="navi">&uarr;</button></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button id="left" class="navi">&larr;</button></td>
+        <td><button id="stop" class="navi">&#8226;</button></td>
+        <td><button id="right" class="navi">&rarr;</button></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button id="down" class="navi">&darr;</button></td>
+        <td></td>
+      </tr>
+    </table></div>    
+    
+    <div style="top: 370px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 390px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("line3d",16,9,1999,31,7,2023);</script>
+
+</body>
+
+</html>

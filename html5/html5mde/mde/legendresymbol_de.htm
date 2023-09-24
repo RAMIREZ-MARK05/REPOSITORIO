@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Online-Rechner Legendre-, Jacobi- und Kronecker-Symbol</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 650px; height: 320px; }
+div#canvas { width: 450px; height: 320px; background-color: #f8f8ff; }
+div#panel { left: 450px; width: 200px; height: 320px; } 
+.pos1 { left: 10px; }
+input[type="text"] { left: 80px; width: 80px; }
+button { left: 10px; width: 180px; background-color: #ffff00; }
+</style>
+<script src="legendresymbol.js"></script>
+<script src="legendresymbol_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Online-Rechner Legendre-, Jacobi- und Kronecker-Symbol">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="Online-Rechner, quadratischer Rest, quadratischer Nichtrest, Legendre-Symbol, Jacobi-Symbol, Kronecker-Symbol">
+</head>
+
+<body>
+
+<h1>Online-Rechner<br>Legendre-, Jacobi- und Kronecker-Symbol</h1>
+
+<p><em class="Begriff">Quadratischer Rest</em> ist ein Begriff, der in der Zahlentheorie von Bedeutung ist. Dabei geht es um die Frage, 
+ob sich aus einem gegebenen Element eines gegebenen Restklassenrings die Quadratwurzel ziehen l&auml;sst. Bei der folgenden Definition 
+werden eine ganze Zahl a und eine nat&uuml;rliche Zahl <span class="nobr">n &gt; 1</span> vorausgesetzt.</p>
+
+<ul>
+<li>a wird <em class="Begriff">quadratischer Rest modulo n</em> genannt, wenn a und n teilerfremd (relativ prim) sind und wenn es 
+eine ganze Zahl x gibt, sodass x&sup2; kongruent zu a modulo n ist (Schreibweise: <span class="nobr">x&sup2; &equiv; a mod n).</span> 
+Die letzte Bedingung l&auml;sst sich auch so ausdr&uuml;cken, dass die Differenz <span class="nobr">x&sup2; &minus; a</span> 
+durch n teilbar sein muss.</li>
+<li>a hei&szlig;t <em class="Begriff">quadratischer Nichtrest modulo n</em>, wenn a und n teilerfremd sind und wenn es <em>keine</em>
+ganze Zahl x gibt, sodass x&sup2; kongruent zu a modulo n ist.</li>
+<li>Sind a und n <em>nicht</em> teilerfremd, so ist a weder quadratischer Rest noch quadratischer Nichtrest modulo n.</li>
+</ul>
+
+<p><b>Beispiele:</b></p>
+
+<p>5 ist quadratischer Rest modulo 11, wie man aus <span class="nobr">4&sup2; = 16 &equiv; 5 mod 11</span> erkennt.<br>
+2 ist quadratischer Nichtrest modulo 11, weil es keine ganze Zahl x mit <span class="nobr">x&sup2; &equiv; 2 mod 11</span> gibt.
+(Durchprobieren: 1&sup2;, 2&sup2;, ..., 10&sup2;)<br>
+22 ist kein quadratischer Rest und auch kein quadratischer Nichtrest modulo 11, denn 22 und 11 haben den gemeinsamen Teiler 11.</p>
+
+<p>Das <em class="Begriff">Legendre-Symbol</em> gibt an, welcher der drei F&auml;lle zutrifft. Man schreibt die gegebenen Zahlen
+in einer Klammer untereinander, mit einer waagrechten Linie (kein Bruchstrich) dazwischen. Im ersten Fall (quadratischer Rest) hat das
+Symbol den Wert 1, im zweiten Fall (quadratischer Nichtrest) den Wert &minus;1 und im dritten Fall (nicht teilerfremde Zahlen) den Wert 0.
+Beim Legendre-Symbol wird vorausgesetzt, dass die untere Zahl eine <em>ungerade Primzahl</em> <span class="nobr">(3, 5, 7, 11, ...)</span>
+ist.</p>
+
+<p>F&uuml;r die Verallgemeinerungen, n&auml;mlich das <em class="Begriff">Jacobi-Symbol</em> und das <em class="Begriff">Kronecker-Symbol</em>,
+verwendet man die gleiche Schreibweise. Beim Jacobi-Symbol sind f&uuml;r die untere Zahl ungerade nat&uuml;rliche Zahlen erlaubt,
+beim Kronecker-Symbol sogar beliebige ganze Zahlen. Allerdings kann es bei beiden Verallgemeinerungen vorkommen, dass das Symbol den Wert 1 hat,
+aber die obere Zahl trotzdem kein quadratischer Rest modulo der unteren Zahl ist.</p>
+
+<p>Dieser Online-Rechner erlaubt die Eingabe von Zahlen bis zum Betrag <span class="nobr">1 000 000</span>. Die Eingabe kann mit der Enter-Taste
+abgeschlossen werden oder durch einen Klick auf den OK-Button. Wenn es sinnvoll ist, wird links oben eine Aussage dazu gemacht, ob ein
+quadratischer Rest oder ein quadratischer Nichtrest vorliegt oder ob die gegebenen Zahlen einen gemeinsamen Teiler gr&ouml;&szlig;er 
+als 1 besitzen (mit knapper Begr&uuml;ndung). Links unten wird der Wert des Legendre-, Jacobi- bzw. Kronecker-Symbols ausgegeben,
+bei den zwei allgemeineren Symbolen mit kurzer Rechnung.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=450 height=320>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 30px;"><span id="lb1" class="pos1"></span><input type="text" id="ip1"></div>
+    <div style="top: 70px;"><span id="lb2" class="pos1"></span><input type="text" id="ip2"></div>
+    <div style="top: 140px;"><button id="bu"></button></div>
+    <div style="top: 280px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 300px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("legendresymbol",4,7,2023,4,7,2023);</script>
+
+</body>
+
+</html>

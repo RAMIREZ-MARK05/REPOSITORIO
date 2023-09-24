@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Abstand zweier Punkte auf einer Kugeloberfl&auml;che</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 720px; height: 480px; }
+div#canvas { width: 480px; height: 480px; }
+div#panel { left: 480px; width: 240px; height: 480px; }
+input[type="text"].left { left: 10px; width: 70px; } 
+input[type="text"].right { left: 110px; width: 70px; }
+select { left: 110px; width: 120px; }
+button.navi { width: 60px; background-color: #a0c0ff; }
+.pos1 { left: 10px; }
+.pos2 { left: 90px; }
+.pos3 { left: 110px; }
+.pos4 { left: 195px; }
+div.Abstand { margin-top: 30px; }
+span.big { font-size: 125%; }
+</style>
+<script src="distancesphere.js"></script>
+<script src="distancesphere_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Abstand zweier Punkte auf einer Kugeloberfl&auml;che">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Kugelgeometrie, Sph&auml;rische Geometrie, Gro&szlig;kreis">
+</head>
+
+<body>
+
+<h1>Abstand zweier Punkte auf einer Kugeloberfl&auml;che</h1>
+
+<p>Unter einem <em class="Begriff">Gro&szlig;kreis</em> versteht man einen Kreis, der durch Schnitt einer Kugel mit einer Ebene durch den
+Kugelmittelpunkt entsteht. Der Radius eines Gro&szlig;kreises stimmt mit dem Kugelradius &uuml;berein, hat also den gr&ouml;&szlig;ten
+Wert, der f&uuml;r den Radius eines Kreises auf der Kugeloberfl&auml;che m&ouml;glich ist. Der k&uuml;rzeste Abstand zweier Punkte auf der
+Kugeloberf&auml;che ist immer Teil eines Gro&szlig;kreises.</p>
+
+<p>In der Zeichenfl&auml;che ist die Kugel mit einigen L&auml;ngen- und Breitenkreisen als Schr&auml;gbild dargestellt
+(Parallelprojektion). Au&szlig;erdem sind (in roter Farbe) die gegebenen Punkte und der dazwischen liegende Gro&szlig;kreisbogen 
+hervorgehoben.</p> 
+
+<p>In der ersten Zeile der Schaltfl&auml;che kann ein Radius zwischen <span class="nobr">1 000 km</span> und 
+<span class="nobr">1 000 000 km</span> eingegeben werden (Enter-Taste nicht vergessen!), wobei die Voreinstellung dem Erdradius entspricht. 
+Weitere Eingabe- und Auswahlfelder erm&ouml;glichen die Festlegung zweier Punkte der Kugeloberfl&auml;che. Der aus diesen Daten
+berechnete Abstand wird als Winkel <span class="nobr">(in Grad)</span> und als L&auml;nge (in km) angegeben. Durch Verwendung der f&uuml;nf
+Schaltkn&ouml;pfe kann man die Projektionsrichtung variieren.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=480 height=480>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><span id="lbR" class="pos1"></span><input type="text" id="ipR" class="right"><span id="uR" class="pos4"></span></div>
+    <div style="top: 50px;"><span id="lbA" class="pos1"></span></div>
+    <div style="top: 80px;"><input type="text" id="ipAx" class="left"><span id="uAx" class="pos2"></span><select id="chAx"></select></div>
+    <div style="top: 110px;"><input type="text" id="ipAy" class="left"><span id="uAy" class="pos2"></span><select id="chAy"></select></div>
+    <div style="top: 140px;"><span id="lbB" class="pos1"></span></div>
+    <div style="top: 170px;"><input type="text" id="ipBx" class="left"><span id="uBx" class="pos2"></span><select id="chBx"></select></div>
+    <div style="top: 200px;"><input type="text" id="ipBy" class="left"><span id="uBy" class="pos2"></span><select id="chBy"></select></div>
+    <div style="top: 240px;"><span id="lbD" class="pos1"></span></div>
+    <div style="top: 270px;"><span id="op1" class="pos1"></span><span id="op2" class="pos3"></span></div>
+    
+    <div style="top: 310px; left: 10px;"><table>
+      <tr>
+        <td></td>
+        <td><button id="up" class="navi">&uarr;</button></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button id="left" class="navi">&larr;</button></td>
+        <td><button id="stop" class="navi">&#8226;</button></td>
+        <td><button id="right" class="navi">&rarr;</button></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button id="down" class="navi">&darr;</button></td>
+        <td></td>
+      </tr>
+    </table></div>    
+         
+    <div style="top: 440px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 460px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<p>Aus dem <em class="Begriff">Seiten-Kosinussatz</em> der sph&auml;rischen Trigonometrie ergibt sich der folgende Rechenausdruck f&uuml;r
+den gesuchten Abstand:</p>
+
+<div class="Abstand"><span class="Formel" style="width: 600px;">
+d &nbsp;=&nbsp; r &middot; arccos <span class="big">(</span>sin &phi;<sub>A</sub> sin &phi;<sub>B</sub> 
++ cos &phi;<sub>A</sub> cos &phi;<sub>B</sub> cos (&lambda;<sub>B</sub> - &lambda;<sub>A</sub>)<span class="big">)</span>
+</span></div>
+
+<p class="Formel">
+r .... Radius der Kugel<br>
+&lambda;<sub>A</sub> ... Geografische L&auml;nge von Punkt A<br>
+&phi;<sub>A</sub> ... Geografische Breite von Punkt A<br>
+&lambda;<sub>B</sub> ... Geografische L&auml;nge von Punkt B<br>
+&phi;<sub>B</sub> ... Geografische Breite von Punkt B<br>
+</p>
+
+<p>Praktischer Hinweis zum Nachrechnen: Die hier auftretende Funktion arccos (Arkuskosinus) ist die Umkehrfunktion der Kosinusfunktion, 
+auf Taschenrechnern meist mit <span class="nobr">cos<sup>&minus;1</sup></span> bezeichnet. Verwendet man den Taschenrechner 
+mit der Einstellung f&uuml;r Gradma&szlig; <span class="nobr">(&uuml;blicherweise DEG),</span> so muss man darauf achten, dass der 
+arccos-Wert im Gradma&szlig; ausgegeben wird. Erst wenn man das Gradma&szlig; in Bogenma&szlig; umgerechnet hat, darf man mit dem Kugelradius 
+multiplizieren.</p>
+
+<script>endPage("distancesphere",16,1,2021,2,8,2023);</script>
+
+</body>
+
+</html>

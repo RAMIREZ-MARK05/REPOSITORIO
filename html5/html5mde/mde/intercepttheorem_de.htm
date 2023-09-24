@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+<head>
+<title>Strahlensatz</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../m/app.css">
+<style>
+div#total { width: 640px; height: 400px; }
+div#canvas { width: 450px; height: 400px; }
+div#panel { left: 450px; width: 190px; height: 400px; } 
+select { width: 50px; }
+.pos1 { left: 10px; }
+.pos2 { left: 80px; }
+.pos3 { left: 100px; }
+</style>
+<script src="intercepttheorem.js"></script>
+<script src="intercepttheorem_de.js"></script>
+<script src="page_mde.js"></script>
+<meta name="description" content="HTML5-App: Der Strahlensatz">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="App, Mathematik, Geometrie, Strahlensatz, zentrische Streckung">
+</head>
+
+<body>
+
+<h1>Strahlensatz</h1>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=450 height=400>HTML5-Canvas nicht unterst&uuml;tzt!</canvas></div>
+  <div id="panel">
+    <div style="top: 50px;"><input type="radio" id="rb1a" name="bg" value=""><label for="rb1a" id="rb1b"></label></div>
+    <div style="top: 90px;"><input type="radio" id="rb2a" name="bg" value=""><label for="rb2a" id="rb2b"></label></div>
+    <div style="top: 160px;"><span id="lb1" class="pos1"></span></div>
+    <div style="top: 190px;">
+      <select id="ch1" class="pos1"></select>
+      <span id="lb2" class="pos2"></span>
+      <select id="ch2" class="pos3"></select>
+    </div>    
+    <div style="top: 360px;"><span id="author" class="pos1"></span></div>
+    <div style="top: 380px;"><span id="translator" class="pos1"></span></div>
+  </div>
+</div>
+
+<script>endPage("intercepttheorem",27,4,2000,18,10,2017);</script>
+
+</body>
+
+</html>
